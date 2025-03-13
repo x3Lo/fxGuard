@@ -78,11 +78,11 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ### 2.3 **Layout ou wireframe des pages**
 
-*Structure de la page d'Accueil en desktop :*                                           
+*Structure de la page d'Accueilp :*                                           
 
 ![wireframeDesktop](./images/wireframes/wireframeHome.png)
 
-*Structure de la page server setting Mobile :*
+*Structure de la page Server Setting :*
 
 ![wireframeMobile](./images/wireframes/wireframeServeurSetting.png)
 
