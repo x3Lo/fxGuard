@@ -23,6 +23,8 @@
    1. *Ergonomie, design & charte graphique*
    2. *Ergonomie*
 5. **Contraintes techniques**
+   1. *Architecture globale*
+   2. *Sécurité*
 6. **Planning & suivi du projet**
 
 ## **1. Présentation générale du projet**
