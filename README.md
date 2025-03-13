@@ -16,8 +16,8 @@
 2. **Aspects fonctionnels**
    1. *Description fonctionnelle*
    2. *Arborescence du site / navigation*
-   3. *Layout ou wireframe des pages*
-   4. *Restriction d'accès*
+   3. *Restriction d'accès*
+   4. *Layout ou wireframe des pages*
 3. **Ressources**
 4. **Ergonomie et graphisme**
    1. *Ergonomie, design & charte graphique*
@@ -76,18 +76,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
   ![backOffice](./images/offices/backOffice.png)
 
 
-### 2.3 **Layout ou wireframe des pages**
-
-*Structure de la page d'Accueilp :*                                           
-
-![wireframeDesktop](./images/wireframes/wireframeHome.png)
-
-*Structure de la page Server Setting :*
-
-![wireframeMobile](./images/wireframes/wireframeServeurSetting.png)
-
-
-### 2.4 **Restriction d'accès**
+### 2.3 **Restriction d'accès**
 
 | Pages          | Non-Authentifié | Authentifié | Administrateur |
 | -------------- | --------------- | ----------- | -------------- |
@@ -99,6 +88,18 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 | Server Setting |                 | X           | X              |
 | Profil         |                 | X           | X              |
 | User List      |                 |             | X              |
+
+
+### 2.4 **Layout ou wireframe des pages**
+
+*Structure de la page d'Accueilp :*                                           
+
+![wireframeDesktop](./images/wireframes/wireframeHome.png)
+
+*Structure de la page Server Setting :*
+
+![wireframeMobile](./images/wireframes/wireframeServeurSetting.png)
+
 
 ## **3. Ressources**
 
