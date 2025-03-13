@@ -58,16 +58,14 @@ En tant qu’administrateur authentifié, nous avons accès à la liste de tous 
 
 ### 2.2 **Arborescence du site / navigation**
 
-fxGuard
-├── Home
-|   ├── Login
-|   ├── Register
-|   ├── Server Liste
-|   |   ├── Server Setting
-|   |
-|   ├── Contact
-|   ├── Profil
-|   ├── User List
+  - Home
+    - Login
+    - Register
+    - Server Liste
+      - Server Setting
+    - Contact
+    - Profil
+    - User List
 
 ### 2.3 **Layout ou wireframe des pages**
 
