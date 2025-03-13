@@ -67,24 +67,23 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ### 2.2 **Arborescence du site / navigation**
 
-  - Home
-    - Login
-    - Register
-    - Server Liste
-      - Server Setting
-    - Contact
-    - Profil
-    - User List
+   *Front office :
+
+  ![frontOffice](./images/offices/frontOffice.png)
+
+   *Back office :
+
+  ![backOffice](./images/offices/backOffice.png)
 
 ### 2.3 **Layout ou wireframe des pages**
 
 *Structure de la page d'Accueil en desktop :*                                           
 
-![wireframeDesktop](./wireframes/wireframeHome.JPG)
+![wireframeDesktop](./images/wireframes/wireframeHome.png)
 
 *Structure de la page server setting Mobile :*
 
-![wireframeMobile](./wireframes/wireframeServeurSetting.JPG)
+![wireframeMobile](./images/wireframes/wireframeServeurSetting.png)
 
 
 ### 2.4 **Restriction d'accès**
