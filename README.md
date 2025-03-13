@@ -74,6 +74,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
    *Back office :
 
   ![backOffice](./images/offices/backOffice.png)
+  
 
 ### 2.3 **Layout ou wireframe des pages**
 
