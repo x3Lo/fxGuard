@@ -107,7 +107,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ## **3. Ressources**
 
-- API : https://gta.vercel.app/api/vehicles/all
+- API : https://gta.vercel.app/
 
 ## **4. Ergonomie et graphisme**
 
