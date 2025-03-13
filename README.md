@@ -29,8 +29,9 @@
 
 ### 1.1 **Contexte**
 
-Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent dans le jeu d’un serveur FiveM, le tout dans un espace no-code.  
+Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent en jeu d’un serveur FiveM, le tout dans un espace no-code.  
 Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalité et de contenu, comme l’ajout de voiture, chat de proximité, etc.
+FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en donnant le prix, la vitesse, une photo, etc. du véhicule directement présent dans le jeu.
 
 ### 1.2 **Objectif(s) qualitatif(s) et/ou quantitatif(s) du site**
 
@@ -41,7 +42,7 @@ Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajou
 Le site Web a pour vocation à être utilisé par une tranche de public assez vaste :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
 - Dans un premier temps, mon projet a pour objectif d’être utilisé dans les pays francophones.
-- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, mais je vais développer aussi une version mobile pour rester compétitif face aux solutions déjà existantes.
+- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, et je vais développer une version mobile complète qui me servira d'atout pour rester compétitif face aux solutions déjà existantes.
 
 ## **2. Aspects fonctionnels**
 
@@ -57,30 +58,40 @@ En tant qu’administrateur authentifié, nous avons accès à la liste de tous 
 
 ### 2.2 **Arborescence du site / navigation**
 
-*En cours...*
+fxGuard
+├── Home
+|   ├── Login
+|   ├── Register
+|   ├── Server Liste
+|   |   ├── Server Setting
+|   |
+|   ├── Contact
+|   ├── Profil
+|   ├── User List
 
 ### 2.3 **Layout ou wireframe des pages**
 
-*Structure de la page Desktop :*
+*Structure de la page d'Accueil en desktop :*                                           
 
-![layoutDesktop](./layouts/layoutDesktop.JPG)
+![wireframeDesktop](./wireframes/wireframeHome.JPG)
 
-*Structure de la page Mobile :*
+*Structure de la page server setting Mobile :*
 
-![layoutMobile](./layouts/layoutMobile.JPG)
+![wireframeMobile](./wireframes/wireframeServeurSetting.JPG)
+
 
 ### 2.4 **Restriction d'accès**
 
-| Pages             | Non-Authentifié | Authentifié | Administrateur |
-| ----------------- | --------------- | ----------- | -------------- |
-| Accueil           | X               | X           | X              |
-| Connexion         | X               | X           | X              |
-| Inscription       | X               | X           | X              |
-| Contact           | X               | X           | X              |
-| Serveur Liste     |                 | X           | X              |
-| Serveur Paramètre |                 | X           | X              |
-| Profil            |                 | X           | X              |
-| Utilisateur List  |                 |             | X              |
+| Pages          | Non-Authentifié | Authentifié | Administrateur |
+| -------------- | --------------- | ----------- | -------------- |
+| Home           | X               | X           | X              |
+| Login          | X               | X           | X              |
+| Register       | X               | X           | X              |
+| Contact        | X               | X           | X              |
+| Server Liste   |                 | X           | X              |
+| Server Setting |                 | X           | X              |
+| Profil         |                 | X           | X              |
+| User List      |                 |             | X              |
 
 ## **3. Ressources**
 
@@ -90,17 +101,18 @@ En tant qu’administrateur authentifié, nous avons accès à la liste de tous 
 
 ### 4.1 **Ergonomie, design & charte graphique**
 
-Le site aura un thème très épuré et moderne, avec un fond gris foncé/noir et une couleur d’accentuation bleue.  
+Le site aura un thème très épuré et moderne, avec un fond gris foncé/noir et une couleur d’accentuation violette.  
 Le logo sera très simpliste, reprenant le nom du site.  
 La police utilisée sera une police neutre, la **Roboto**.
 
 ### 4.2 **Ergonomie**
 
 Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant.
+Et un accent sur l'accessibilité sera fait.
 
 ## **5. Contraintes techniques**
 
-- **Architecture globale** : appel à des API extérieures, etc.
+- **Architecture globale** :
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
   - Bibliothèques et API
