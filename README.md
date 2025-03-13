@@ -59,6 +59,7 @@ Grâce à ce menu, il pourra :
   - Voir le nombre de joueurs connectés sur le serveur, avec leur "ID" en jeu, leur pseudo ainsi que le nom et prénom de leurs personnages.
   - Modifier les menus accessibles aux joueurs en jeu, comme le concessionnaire de voitures, où il pourra ajouter ou retirer des véhicules mis en vente. Toutes les données du véhicule seront affichées : type, nom, images, vitesse maximale et marque.
   - Accéder à la console du serveur.
+  - Logs détaillés de toutes les interactions entre notre interface et votre serveur.
   - Gérer un système d'autorisation du panel afin d'accorder l'accès à d'autres personnes.
 
 En tant qu’administrateur authentifié, nous avons accès à la liste de tous les serveurs utilisant notre solution, ainsi qu'à tous les comptes créés. Une fois un serveur sélectionné, nous avons accès au même menu que les utilisateurs authentifiés, à la différence que nous pouvons modifier certains éléments qui ne pouuront pas être re modifié par l'utilisateur authentifié, ainsi que des champs auxquels il n'a accès qu'en lecture.
@@ -120,7 +121,8 @@ Et un accent sur l'accessibilité sera fait.
 
 ## **5. Contraintes techniques**
 
-- **Architecture globale** :
+### 5.1 **Architecture globale**
+
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
   - Bibliothèques et API
@@ -129,6 +131,11 @@ Et un accent sur l'accessibilité sera fait.
   - Architecture : Model View Controller
   - Langage : PHP, SQL
   - Base de données : MySQL
+
+### 5.2 **Sécurité**
+
+Nous mettons tout à disposition pour garantir la sécurité et l'intégrité de nos données. Ce site, développé en PHP, inclura des mécanismes de gestion robustes pour l’administration de serveurs FiveM via une interface complete. Il comprendra des fonctionnalités telles que la gestion des utilisateurs, la surveillance des performances du serveur, ainsi que la gestion des ressources et des configurations. Un accent particulier sera mis sur la sécurité, avec des protocoles de cryptage pour les données sensibles, des mécanismes de vérification des accès et un système de journalisation pour toute action effectuée. L’objectif est d’assurer un contrôle total et sécurisé de l'administration du serveur tout en garantissant une performance optimale et une interface utilisateur intuitive.
+
 
 ## **6. Planning & suivi du projet**
 
