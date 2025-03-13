@@ -67,14 +67,14 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ### 2.2 **Arborescence du site / navigation**
 
-   *Front office :
+   *Front office* :
 
   ![frontOffice](./images/offices/frontOffice.png)
 
-   *Back office :
+   *Back office* :
 
   ![backOffice](./images/offices/backOffice.png)
-  
+
 
 ### 2.3 **Layout ou wireframe des pages**
 
