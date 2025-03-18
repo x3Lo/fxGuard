@@ -298,15 +298,15 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ### 8.2 ** Groupe de travail**
 
-| **Rôle**                        | **Nom**                | **Responsabilités** |
-|---------------------------------|----------------------|--------------------|
-| **Chef de projet**             | Lucas Morel         | Supervise l'avancement du projet, assure la communication entre les membres et veille au respect des délais. |
-| **UX/UI Designer**             | Emma Dubois         | Conçoit l'interface et l’expérience utilisateur, réalise les maquettes et prototypes. |
-| **Graphiste**                  | Léa Martin          | Crée les éléments visuels (logos, icônes, illustrations) et assure la cohérence graphique du projet. |
-| **Développeur Frontend**       | Thomas Lefevre      | Développe l’interface utilisateur en respectant le design et les bonnes pratiques d’accessibilité. |
-| **Développeur Backend**        | Hugo Bernard        | Implémente les fonctionnalités du serveur, gère la base de données et l’authentification des utilisateurs. |
-| **Développeur Base de données**| Sarah Fontaine      | Conçoit et optimise la structure des bases de données pour assurer la gestion efficace des serveurs et des utilisateurs. |
-| **Responsable Qualité & Tests** | Julien Garnier      | Met en place des tests (unitaires, intégration, UI) et s’assure du bon fonctionnement et de la sécurité de l’application. |
-| **Expert Sécurité**            | Camille Roche       | Garantit la sécurité des données et la conformité avec les réglementations (ex : RGPD). |
-| **Administrateur Système**     | Nathan Carpentier   | Supervise l’hébergement et la mise en production de la plateforme, optimise les performances du serveur. |
-| **Référenceur SEO**            | Antoine Dupont      | Optimise le site pour le référencement naturel (SEO), améliore la visibilité sur les moteurs de recherche et analyse les performances. |
+| **Rôle**                        | **Nom**           | **Responsabilités**                                                                                                                    |
+| ------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Chef de projet**              | Lucas Morel       | Supervise l'avancement du projet, assure la communication entre les membres et veille au respect des délais.                           |
+| **UX/UI Designer**              | Emma Dubois       | Conçoit l'interface et l’expérience utilisateur, réalise les maquettes et prototypes.                                                  |
+| **Graphiste**                   | Léa Martin        | Crée les éléments visuels (logos, icônes, illustrations) et assure la cohérence graphique du projet.                                   |
+| **Développeur Frontend**        | Thomas Lefevre    | Développe l’interface utilisateur en respectant le design et les bonnes pratiques d’accessibilité.                                     |
+| **Développeur Backend**         | Hugo Bernard      | Implémente les fonctionnalités du serveur, gère la base de données et l’authentification des utilisateurs.                             |
+| **Développeur Base de données** | Sarah Fontaine    | Conçoit et optimise la structure des bases de données pour assurer la gestion efficace des serveurs et des utilisateurs.               |
+| **Responsable Qualité & Tests** | Julien Garnier    | Met en place des tests (unitaires, intégration, UI) et s’assure du bon fonctionnement et de la sécurité de l’application.              |
+| **Expert Sécurité**             | Camille Roche     | Garantit la sécurité des données et la conformité avec les réglementations (ex : RGPD).                                                |
+| **Administrateur Système**      | Nathan Carpentier | Supervise l’hébergement et la mise en production de la plateforme, optimise les performances du serveur.                               |
+| **Référenceur SEO**             | Antoine Dupont    | Optimise le site pour le référencement naturel (SEO), améliore la visibilité sur les moteurs de recherche et analyse les performances. |
