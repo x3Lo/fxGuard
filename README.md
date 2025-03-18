@@ -238,10 +238,6 @@ Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures se
   
 Ces actions visent à améliorer l’impact environnemental du projet tout en garantissant une expérience utilisateur fluide et performante.
 
-### 5.4 **Accessibilité**
-
-Voici un point sur l'accessibilité que vous pouvez inclure dans votre cahier des charges sous la section **5.4 Accessibilité** :
-
 ### **5.4 Accessibilité**
 L'accessibilité est une priorité afin de garantir une expérience utilisateur optimale pour tous, y compris les personnes en situation de handicap. Pour cela, les actions suivantes seront mises en place :
 
