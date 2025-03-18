@@ -238,6 +238,23 @@ Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures se
   
 Ces actions visent à améliorer l’impact environnemental du projet tout en garantissant une expérience utilisateur fluide et performante.
 
+### 5.4 **Accessibilité**
+
+Voici un point sur l'accessibilité que vous pouvez inclure dans votre cahier des charges sous la section **5.4 Accessibilité** :
+
+### **5.4 Accessibilité**
+L'accessibilité est une priorité afin de garantir une expérience utilisateur optimale pour tous, y compris les personnes en situation de handicap. Pour cela, les actions suivantes seront mises en place :
+
+- **Respect des normes WCAG** : Le site respectera les directives du W3C en matière d'accessibilité numérique (WCAG 2.1, niveau AA minimum).
+- **Navigation au clavier** : Toutes les fonctionnalités seront accessibles sans souris, en utilisant uniquement le clavier (tabulation, raccourcis).
+- **Contraste et lisibilité** : Les couleurs et typographies seront choisies pour assurer un bon contraste et une lecture aisée, même pour les personnes malvoyantes.
+- **Compatibilité avec les lecteurs d'écran** : L’ensemble du site sera conçu pour être compatible avec les technologies d’assistance, telles que les lecteurs d’écran (ex. NVDA, JAWS, VoiceOver).
+- **Textes alternatifs pour les images** : Toutes les images informatives incluront des descriptions textuelles (attributs alt) pour garantir leur compréhension par les utilisateurs malvoyants.
+- **Adaptabilité aux différentes tailles d’écran** : L'interface sera entièrement responsive et optimisée pour différents types d’écrans, y compris mobiles et tablettes.
+- **Modes d’affichage alternatifs** : Un mode haute visibilité et un mode daltonien seront proposés pour améliorer l’expérience des utilisateurs ayant des déficiences visuelles.
+
+Ces actions assureront une meilleure accessibilité et permettront au plus grand nombre d’utiliser l’interface sans obstacles.
+
 ## **6. SEO & Référencement**
 
 Dans le cadre de la création du site web d'administration de serveur FiveM, un point crucial concerne l'optimisation pour les moteurs de recherche (SEO/référencement).
