@@ -26,8 +26,13 @@
 5. **Contraintes techniques**
    1. *Architecture globale*
    2. *Sécurité*
+   3. *Eco-resposabilité*
+   4. *Accessibilité*
 6. **SEO & Référencement**
-7. **Planning & suivi du projet**
+7. **RGPD/Conditions d'utilisation**
+8. **Planning & suivi du projet**
+   1. *Planning*
+   2. *Groupe de trvail*
 
 ## **1. Présentation générale du projet**
 
@@ -85,8 +90,6 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 ##### En tant qu'utilisateur souhaitant s'inscrire,
 
 - Je veux remplir un formulaire d'inscription afin de créer un compte et accéder à un espace dédié.
-
-- En tant qu'utilisateur authentifié,
 
 - Je veux pouvoir me connecter à mon compte pour accéder aux serveurs auxquels j'ai droit.
 
@@ -221,6 +224,19 @@ Et un accent sur l'accessibilité sera fait.
 
 Nous mettons tout à disposition pour garantir la sécurité et l'intégrité de nos données. Ce site, développé en PHP, inclura des mécanismes de gestion robustes pour l’administration de serveurs FiveM via une interface complete. Il comprendra des fonctionnalités telles que la gestion des utilisateurs, la surveillance des performances du serveur, ainsi que la gestion des ressources et des configurations. Un accent particulier sera mis sur la sécurité, avec des protocoles de cryptage pour les données sensibles, des mécanismes de vérification des accès et un système de journalisation pour toute action effectuée. L’objectif est d’assurer un contrôle total et sécurisé de l'administration du serveur tout en garantissant une performance optimale et une interface utilisateur intuitive.
 
+<!-- modifier plus technique -->
+
+### 5.3 **Eco-resposabilité**
+
+Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures seront mises en place :
+
+Optimisation des performances : Réduction des requêtes serveur et optimisation du code pour limiter la consommation énergétique.
+Hébergement vert : Utilisation d’un hébergement écoresponsable, fonctionnant avec des énergies renouvelables.
+Compression des ressources : Minimisation et compression des fichiers CSS, JavaScript et images pour réduire la bande passante utilisée.
+Dark mode par défaut : Réduction de la consommation d'énergie sur les écrans OLED et AMOLED.
+Durabilité du développement : Adoption de bonnes pratiques de développement pour assurer la maintenance et l'évolution du projet sans surconsommation de ressources.
+Ces actions visent à améliorer l’impact environnemental du projet tout en garantissant une expérience utilisateur fluide et performante.
+
 ## **6. SEO & Référencement**
 
 Dans le cadre de la création du site web d'administration de serveur FiveM, un point crucial concerne l'optimisation pour les moteurs de recherche (SEO/référencement).
@@ -233,7 +249,10 @@ De plus, une architecture claire du site contribuera à la bonne indexation par 
 
 Enfin, l’optimisation des performances du site, notamment par la réduction des temps de chargement grâce à l'optimisation des images, du code CSS/JavaScript et la mise en cache, permettra d'améliorer l'expérience utilisateur tout en favorisant un meilleur référencement.
 
+## **7. RGPD/Conditions d'utilisation**
 
-## **7. Planning & suivi du projet**
+fxGuard accorde une importance primordiale à la protection des données des utilisateurs et s’engage à respecter le Règlement général sur la protection des données (RGPD). De plus, toute inscription sur la plateforme implique l’acceptation des conditions d’utilisation, qui garantissent la sécurité des informations personnelles et interdisent la diffusion de contenus illégaux ou offensants. Les données collectées ne seront ni partagées avec des tiers sans le consentement explicite de l’utilisateur, ni exploitées à des fins marketing ou commerciales.
+
+## **8. Planning & suivi du projet**
 
 *En cours...*
