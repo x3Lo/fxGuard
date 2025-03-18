@@ -230,11 +230,12 @@ Nous mettons tout à disposition pour garantir la sécurité et l'intégrité de
 
 Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures seront mises en place :
 
-Optimisation des performances : Réduction des requêtes serveur et optimisation du code pour limiter la consommation énergétique.
-Hébergement vert : Utilisation d’un hébergement écoresponsable, fonctionnant avec des énergies renouvelables.
-Compression des ressources : Minimisation et compression des fichiers CSS, JavaScript et images pour réduire la bande passante utilisée.
-Dark mode par défaut : Réduction de la consommation d'énergie sur les écrans OLED et AMOLED.
-Durabilité du développement : Adoption de bonnes pratiques de développement pour assurer la maintenance et l'évolution du projet sans surconsommation de ressources.
+- Optimisation des performances : Réduction des requêtes serveur et optimisation du code pour limiter la consommation énergétique.
+- Hébergement vert : Utilisation d’un hébergement écoresponsable, fonctionnant avec des énergies renouvelables.
+- Compression des ressources : Minimisation et compression des fichiers CSS, JavaScript et images pour réduire la bande passante utilisée.
+- Dark mode par défaut : Réduction de la consommation d'énergie sur les écrans OLED et AMOLED.
+- Durabilité du développement : Adoption de bonnes pratiques de développement pour assurer la maintenance et l'évolution du projet sans surconsommation de ressources.
+  
 Ces actions visent à améliorer l’impact environnemental du projet tout en garantissant une expérience utilisateur fluide et performante.
 
 ## **6. SEO & Référencement**
