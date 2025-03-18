@@ -222,9 +222,20 @@ Et un accent sur l'accessibilité sera fait.
 
 ### 5.2 **Sécurité**
 
-Nous mettons tout à disposition pour garantir la sécurité et l'intégrité de nos données. Ce site, développé en PHP, inclura des mécanismes de gestion robustes pour l’administration de serveurs FiveM via une interface complete. Il comprendra des fonctionnalités telles que la gestion des utilisateurs, la surveillance des performances du serveur, ainsi que la gestion des ressources et des configurations. Un accent particulier sera mis sur la sécurité, avec des protocoles de cryptage pour les données sensibles, des mécanismes de vérification des accès et un système de journalisation pour toute action effectuée. L’objectif est d’assurer un contrôle total et sécurisé de l'administration du serveur tout en garantissant une performance optimale et une interface utilisateur intuitive.
+Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes directrices suivantes seront appliquées tant au niveau du front-end que du back-end :
 
-<!-- modifier plus technique -->
+- **Privilèges minimaux pour l'accès à la base de données** : Un utilisateur avec les privilèges minimaux nécessaires pour effectuer des requêtes sur la base de données sera créé, afin de limiter l'accès et les actions possibles.
+  
+- **Validation et assainissement des données** : Des mécanismes de validation et d’assainissement des données seront utilisés pour toutes les données reçues des utilisateurs via les formulaires de contact, d’enregistrement et d’authentification. Ces données seront systématiquement nettoyées avant toute utilisation dans des requêtes à la base de données pour prévenir les attaques par injection SQL.
+  
+- **Protection contre les attaques XSS** : Des fonctions sécuritaires, telles que `htmlentities()` et `html_entity_decode()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
+
+- **Utilisation de PDO pour les interactions avec la base de données** : L’interface PDO (PHP Data Objects) sera utilisée pour interagir avec la base de données. Pour chaque requête, des instructions préparées seront systématiquement privilégiées, afin d’assurer une sécurité maximale contre les injections SQL. De plus, les préparations émulées seront désactivées pour forcer l’utilisation de vrais préparations de requêtes.
+
+- **Validation stricte des entrées utilisateurs** : Toutes les entrées utilisateurs seront également soumises à une validation stricte (types, formats, etc.) pour s'assurer qu'elles respectent les critères attendus avant d’être traitées ou stockées.
+
+- **Chiffrement des données sensibles** : Le chiffrement des données sensibles, notamment des mots de passe, sera réalisé à l’aide de fonctions de hachage sécurisées pour garantir leur sécurité en cas de fuite de données.
+
 
 ### 5.3 **Eco-resposabilité**
 
