@@ -192,7 +192,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ## **3. Ressources**
 
-- API : https://gta.vercel.app/
+- API REST : https://gta.vercel.app/
 
 ## **4. Ergonomie et graphisme**
 
@@ -213,7 +213,7 @@ Et un accent sur l'accessibilité sera fait.
 
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
-  - Bibliothèques et API
+  - Bibliothèques et API REST
   - Outils : SASS
 - **Backend** :
   - Architecture : Model View Controller
