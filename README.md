@@ -15,9 +15,10 @@
    3. *Cible(s) du site / de l'application*
 2. **Aspects fonctionnels**
    1. *Description fonctionnelle*
-   2. *Arborescence du site / navigation*
-   3. *Restriction d'accès*
-   4. *Layout ou wireframe des pages*
+   2. *User strory*
+   3. *Arborescence du site / navigation*
+   4. *Restriction d'accès*
+   5. *Layout ou wireframe des pages*
 3. **Ressources**
 4. **Ergonomie et graphisme**
    1. *Ergonomie, design & charte graphique*
@@ -69,7 +70,88 @@ En tant qu’administrateur authentifié, nous avons accès à la liste de tous 
 
 Nous pouvons également ajouter ou retirer des droits d’accès aux panels des serveurs.
 
-### 2.2 **Arborescence du site / navigation**
+### 2.2 **User story**
+
+#### Scénario 1 : Accueil pour utilisateur non authentifié
+
+##### En tant qu'utilisateur non authentifié,
+
+- Je veux voir une page de promotion de l'interface mettant en avant toutes les fonctionnalités disponibles.
+
+- Je veux avoir la possibilité de m'inscrire ou de me connecter à l'interface via une section dédiée.
+
+#### Scénario 2 : Inscription et authentification
+
+##### En tant qu'utilisateur souhaitant s'inscrire,
+
+- Je veux remplir un formulaire d'inscription afin de créer un compte et accéder à un espace dédié.
+
+- En tant qu'utilisateur authentifié,
+
+- Je veux pouvoir me connecter à mon compte pour accéder aux serveurs auxquels j'ai droit.
+
+#### Scénario 3 : Sélection d'un serveur
+
+##### En tant qu'utilisateur authentifié,
+
+- Je veux voir une liste des serveurs auxquels j'ai accès.
+
+- Je veux pouvoir choisir un serveur pour l'administrer.
+
+- Une fois mon serveur sélectionné, je veux accéder à un menu d'administration proposant différentes fonctionnalités.
+
+#### Scénario 4 : Accès au dashboard du serveur
+
+##### En tant qu'utilisateur administrateur d'un serveur,
+
+- Je veux voir un dashboard affichant les informations principales du serveur.
+
+- Je veux voir le nombre de joueurs connectés avec leur ID en jeu, leur pseudo ainsi que le nom et prénom de leurs personnages.
+
+#### Scénario 5 : Gestion des menus accessibles aux joueurs
+
+##### En tant qu'utilisateur administrateur d'un serveur,
+
+- Je veux pouvoir modifier les menus disponibles en jeu.
+
+- Par exemple, je veux pouvoir ajouter ou retirer des véhicules mis en vente dans le concessionnaire.
+
+- Je veux voir toutes les données d'un véhicule, y compris : type, nom, images, vitesse maximale et marque.
+
+#### Scénario 6 : Accès à la console et aux logs
+
+##### En tant qu'utilisateur administrateur d'un serveur,
+
+- Je veux avoir accès à la console du serveur pour exécuter des commandes.
+
+- Je veux pouvoir consulter les logs détaillés de toutes les interactions entre l'interface et le serveur.
+
+#### Scénario 7 : Gestion des accès
+
+##### En tant qu'utilisateur administrateur d'un serveur,
+
+- Je veux pouvoir accorder l'accès à d'autres personnes pour administrer le serveur avec moi.
+
+- Je veux pouvoir gérer les autorisations et les rôles des utilisateurs sur le panel.
+
+#### Scénario 8 : Administration globale pour les administrateurs de la solution
+
+##### En tant qu'administrateur de la solution,
+
+- Je veux voir la liste de tous les serveurs utilisant notre interface.
+
+- Je veux voir la liste de tous les comptes créés sur la plateforme.
+
+- Je veux pouvoir sélectionner un serveur et accéder à son menu d'administration.
+
+- Je veux avoir des droits supplémentaires me permettant de modifier certains éléments non modifiables par un utilisateur classique.
+
+- Je veux pouvoir accéder à des champs en lecture seule pour les utilisateurs classiques.
+
+- Je veux pouvoir ajouter ou retirer des droits d'accès aux panels des serveurs.
+
+
+### 2.3 **Arborescence du site / navigation**
 
    *Front office* :
 
@@ -80,7 +162,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
   ![backOffice](./images/offices/backOffice.png)
 
 
-### 2.3 **Restriction d'accès**
+### 2.4 **Restriction d'accès**
 
 | Pages          | Non-Authentifié | Authentifié | Administrateur |
 | -------------- | --------------- | ----------- | -------------- |
@@ -94,7 +176,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 | User List      |                 |             | X              |
 
 
-### 2.4 **Layout ou wireframe des pages**
+### 2.5 **Layout ou wireframe des pages**
 
 *Structure de la page d'Accueilp :*                                           
 
