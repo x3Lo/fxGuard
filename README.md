@@ -269,4 +269,18 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ## **8. Planning & suivi du projet**
 
-*En cours...*
+### 8.1 **Planning**
+
+| Activité                                          | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
+| ------------------------------------------------- | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
+| **Cahier des charges**                            | 🔵          | 🔵          | 🔵          | 🔵          | 🔵       |         |         |         |          |          |
+| **Conception et mise en page**                    |            |            |            |            | 🟡       | 🟡       |         |         |          |          |
+| **Conception et élaboration de bases de données** |            |            |            |            |         | 🟢       | 🟢       |         |          |          |
+| **Création d'un backend**                         |            |            |            |            |         |         | 🟠       | 🟠       |          |          |
+| **Création de frontend**                          |            |            |            |            |         |         |         |         | 🔴        | 🔴        |
+
+🔵 = Cahier des charges  
+🟡 = Conception et mise en page  
+🟢 = Bases de données  
+🟠 = Backend  
+🔴 = Frontend  
