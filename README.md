@@ -245,7 +245,7 @@ Et un accent sur l'accessibilité sera fait.
 Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes directrices suivantes seront appliquées tant au niveau du front-end que du back-end :
 
   
-- **Validation et assainissement des données** : Des mécanismes de validation et d’assainissement des données seront utilisés pour toutes les données reçues des utilisateurs via les formulaires de contact, d’enregistrement et d’authentification. Ces données seront systématiquement nettoyées avant toute utilisation dans des requêtes à la base de données pour prévenir les attaques par injection SQL.
+- **Protection contre les attaques par injection SQL** : Pour sécuriser l'application, des requêtes préparées et paramétrées seront utilisées afin de séparer les données utilisateurs du code SQL. Cela empêche toute manipulation malveillante des requêtes. Les entrées utilisateurs seront systématiquement échappées pour éviter l'exécution de code SQL non prévu.
   
 - **Protection contre les attaques XSS** : Des fonctions sécuritaires, telles que `htmlspecialchars()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
 
