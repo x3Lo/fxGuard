@@ -176,11 +176,11 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
    *Front office* :
 
-  <!-- ![frontOffice](./images/offices/frontOffice.png) -->
+  [fontOffice](./images/offices/frontOffice.png)
 
    *Back office* :
 
-  <!-- ![backOffice](./images/offices/backOffice.png) -->
+  [backOffice](./images/offices/backOffice.png)
 
 
 ### 2.4 **Restriction d'accès**
