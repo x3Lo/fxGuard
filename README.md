@@ -31,20 +31,24 @@
 6. **SEO & Référencement**
 7. **RGPD/Conditions d'utilisation**
 8. **Planning & suivi du projet**
-   1. *Planning*
-   2. *Groupe de trvail*
+   1. *Planning de la réalisation*
+   2. *Planning de validation*
+   3. *Groupe de trvail*
 
 ## **1. Présentation générale du projet**
 
 ### 1.1 **Contexte**
 
+A la demande d'un client, j'ai du trouvé une solution web pour répondre à sont besoin de modifier du contenu dans du code mais dans un espace no-code.
+
 Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent en jeu d’un serveur FiveM, le tout dans un espace no-code.  
 Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalité et de contenu, comme l’ajout de voiture, chat de proximité, etc.
 FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en donnant le prix, la vitesse, une photo, etc. du véhicule directement présent dans le jeu.
 
-### 1.2 **Objectif(s) qualitatif(s) et/ou quantitatif(s) du site**
+### 1.2 **Objectif(s) qualitatif(s)**
 
-- Créer une interface graphique permettant aux administrateurs d’interagir avec le contenu présent en jeu.
+- Créer une interface lisible et facile à comprendre.
+- Avoir un site responsive pour s'adapter à tout type de support
 
 ### 1.3 **Cible(s) du site / de l'application**
 
@@ -57,9 +61,50 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 ### 2.1 **Description fonctionnelle**
 
-Lorsque l’utilisateur n’est pas authentifié, une page de promotion de l'interface avec toutes les fonctionnalités proposées sera affichée. Une partie proposera de s’inscrire ou de se connecter.
+1. Inscription
+   - Un formulaire d'inscription demandant : pseudo, e-mail et mot de passe.
 
-Si l’utilisateur souhaite s’inscrire, il devra renseigner un formulaire pour récupérer ses informations et avoir un espace dédié.
+2. Connexion
+   - Formulaire de connexion demandant l'identifiant et le mot de passe.
+
+3. Deconnexion
+   - Bouton de deconnexion
+
+4. Profil utilisateur
+   - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
+
+5. Rubrique de promotion
+   - Dans la page d'accueil, un paragraphe de promotion donnant les avantages à utiliser notre solution.
+
+6. Contact
+   - Un formulaire de contact sera mis à disposition pour tous les utilisateurs.
+
+7. Filter la recherche
+   - Lors d'ajout de vehicule à un menu un bandeau de filtre avec une zone de recherche seras mis à disposition de l'utilisateur.
+
+8. Ajouter des vehicules
+   - Ajouter des vehicules au menu.
+
+9.  Retirer des vehicules
+   - Retirer des vehicules au menu.
+
+10. Créer plusieurs menus
+    - Possiblité de créer plusieurs sans écraser le précédent.
+
+11. Supprimer un menu
+    - Possibilité de supprimer un/des menus.
+
+12. Modifier un menu
+    - Possibilité de modifier un menu déja créer.
+
+13. List des utilisateurs
+    - En tant qu'administrateur j'ai accés à la liste de tout les utilisateurs inscrit
+  
+14. Promouvoir un utilisateur
+    - Je peux promouvoir un utilisateur au rang d'administrateur
+
+
+<!-- Si l’utilisateur souhaite s’inscrire, il devra renseigner un formulaire pour récupérer ses informations et avoir un espace dédié.
 
 Une fois connecté, l'utilisateur aura accès à une liste de serveurs utilisant mon interface web et auxquels il a accès. Il devra alors choisir le serveur qu'il souhaite administrer. Une fois son choix fait, il accèdera à un menu proposant différentes fonctionnalités.
 
@@ -73,7 +118,7 @@ Grâce à ce menu, il pourra :
 
 En tant qu’administrateur authentifié, nous avons accès à la liste de tous les serveurs utilisant notre solution, ainsi qu'à tous les comptes créés. Une fois un serveur sélectionné, nous avons accès au même menu que les utilisateurs authentifiés, à la différence que nous pouvons modifier certains éléments qui ne pouuront pas être re modifié par l'utilisateur authentifié, ainsi que des champs auxquels il n'a accès qu'en lecture.
 
-Nous pouvons également ajouter ou retirer des droits d’accès aux panels des serveurs.
+Nous pouvons également ajouter ou retirer des droits d’accès aux panels des serveurs. -->
 
 ### 2.2 **User story**
 
@@ -91,29 +136,21 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 - Je veux remplir un formulaire d'inscription afin de créer un compte et accéder à un espace dédié.
 
-- Je veux pouvoir me connecter à mon compte pour accéder aux serveurs auxquels j'ai droit.
+- Je veux pouvoir me connecter à mon compte pour accéder aux menus aux quels j'ai droit.
 
 #### Scénario 3 : Sélection d'un serveur
 
 ##### En tant qu'utilisateur authentifié,
 
-- Je veux voir une liste des serveurs auxquels j'ai accès.
+- Je veux voir une liste des menus personnalisés auxquels j'ai accès.
 
-- Je veux pouvoir choisir un serveur pour l'administrer.
+- Je veux avoir accès à des menus déjà faits.
 
-- Une fois mon serveur sélectionné, je veux accéder à un menu d'administration proposant différentes fonctionnalités.
+- Je veux pour voir modifier les menus déjà préfaits.
 
-#### Scénario 4 : Accès au dashboard du serveur
+#### Scénario 4 : Gestion des menus accessibles aux joueurs
 
-##### En tant qu'utilisateur administrateur d'un serveur,
-
-- Je veux voir un dashboard affichant les informations principales du serveur.
-
-- Je veux voir le nombre de joueurs connectés avec leur ID en jeu, leur pseudo ainsi que le nom et prénom de leurs personnages.
-
-#### Scénario 5 : Gestion des menus accessibles aux joueurs
-
-##### En tant qu'utilisateur administrateur d'un serveur,
+##### En tant qu'utilisateur authentifié,
 
 - Je veux pouvoir modifier les menus disponibles en jeu.
 
@@ -121,37 +158,19 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 - Je veux voir toutes les données d'un véhicule, y compris : type, nom, images, vitesse maximale et marque.
 
-#### Scénario 6 : Accès à la console et aux logs
+#### Scénario 5 : Gestion des accès
 
-##### En tant qu'utilisateur administrateur d'un serveur,
+##### En tant qu'utilisateur authentifié,
 
-- Je veux avoir accès à la console du serveur pour exécuter des commandes.
+- Je veux pouvoir accorder l'accès à d'autres personnes pour modifier les menus avec moi.
 
-- Je veux pouvoir consulter les logs détaillés de toutes les interactions entre l'interface et le serveur.
-
-#### Scénario 7 : Gestion des accès
-
-##### En tant qu'utilisateur administrateur d'un serveur,
-
-- Je veux pouvoir accorder l'accès à d'autres personnes pour administrer le serveur avec moi.
-
-- Je veux pouvoir gérer les autorisations et les rôles des utilisateurs sur le panel.
-
-#### Scénario 8 : Administration globale pour les administrateurs de la solution
+#### Scénario 6 : Administration globale pour les administrateurs de la solution
 
 ##### En tant qu'administrateur de la solution,
 
-- Je veux voir la liste de tous les serveurs utilisant notre interface.
-
 - Je veux voir la liste de tous les comptes créés sur la plateforme.
-
-- Je veux pouvoir sélectionner un serveur et accéder à son menu d'administration.
-
-- Je veux avoir des droits supplémentaires me permettant de modifier certains éléments non modifiables par un utilisateur classique.
-
-- Je veux pouvoir accéder à des champs en lecture seule pour les utilisateurs classiques.
-
-- Je veux pouvoir ajouter ou retirer des droits d'accès aux panels des serveurs.
+- Je veux pouvoir créer des menus que les utilisateurs peuvent utilisé
+- Je veux pouvoir promouvoir un utilisateur en administrateur
 
 
 ### 2.3 **Arborescence du site / navigation**
@@ -167,21 +186,23 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 ### 2.4 **Restriction d'accès**
 
-| Pages          | Non-Authentifié | Authentifié | Administrateur |
-| -------------- | --------------- | ----------- | -------------- |
-| Home           | X               | X           | X              |
-| Login          | X               | X           | X              |
-| Register       | X               | X           | X              |
-| Contact        | X               | X           | X              |
-| Server Liste   |                 | X           | X              |
-| Server Setting |                 | X           | X              |
-| Profil         |                 | X           | X              |
-| User List      |                 |             | X              |
+| Pages        | Non-Authentifié | Authentifié | Administrateur |
+| ------------ | --------------- | ----------- | -------------- |
+| Home         | X               | X           | X              |
+| Login        | X               | X           | X              |
+| Register     | X               | X           | X              |
+| Contact      | X               | X           | X              |
+| Menu Liste   |                 | X           | X              |
+| Menu Setting |                 | X           | X              |
+| Profil       |                 | X           | X              |
+| Back Home    |                 |             | X              |
+| User List    |                 |             | X              |
+| Creat Menu   |                 |             | X              |
 
 
 ### 2.5 **Layout ou wireframe des pages**
 
-*Structure de la page d'Accueilp :*                                           
+*Structure de la page d'Accueil :*                                           
 
 ![wireframeDesktop](./images/wireframes/wireframeHome.png)
 
@@ -213,8 +234,8 @@ Et un accent sur l'accessibilité sera fait.
 
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
-  - Bibliothèques et API REST
-  - Outils : SASS
+  - API REST
+  - Préprocesseur : SASS
 - **Backend** :
   - Architecture : Model View Controller
   - Langage : PHP, SQL
@@ -224,13 +245,10 @@ Et un accent sur l'accessibilité sera fait.
 
 Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes directrices suivantes seront appliquées tant au niveau du front-end que du back-end :
 
-- **Privilèges minimaux pour l'accès à la base de données** : Un utilisateur avec les privilèges minimaux nécessaires pour effectuer des requêtes sur la base de données sera créé, afin de limiter l'accès et les actions possibles.
   
 - **Validation et assainissement des données** : Des mécanismes de validation et d’assainissement des données seront utilisés pour toutes les données reçues des utilisateurs via les formulaires de contact, d’enregistrement et d’authentification. Ces données seront systématiquement nettoyées avant toute utilisation dans des requêtes à la base de données pour prévenir les attaques par injection SQL.
   
-- **Protection contre les attaques XSS** : Des fonctions sécuritaires, telles que `htmlentities()` et `html_entity_decode()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
-
-- **Utilisation de PDO pour les interactions avec la base de données** : L’interface PDO (PHP Data Objects) sera utilisée pour interagir avec la base de données. Pour chaque requête, des instructions préparées seront systématiquement privilégiées, afin d’assurer une sécurité maximale contre les injections SQL. De plus, les préparations émulées seront désactivées pour forcer l’utilisation de vrais préparations de requêtes.
+- **Protection contre les attaques XSS** : Des fonctions sécuritaires, telle que `htmlspecialchars()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
 
 - **Validation stricte des entrées utilisateurs** : Toutes les entrées utilisateurs seront également soumises à une validation stricte (types, formats, etc.) pour s'assurer qu'elles respectent les critères attendus avant d’être traitées ou stockées.
 
@@ -244,8 +262,6 @@ Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures se
 - **Optimisation des performances** : Réduction des requêtes serveur et optimisation du code pour limiter la consommation énergétique.
 - **Hébergement vert : Utilisation** d’un hébergement écoresponsable, fonctionnant avec des énergies renouvelables.
 - **Compression des ressources** : Minimisation et compression des fichiers CSS, JavaScript et images pour réduire la bande passante utilisée.
-- **Dark mode par défaut** : Réduction de la consommation d'énergie sur les écrans OLED et AMOLED.
-- **Durabilité du développement** : Adoption de bonnes pratiques de développement pour assurer la maintenance et l'évolution du projet sans surconsommation de ressources.
   
 Ces actions visent à améliorer l’impact environnemental du projet tout en garantissant une expérience utilisateur fluide et performante.
 
@@ -255,10 +271,8 @@ L'accessibilité est une priorité afin de garantir une expérience utilisateur 
 - **Respect des normes WCAG** : Le site respectera les directives du W3C en matière d'accessibilité numérique (WCAG 2.1, niveau AA minimum).
 - **Navigation au clavier** : Toutes les fonctionnalités seront accessibles sans souris, en utilisant uniquement le clavier (tabulation, raccourcis).
 - **Contraste et lisibilité** : Les couleurs et typographies seront choisies pour assurer un bon contraste et une lecture aisée, même pour les personnes malvoyantes.
-- **Compatibilité avec les lecteurs d'écran** : L’ensemble du site sera conçu pour être compatible avec les technologies d’assistance, telles que les lecteurs d’écran (ex. NVDA, JAWS, VoiceOver).
 - **Textes alternatifs pour les images** : Toutes les images informatives incluront des descriptions textuelles (attributs alt) pour garantir leur compréhension par les utilisateurs malvoyants.
-- **Adaptabilité aux différentes tailles d’écran** : L'interface sera entièrement responsive et optimisée pour différents types d’écrans, y compris mobiles et tablettes.
-- **Modes d’affichage alternatifs** : Un mode haute visibilité et un mode daltonien seront proposés pour améliorer l’expérience des utilisateurs ayant des déficiences visuelles.
+- **Adaptabilité aux différentes tailles d’écran** : L'interface sera entièrement responsive et optimisée pour différents types d’écrans, y compris mobiles et tablettes (Mobile First).
 
 Ces actions assureront une meilleure accessibilité et permettront au plus grand nombre d’utiliser l’interface sans obstacles.
 
@@ -282,21 +296,22 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ### 8.1 **Planning**
 
-| Activité                                          | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
-| ------------------------------------------------- | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
-| **Cahier des charges**                            | 🔵          | 🔵          | 🔵          | 🔵          | 🔵       |         |         |         |          |          |
-| **Conception et mise en page**                    |            |            |            |            | 🟡       | 🟡       |         |         |          |          |
-| **Conception et élaboration de bases de données** |            |            |            |            |         | 🟢       | 🟢       |         |          |          |
-| **Création d'un backend**                         |            |            |            |            |         |         | 🟠       | 🟠       |          |          |
-| **Création de frontend**                          |            |            |            |            |         |         |         |         | 🔴        | 🔴        |
+| Activité                                                                                            | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
+| --------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
+| **Cahier des charges** -> *Chef de projet*                                                          | 🔵          | 🔵          | 🔵          | 🔵          | ⚪       |         |         |         |          |          |
+| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                      |            |            |            |            | 🟡       | ⚪       |         |         |          |          |
+| **Conception et élaboration de bases de données**  -> *Développeur Base de données*                 |            |            |            |            |         | 🟢       | ⚪       |         |          |          |
+| **Création d'un backend** -> *Développeur Backend & Responsable Qualité et Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | ⚪       |          |          |
+| **Création de frontend** -> *Développeur Frontend & Responsable Qualité & Tests & Référenceur SEO*  |            |            |            |            |         |         |         |         | 🔴        | ⚪        |
 
 🔵 = Cahier des charges  
 🟡 = Conception et mise en page  
 🟢 = Bases de données  
 🟠 = Backend  
 🔴 = Frontend
+⚪ = Validation avec le client
 
-### 8.2 ** Groupe de travail**
+### 8.2 **Groupe de travail**
 
 | **Rôle**                        | **Nom**           | **Responsabilités**                                                                                                                    |
 | ------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
