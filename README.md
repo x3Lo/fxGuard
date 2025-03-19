@@ -235,7 +235,7 @@ Et un accent sur l'accessibilité sera fait.
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
   - API REST
-  - Préprocesseur : SASS
+  - Préprocesseur CSS : SASS
 - **Backend** :
   - Architecture : Model View Controller
   - Langage : PHP, SQL
