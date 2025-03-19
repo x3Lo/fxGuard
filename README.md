@@ -88,7 +88,7 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
     - Retirer des véhicules au menu.
 
 10. Créer plusieurs menus
-    - Possibilité de créer plusieurs sans écraser le précédent.
+    - Possibilité d'en créer plusieurs sans écraser le précédent.
 
 11. Supprimer un menu
     - Possibilité de supprimer un/des menus.
