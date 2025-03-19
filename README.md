@@ -11,11 +11,11 @@
 
 1. **Présentation générale du projet**
    1. *Contexte*
-   2. *Objectif(s) qualitatif(s) et/ou quantitatif(s) du site*
+   2. *Objectifs qualitatifs*
    3. *Cible(s) du site / de l'application*
 2. **Aspects fonctionnels**
    1. *Description fonctionnelle*
-   2. *User strory*
+   2. *User story*
    3. *Arborescence du site / navigation*
    4. *Restriction d'accès*
    5. *Layout ou wireframe des pages*
@@ -26,23 +26,22 @@
 5. **Contraintes techniques**
    1. *Architecture globale*
    2. *Sécurité*
-   3. *Eco-resposabilité*
+   3. *Eco-responsabilité*
    4. *Accessibilité*
 6. **SEO & Référencement**
 7. **RGPD/Conditions d'utilisation**
 8. **Planning & suivi du projet**
-   1. *Planning de la réalisation*
-   2. *Planning de validation*
-   3. *Groupe de trvail*
+   1. *Planning*
+   2. *Groupe de travail*
 
 ## **1. Présentation générale du projet**
 
 ### 1.1 **Contexte**
 
-A la demande d'un client, j'ai du trouvé une solution web pour répondre à sont besoin de modifier du contenu dans du code mais dans un espace no-code.
+À la demande d'un client, j'ai dû trouver une solution web pour répondre à son besoin de modifier du contenu dans du code mais dans un espace no-code.
 
 Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent en jeu d’un serveur FiveM, le tout dans un espace no-code.  
-Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalité et de contenu, comme l’ajout de voiture, chat de proximité, etc.
+Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalités et de contenu, comme l’ajout de voitures, chat de proximité, etc.
 FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en donnant le prix, la vitesse, une photo, etc. du véhicule directement présent dans le jeu.
 
 ### 1.2 **Objectif(s) qualitatif(s)**
@@ -67,8 +66,8 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 2. Connexion
    - Formulaire de connexion demandant l'identifiant et le mot de passe.
 
-3. Deconnexion
-   - Bouton de deconnexion
+3. Déconnexion
+   - Bouton de déconnexion
 
 4. Profil utilisateur
    - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
@@ -79,29 +78,29 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 6. Contact
    - Un formulaire de contact sera mis à disposition pour tous les utilisateurs.
 
-7. Filter la recherche
-   - Lors d'ajout de vehicule à un menu un bandeau de filtre avec une zone de recherche seras mis à disposition de l'utilisateur.
+7. Filtrer la recherche
+   - Lors de l'ajout de véhicule à un menu un bandeau de filtre avec une zone de recherche sera mis à disposition de l'utilisateur.
 
-8. Ajouter des vehicules
-   - Ajouter des vehicules au menu.
+8. Ajouter des véhicules
+   - Ajouter des véhicules au menu.
 
-9.  Retirer des vehicules
-   - Retirer des vehicules au menu.
+9.  Retirer des véehicules
+   - Retirer des véhicules au menu.
 
 10. Créer plusieurs menus
-    - Possiblité de créer plusieurs sans écraser le précédent.
+    - Possibilité de créer plusieurs sans écraser le précédent.
 
 11. Supprimer un menu
     - Possibilité de supprimer un/des menus.
 
 12. Modifier un menu
-    - Possibilité de modifier un menu déja créer.
+    - Possibilité de modifier un menu déja créé.
 
-13. List des utilisateurs
-    - En tant qu'administrateur j'ai accés à la liste de tout les utilisateurs inscrit
+13. Liste des utilisateurs
+    - En tant qu'administrateur j'ai accès à la liste de tous les utilisateurs inscrits.
   
 14. Promouvoir un utilisateur
-    - Je peux promouvoir un utilisateur au rang d'administrateur
+    - Je peux promouvoir un utilisateur au rang d'administrateur.
 
 
 <!-- Si l’utilisateur souhaite s’inscrire, il devra renseigner un formulaire pour récupérer ses informations et avoir un espace dédié.
@@ -136,7 +135,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 - Je veux remplir un formulaire d'inscription afin de créer un compte et accéder à un espace dédié.
 
-- Je veux pouvoir me connecter à mon compte pour accéder aux menus aux quels j'ai droit.
+- Je veux pouvoir me connecter à mon compte pour accéder aux menus auxquels j'ai droit.
 
 #### Scénario 3 : Sélection d'un serveur
 
@@ -146,7 +145,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 
 - Je veux avoir accès à des menus déjà faits.
 
-- Je veux pour voir modifier les menus déjà préfaits.
+- Je veux pourvoir modifier les menus déjà préfaits.
 
 #### Scénario 4 : Gestion des menus accessibles aux joueurs
 
@@ -169,19 +168,19 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 ##### En tant qu'administrateur de la solution,
 
 - Je veux voir la liste de tous les comptes créés sur la plateforme.
-- Je veux pouvoir créer des menus que les utilisateurs peuvent utilisé
-- Je veux pouvoir promouvoir un utilisateur en administrateur
+- Je veux pouvoir créer des menus que les utilisateurs peuvent utiliser.
+- Je veux pouvoir promouvoir un utilisateur en administrateur.
 
 
 ### 2.3 **Arborescence du site / navigation**
 
    *Front office* :
 
-  ![frontOffice](./images/offices/frontOffice.png)
+  <!-- ![frontOffice](./images/offices/frontOffice.png) -->
 
    *Back office* :
 
-  ![backOffice](./images/offices/backOffice.png)
+  <!-- ![backOffice](./images/offices/backOffice.png) -->
 
 
 ### 2.4 **Restriction d'accès**
@@ -248,7 +247,7 @@ Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes dire
   
 - **Validation et assainissement des données** : Des mécanismes de validation et d’assainissement des données seront utilisés pour toutes les données reçues des utilisateurs via les formulaires de contact, d’enregistrement et d’authentification. Ces données seront systématiquement nettoyées avant toute utilisation dans des requêtes à la base de données pour prévenir les attaques par injection SQL.
   
-- **Protection contre les attaques XSS** : Des fonctions sécuritaires, telle que `htmlspecialchars()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
+- **Protection contre les attaques XSS** : Des fonctions sécuritaires, telles que `htmlspecialchars()`, seront appliquées afin de convertir les caractères spéciaux en entités HTML et ainsi éviter les attaques de type Cross-Site Scripting (XSS) en désinfectant les entrées de l’utilisateur.
 
 - **Validation stricte des entrées utilisateurs** : Toutes les entrées utilisateurs seront également soumises à une validation stricte (types, formats, etc.) pour s'assurer qu'elles respectent les critères attendus avant d’être traitées ou stockées.
 
