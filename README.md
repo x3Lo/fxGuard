@@ -191,7 +191,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 | Login        | X               | X           | X              |
 | Register     | X               | X           | X              |
 | Contact      | X               | X           | X              |
-| Menu Liste   |                 | X           | X              |
+| Menu List   |                 | X           | X              |
 | Menu Setting |                 | X           | X              |
 | Profil       |                 | X           | X              |
 | Back Home    |                 |             | X              |
@@ -204,11 +204,6 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 *Structure de la page d'Accueil :*                                           
 
 ![wireframeDesktop](./images/wireframes/wireframeHome.png)
-
-*Structure de la page Server Setting :*
-
-![wireframeMobile](./images/wireframes/wireframeServeurSetting.png)
-
 
 ## **3. Ressources**
 
@@ -225,7 +220,6 @@ La police utilisée sera une police neutre, la **Roboto**.
 ### 4.2 **Ergonomie**
 
 Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant.
-Et un accent sur l'accessibilité sera fait.
 
 ## **5. Contraintes techniques**
 
