@@ -307,7 +307,7 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 🟡 = Conception et mise en page  
 🟢 = Bases de données  
 🟠 = Backend  
-🔴 = Frontend
+🔴 = Frontend  
 ⚪ = Validation avec le client
 
 ### 8.2 **Groupe de travail**
