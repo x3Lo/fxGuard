@@ -235,9 +235,11 @@ Le site sera conçu pour être le plus intuitif possible, avec des noms de menus
   - Base de données : MySQL
 - **Base de données** :
   
-   - Le projet repose sur MySQL, une base de données relationnelle qui assure la gestion des utilisateurs, permissions et contenus du site.
+   - Le projet repose sur MySQL, une base de données relationnelle, garantissant une structure stable et relationnelle pour la gestion des utilisateurs, permissions et contenus du site.
  
-   - D'autres approches comme MongoDB (https://www.mongodb.com/) (base NoSQL orientée documents) existent et pourraient être envisagées dans certains cas d’usage, notamment pour gérer des données non structurées ou évolutives. Toutefois, MySQL est privilégié ici pour assurer une structure robuste et relationnelle.
+   - Toutefois, certaines solutions NoSQL, comme MongoDB, permettent une gestion plus souple des préférences utilisateur et des contenus accessibles. Dans un contexte où l’accessibilité est primordiale, une base NoSQL pourrait être utilisée pour stocker des configurations personnalisées (ex. tailles de police, contrastes, version simplifiée du contenu).
+
+   - Pour le moment, MySQL est privilégié, mais une architecture hybride pourrait être envisagée si des besoins d’accessibilité avancés émergent (ex. personnalisation dynamique du contenu en fonction des besoins spécifiques des utilisateurs).
 
 ### 5.2 **Sécurité**
 
