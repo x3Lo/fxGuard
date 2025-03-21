@@ -311,13 +311,15 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ### 8.2 **Planning**
 
-| Activité                                                                                         | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars   S2 | Mars   S3 | Mars S4 | Avril   S1 | Avril S2 |
-| ------------------------------------------------------------------------------------------------ | ---------- | ---------- | ---------- | ---------- | ------- | --------- | --------- | ------- | ---------- | -------- |
-| **Cahier des charges** -> *Chef de projet*                                                       | 🔵          | 🔵          | 🔵          | 🔵          | 🔵✅      |           |           |         |            |          |
-| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                   |            |            |            |            | 🟡       | 🟡✅​       |           |         |            |          |
-| **Conception et élaboration de bases de données**  -> *Développeur Base de données*              |            |            |            |            |         | 🟣​        | 🟣​✅​      |         |            |          |
-| **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |         |           | 🟠         | 🟠​      | 🟠✅         |          |
-| **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |         |           |           |         | 🔴          | 🔴✅​      |
+Voici le tableau corrigé avec les coches alignées :  
+
+| Activité                                                                                         | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1  | Mars S2  | Mars S3  | Mars S4  | Avril S1  | Avril S2  |
+|-------------------------------------------------------------------------------------------------|------------|------------|------------|------------|----------|----------|----------|----------|-----------|-----------|
+| **Cahier des charges** -> *Chef de projet*                                                       | 🔵         | 🔵         | 🔵         | 🔵         | 🔵 ✅    |          |          |          |           |           |
+| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                   |            |            |            |            | 🟡       | 🟡 ✅    |          |          |           |           |
+| **Conception et élaboration de bases de données** -> *Développeur Base de données*              |            |            |            |            |          | 🟣       | 🟣 ✅    |          |           |           |
+| **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |          |          | 🟠       | 🟠 ✅    |           |           |
+| **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |          |          |          |          | 🔴       | 🔴 ✅     |
 
 🔵 = Cahier des charges  
 🟡 = Conception et mise en page  
