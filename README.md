@@ -54,7 +54,7 @@ FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en don
 Le site Web a pour vocation à être utilisé par une tranche de public assez vaste :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
 - Dans un premier temps, mon projet a pour objectif d’être utilisé dans les pays francophones.
-- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, et je vais développer une version mobile complète qui me servira d'atout pour rester compétitif face aux solutions déjà existantes.
+- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
 
 ## **2. Aspects fonctionnels**
 
