@@ -193,7 +193,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 | Contact      | X               | X           | X              |
 | Menu List    |                 | X           | X              |
 | Menu Setting |                 | X           | X              |
-| Profil       |                 | X           | X              |
+| Profile      |                 | X           | X              |
 | Back Home    |                 |             | X              |
 | User List    |                 |             | X              |
 | Creat Menu   |                 |             | X              |
@@ -311,13 +311,13 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ### 8.2 **Planning**
 
-| Activité                                                                                         | Février semaine 1 | Février semaine 2 | Février semaine 3 | Février semaine 4 | Mars semaine 1 | Mars semaine 2 | Mars semaine 3 | Mars semaine 4 | Avril semaine 1 | Avril semaine 2 |
-| ------------------------------------------------------------------------------------------------ | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
-| **Cahier des charges** -> *Chef de projet*                                                       | 🔵          | 🔵          | 🔵          | 🔵          | 🔵✅      |         |         |         |          |          |
-| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                   |            |            |            |            | 🟡       | 🟡✅​    |         |         |          |          |
-| **Conception et élaboration de bases de données**  -> *Développeur Base de données*              |            |            |            |            |         | 🟣​      | 🟣​✅​    |         |          |          |
-| **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | 🟠​      | 🟠✅       |          |
-| **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |         |         |         |         | 🔴        | 🔴✅​      |
+| Activité                                                                                         | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars   S2 | Mars   S3 | Mars S4 | Avril   S1 | Avril S2 |
+| ------------------------------------------------------------------------------------------------ | ---------- | ---------- | ---------- | ---------- | ------- | --------- | --------- | ------- | ---------- | -------- |
+| **Cahier des charges** -> *Chef de projet*                                                       | 🔵          | 🔵          | 🔵          | 🔵          | 🔵✅      |           |           |         |            |          |
+| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                   |            |            |            |            | 🟡       | 🟡✅​       |           |         |            |          |
+| **Conception et élaboration de bases de données**  -> *Développeur Base de données*              |            |            |            |            |         | 🟣​        | 🟣​✅​      |         |            |          |
+| **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |         |           | 🟠         | 🟠​      | 🟠✅         |          |
+| **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |         |           |           |         | 🔴          | 🔴✅​      |
 
 🔵 = Cahier des charges  
 🟡 = Conception et mise en page  
