@@ -176,12 +176,18 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 ## **3. Ressources**
 
 - API REST : https://gta.vercel.app/
+- Les images présentes sur ce site proviennent de diverses sources, comme Google Images ou Pixabay, et sont toutes libres de droits.
 
 ## **4. Ergonomie et graphisme**
 
 ### 4.1 **Ergonomie, design & charte graphique**
 
-Le site aura un thème très épuré et moderne, avec un fond gris foncé/noir et une couleur d’accentuation violette.  
+Le site aura un thème très épuré et moderne, avec un fond gris foncé/noir et une couleur d’accentuation violette.
+
+Palette : 
+
+![paletteCouleur](./images/couleurs/paletteCouleur.png)
+
 Le logo sera très simpliste, reprenant le nom du site.  
 La police utilisée sera une police neutre, la **Roboto**.
 
