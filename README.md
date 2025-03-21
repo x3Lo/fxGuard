@@ -12,10 +12,10 @@
 1. **Présentation générale du projet**
    1. *Contexte*
    2. *Objectifs qualitatifs*
-   3. *Cible(s) du site / de l'application*
+   3. *Cible(s) du site*
 2. **Aspects fonctionnels**
-   1. *Description fonctionnelle*
-   2. *User story*
+   1. *User story*
+   2. *Description fonctionnelle*
    3. *Arborescence du site / navigation*
    4. *Restriction d'accès*
    5. *Layout ou wireframe des pages*
@@ -58,7 +58,43 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 ## **2. Aspects fonctionnels**
 
-### 2.1 **Description fonctionnelle**
+### 2.1 **User story**
+
+#### En tant qu'utilisateur non authentifié,
+
+- Une page de promotion de l'interface mettant en avant toutes les fonctionnalités disponibles est affichée.
+
+- Il est possible de s'inscrire ou de se connecter à l'interface via une section dédiée.
+
+#### En tant qu'utilisateur authentifié,
+
+- Possibilité de voir toutes les configurations associées au compte.
+
+- Possibilité d'importer les configuration des joueurs.
+
+- Possibilité de créer de nouvelle configuration.
+
+- Possibilité de modifier les configurations.
+
+- Possibilité de supprimer les configurations.
+
+- Possibilité de partager sa configuration.
+
+- Possibilité de donner une note et poster un commentaire sur une confirmation partagée.
+
+- Il est possible de se déconnecter.
+
+#### En tant qu'administrateur de la solution,
+
+- Voir la liste de tous les comptes créés sur le site.
+
+- Accéder à des données statistiques liées au site web.
+
+- Faire la modération des commentaires.
+
+- Promouvoir un utilisateur en administrateur.
+
+### 2.2 **Description fonctionnelle**
 
 1. Inscription
    - Un formulaire d'inscription demandant : pseudo, e-mail et mot de passe.
@@ -69,108 +105,38 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 3. Déconnexion
    - Bouton de déconnexion
 
-4. Profil utilisateur
+4. Gestion du profil utilisateur
    - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
 
-5. Rubrique de promotion
-   - Dans la page d'accueil, un paragraphe de promotion donnant les avantages à utiliser notre solution.
+5. Présentation des fonctionnalités
+   - Dans la page d'accueil, un paragraphe de présentation donnant les avantages à utiliser notre solution.
 
 6. Contact
    - Un formulaire de contact sera mis à disposition pour tous les utilisateurs.
 
-7. Filtrer la recherche
-   - Lors de l'ajout de véhicule à un menu un bandeau de filtre avec une zone de recherche sera mis à disposition de l'utilisateur.
+7. Création d'une configuration
+   - Il est possible de créer une/plusieurs configuration.
 
-8. Ajouter des véhicules
-   - Ajouter des véhicules au menu.
+8. Fonction de recherche
+   - Lors de la création/impotation d'une configuration, il est possible d'effectuer des recherches et y ajouter des filtres.
 
-9.  Retirer des véehicules
-    - Retirer des véhicules au menu.
+9. Modifications d'une configuration
+    - Si une configuration est déjà existante, il est toujours possible de la modifier même après sa création.
 
-10. Créer plusieurs menus
-    - Possibilité d'en créer plusieurs sans écraser le précédent.
+10. Supprimer une configuration
+    - Il est possible de supprimer ces propres configurations.
 
-11. Supprimer un menu
-    - Possibilité de supprimer un/des menus.
+11. Partager sa configuration
+    - Possibilité de partagé ou non ces configurations.
 
-12. Modifier un menu
-    - Possibilité de modifier un menu déja créé.
+12. Ajouter ces des commentaires/notes à des configurations
+    - Quand un autre utilisateur publit une configuration il es possible de partager des commentaires et ajouter des notes.
 
-13. Liste des utilisateurs
-    - En tant qu'administrateur j'ai accès à la liste de tous les utilisateurs inscrits.
+13. Ajouter des catégories à ces configurations
+    - Lors de la création de configuration, un champ catégorie doit être rempli pour une meilleure expérience utilisateur lors de la recherche de configuration.
   
 14. Promouvoir un utilisateur
     - Je peux promouvoir un utilisateur au rang d'administrateur.
-
-
-<!-- Si l’utilisateur souhaite s’inscrire, il devra renseigner un formulaire pour récupérer ses informations et avoir un espace dédié.
-
-Une fois connecté, l'utilisateur aura accès à une liste de serveurs utilisant mon interface web et auxquels il a accès. Il devra alors choisir le serveur qu'il souhaite administrer. Une fois son choix fait, il accèdera à un menu proposant différentes fonctionnalités.
-
-Grâce à ce menu, il pourra :
-  - Accéder à un dashboard où seront affichées les informations principales du serveur.
-  - Voir le nombre de joueurs connectés sur le serveur, avec leur "ID" en jeu, leur pseudo ainsi que le nom et prénom de leurs personnages.
-  - Modifier les menus accessibles aux joueurs en jeu, comme le concessionnaire de voitures, où il pourra ajouter ou retirer des véhicules mis en vente. Toutes les données du véhicule seront affichées : type, nom, images, vitesse maximale et marque.
-  - Accéder à la console du serveur.
-  - Logs détaillés de toutes les interactions entre notre interface et votre serveur.
-  - Gérer un système d'autorisation du panel afin d'accorder l'accès à d'autres personnes.
-
-En tant qu’administrateur authentifié, nous avons accès à la liste de tous les serveurs utilisant notre solution, ainsi qu'à tous les comptes créés. Une fois un serveur sélectionné, nous avons accès au même menu que les utilisateurs authentifiés, à la différence que nous pouvons modifier certains éléments qui ne pouuront pas être re modifié par l'utilisateur authentifié, ainsi que des champs auxquels il n'a accès qu'en lecture.
-
-Nous pouvons également ajouter ou retirer des droits d’accès aux panels des serveurs. -->
-
-### 2.2 **User story**
-
-#### Scénario 1 : Accueil pour utilisateur non authentifié
-
-##### En tant qu'utilisateur non authentifié,
-
-- Je veux voir une page de promotion de l'interface mettant en avant toutes les fonctionnalités disponibles.
-
-- Je veux avoir la possibilité de m'inscrire ou de me connecter à l'interface via une section dédiée.
-
-#### Scénario 2 : Inscription et authentification
-
-##### En tant qu'utilisateur souhaitant s'inscrire,
-
-- Je veux remplir un formulaire d'inscription afin de créer un compte et accéder à un espace dédié.
-
-- Je veux pouvoir me connecter à mon compte pour accéder aux menus auxquels j'ai droit.
-
-#### Scénario 3 : Sélection d'un serveur
-
-##### En tant qu'utilisateur authentifié,
-
-- Je veux voir une liste des menus personnalisés auxquels j'ai accès.
-
-- Je veux avoir accès à des menus déjà faits.
-
-- Je veux pourvoir modifier les menus déjà préfaits.
-
-#### Scénario 4 : Gestion des menus accessibles aux joueurs
-
-##### En tant qu'utilisateur authentifié,
-
-- Je veux pouvoir modifier les menus disponibles en jeu.
-
-- Par exemple, je veux pouvoir ajouter ou retirer des véhicules mis en vente dans le concessionnaire.
-
-- Je veux voir toutes les données d'un véhicule, y compris : type, nom, images, vitesse maximale et marque.
-
-#### Scénario 5 : Gestion des accès
-
-##### En tant qu'utilisateur authentifié,
-
-- Je veux pouvoir accorder l'accès à d'autres personnes pour modifier les menus avec moi.
-
-#### Scénario 6 : Administration globale pour les administrateurs de la solution
-
-##### En tant qu'administrateur de la solution,
-
-- Je veux voir la liste de tous les comptes créés sur la plateforme.
-- Je veux pouvoir créer des menus que les utilisateurs peuvent utiliser.
-- Je veux pouvoir promouvoir un utilisateur en administrateur.
-
 
 ### 2.3 **Arborescence du site / navigation**
 
