@@ -233,6 +233,11 @@ Le site sera conçu pour être le plus intuitif possible, avec des noms de menus
   - Architecture : Model View Controller
   - Langage : PHP, SQL
   - Base de données : MySQL
+- **Base de données** :
+  
+   - Le projet repose sur MySQL, une base de données relationnelle qui assure la gestion des utilisateurs, permissions et contenus du site.
+ 
+   - D'autres approches comme MongoDB (https://www.mongodb.com/) (base NoSQL orientée documents) existent et pourraient être envisagées dans certains cas d’usage, notamment pour gérer des données non structurées ou évolutives. Toutefois, MySQL est privilégié ici pour assurer une structure robuste et relationnelle.
 
 ### 5.2 **Sécurité**
 
