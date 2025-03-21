@@ -38,13 +38,13 @@
 
 ### 1.1 **Contexte**
 
-À la demande d'un client, j'ai dû trouver une solution web pour répondre à son besoin de modifier du contenu dans du code mais dans un espace no-code.
+À la demande d'un client, j'ai dû trouver une solution web pour répondre à son besoin de modifier du contenu dans du code mais dans un espace no-code. Plus précisément, il voulait pouvoir modifier un menu accessible en jeu par les joueurs.
 
 Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent en jeu d’un serveur FiveM, le tout dans un espace no-code.  
 Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalités et de contenu, comme l’ajout de voitures, chat de proximité, etc.
 FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en donnant le prix, la vitesse, une photo, etc. du véhicule directement présent dans le jeu.
 
-### 1.2 **Objectif(s) qualitatif(s)**
+### 1.2 **Objectifs qualitatifs**
 
 - Créer une interface lisible et facile à comprendre.
 - Avoir un site responsive pour s'adapter à tout type de support
