@@ -31,8 +31,8 @@
 6. **SEO & Référencement**
 7. **RGPD/Conditions d'utilisation**
 8. **Planning & suivi du projet**
-   1. *Planning*
-   2. *Groupe de travail*
+   1. *Groupe de travail*
+   2. *Planning*
 
 ## **1. Présentation générale du projet**
 
@@ -191,7 +191,7 @@ Nous pouvons également ajouter ou retirer des droits d’accès aux panels des 
 | Login        | X               | X           | X              |
 | Register     | X               | X           | X              |
 | Contact      | X               | X           | X              |
-| Menu List   |                 | X           | X              |
+| Menu List    |                 | X           | X              |
 | Menu Setting |                 | X           | X              |
 | Profil       |                 | X           | X              |
 | Back Home    |                 |             | X              |
@@ -294,24 +294,7 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 
 ## **8. Planning & suivi du projet**
 
-### 8.1 **Planning**
-
-| Activité                                                                                            | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
-| --------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
-| **Cahier des charges** -> *Chef de projet*                                                          | 🔵          | 🔵          | 🔵          | 🔵          | ⚪       |         |         |         |          |          |
-| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                      |            |            |            |            | 🟡       | ⚪       |         |         |          |          |
-| **Conception et élaboration de bases de données**  -> *Développeur Base de données*                 |            |            |            |            |         | 🟢       | ⚪       |         |          |          |
-| **Création d'un backend** -> *Développeur Backend & Responsable Qualité et Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | ⚪       |          |          |
-| **Création de frontend** -> *Développeur Frontend & Responsable Qualité & Tests & Référenceur SEO*  |            |            |            |            |         |         |         |         | 🔴        | ⚪        |
-
-🔵 = Cahier des charges  
-🟡 = Conception et mise en page  
-🟢 = Bases de données  
-🟠 = Backend  
-🔴 = Frontend  
-⚪ = Validation avec le client
-
-### 8.2 **Groupe de travail**
+### 8.1 **Groupe de travail**
 
 | **Rôle**                        | **Nom**           | **Responsabilités**                                                                                                                    |
 | ------------------------------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -325,3 +308,20 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 | **Expert Sécurité**             | Camille Roche     | Garantit la sécurité des données et la conformité avec les réglementations (ex : RGPD).                                                |
 | **Administrateur Système**      | Nathan Carpentier | Supervise l’hébergement et la mise en production de la plateforme, optimise les performances du serveur.                               |
 | **Référenceur SEO**             | Antoine Dupont    | Optimise le site pour le référencement naturel (SEO), améliore la visibilité sur les moteurs de recherche et analyse les performances. |
+
+### 8.2 **Planning**
+
+| Activité                                                                                            | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
+| --------------------------------------------------------------------------------------------------- | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
+| **Cahier des charges** -> *Chef de projet*                                                          | 🔵          | 🔵          | 🔵          | 🔵          | 🔵✅​     |         |         |         |          |          |
+| **Conception et mise en page** -> *Graphiste & UX/UI designer*                                      |            |            |            |            | 🟡       | 🟡 ✅​    |         |         |          |          |
+| **Conception et élaboration de bases de données**  -> *Développeur Base de données*                 |            |            |            |            |         | 🟣​       | 🟣​✅​     |         |          |          |
+| **Création d'un backend** -> *Développeur Backend & Responsable Qualité et Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | 🟠​      | 🟠✅       |          |
+| **Création de frontend** -> *Développeur Frontend & Responsable Qualité & Tests & Référenceur SEO*  |            |            |            |            |         |         |         |         | 🔴        | 🔴✅​      |
+
+🔵 = Cahier des charges  
+🟡 = Conception et mise en page  
+🟣​ = Bases de données  
+🟠 = Backend  
+🔴 = Frontend  
+✅​ = Validation avec le client et autres
