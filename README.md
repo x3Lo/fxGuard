@@ -151,18 +151,20 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 ### 2.4 **Restriction d'accès**
 
-| Pages        | Non-Authentifié | Authentifié | Administrateur |
-| ------------ | --------------- | ----------- | -------------- |
-| Home         | X               | X           | X              |
-| Login        | X               | X           | X              |
-| Register     | X               | X           | X              |
-| Contact      | X               | X           | X              |
-| Menu List    |                 | X           | X              |
-| Menu Setting |                 | X           | X              |
-| Profile      |                 | X           | X              |
-| Back Home    |                 |             | X              |
-| User List    |                 |             | X              |
-| Creat Menu   |                 |             | X              |
+| Pages          | Non-Authentifié | Authentifié | Administrateur |
+| -------------- | --------------- | ----------- | -------------- |
+| Home           | X               | X           | X              |
+| Login          | X               | X           | X              |
+| Register       | X               | X           | X              |
+| Contact        | X               | X           | X              |
+| Config List    |                 | X           | X              |
+| Config Creator |                 | X           | X              |
+| Config Share   |                 | X           | X              |
+| Profile        |                 | X           | X              |
+| **Back Home**  |                 |             | X              |
+| Statistic      |                 |             | X              |
+| User List      |                 |             | X              |
+| Comments       |                 |             | X              |
 
 
 ### 2.5 **Layout ou wireframe des pages**
@@ -193,19 +195,12 @@ Le site sera conçu pour être le plus intuitif possible, avec des noms de menus
 
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
-  - API REST
   - Préprocesseur CSS : SASS
+  - API REST
 - **Backend** :
   - Architecture : Model View Controller
   - Langage : PHP, SQL
   - Base de données : MySQL
-- **Base de données** :
-  
-   - Le projet repose sur MySQL, une base de données relationnelle, garantissant une structure stable et relationnelle pour la gestion des utilisateurs, permissions et contenus du site.
- 
-   - Toutefois, certaines solutions NoSQL, comme MongoDB, permettent une gestion plus souple des préférences utilisateur et des contenus accessibles. Dans un contexte où l’accessibilité est primordiale, une base NoSQL pourrait être utilisée pour stocker des configurations personnalisées (ex. tailles de police, contrastes, version simplifiée du contenu).
-
-   - Pour le moment, MySQL est privilégié, mais une architecture hybride pourrait être envisagée si des besoins d’accessibilité avancés émergent (ex. personnalisation dynamique du contenu en fonction des besoins spécifiques des utilisateurs).
 
 ### 5.2 **Sécurité**
 
