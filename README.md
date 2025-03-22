@@ -288,11 +288,11 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 | **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | 🟠       |          |          |
 | Validation du backend                                                                            |            |            |            |            |         |         |         | ✅​      |          |          |
 | **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |         |         |         |         | 🔴        | 🔴        |
-| Validation du frontend                                                                           |            |            |            |            |         |         |         |         |          | ✅​       |
+| Validation du frontend + Validation et livraison du projet                                       |            |            |            |            |         |         |         |         |          | ✅​       |
 
 🔵 = Cahier des charges  
 🟡 = Conception et mise en page  
 🟣​ = Bases de données  
 🟠 = Backend  
 🔴 = Frontend  
-✅​ = Validation avec le client et autres
+✅​ = Validation par client accompagné par le chef de projet
