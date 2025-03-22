@@ -61,7 +61,7 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
 #### En tant qu'utilisateur non authentifié,
 
-- Une page de promotion de l'interface mettant en avant toutes les fonctionnalités disponibles est affichée.
+- Une page de présentation de l'interface mettant en avant toutes les fonctionnalités disponibles est affichée.
 
 - Il est possible de s'inscrire ou de se connecter à l'interface via une section dédiée.
 
@@ -79,17 +79,17 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
 - Possibilité de partager sa configuration.
 
-- Possibilité de donner une note et poster un commentaire sur une confirmation partagée.
+- Possibilité de donner une note et poster un commentaire sur une configuration partagée.
 
-- Il est possible de se déconnecter.
+- Possibilité de se déconnecter.
 
 #### En tant qu'administrateur de la solution,
 
-- Voir la liste de tous les comptes créés sur le site.
+- Accéder à liste de tous les comptes créés sur le site.
 
 - Accéder à des données statistiques liées au site web.
 
-- Faire la modération des commentaires.
+- Modérer des commentaires.
 
 - Promouvoir un utilisateur en administrateur.
 
@@ -108,7 +108,7 @@ Le site Web a pour vocation d'être utilisé par un public varié :
    - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
 
 5. Présentation des fonctionnalités
-   - Dans la page d'accueil, un paragraphe de présentation donnant les avantages à utiliser notre solution.
+   - Dans la page d'accueil, un paragraphe de présentation donnera les avantages à utiliser notre solution.
 
 6. Contact
    - Un formulaire de contact sera mis à disposition pour tous les utilisateurs.
@@ -117,25 +117,25 @@ Le site Web a pour vocation d'être utilisé par un public varié :
    - Il est possible de créer une/plusieurs configuration.
 
 8. Fonction de recherche
-   - Lors de la création/impotation d'une configuration, il est possible d'effectuer des recherches et y ajouter des filtres.
+   - Lors de la création/importation d'une configuration, il est possible d'effectuer des recherches et y ajouter des filtres.
 
 9. Modifications d'une configuration
     - Si une configuration est déjà existante, il est toujours possible de la modifier même après sa création.
 
 10. Supprimer une configuration
-    - Il est possible de supprimer ces propres configurations.
+    - Il est possible de supprimer ses configurations.
 
 11. Partager sa configuration
-    - Possibilité de partagé ou non ces configurations.
+    - Possibilité de partager ou non ses configurations.
 
-12. Ajouter ces des commentaires/notes à des configurations
-    - Quand un autre utilisateur publit une configuration il es possible de partager des commentaires et ajouter des notes.
+12. Ajouter des commentaires/notes à des configurations
+    - Quand un autre utilisateur publie une configuration il est possible de partager des commentaires et ajouter des notes.
 
-13. Ajouter des catégories à ces configurations
+13. Ajouter des catégories à ses configurations
     - Lors de la création de configuration, un champ catégorie doit être rempli pour une meilleure expérience utilisateur lors de la recherche de configuration.
   
 14. Promouvoir un utilisateur
-    - Je peux promouvoir un utilisateur au rang d'administrateur.
+    - Un administrateur peut promouvoir un autre utilisateur au rang d'administrateur.
 
 ### 2.3 **Arborescence du site / navigation**
 
