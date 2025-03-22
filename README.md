@@ -38,13 +38,6 @@
 
 ### 1.1 **Contexte**
 
-<!-- À la demande d'un client, j'ai dû trouver une solution web pour répondre à son besoin de modifier du contenu dans du code mais dans un espace no-code. Plus précisément, il voulait pouvoir modifier un menu accessible en jeu par les joueurs. -->
-
-<!-- Le projet « fxGuard » a vu jour à la demande d'un client, qui souhaitait pouvoir modifier des configurations telle que des menus présents en jeu, qui ont un impact direct dans le jeu. En effet, la modification de contenu apparaissant directement dans le jeu peut s'avérer complexe pour une personne qui ne s'y connaît pas.
-
-Ce projet a donc pour but de permettre la modification de configuration telle que des menus présents en jeu d’un serveur FiveM, le tout dans un espace no-code.
-Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalités et de contenu, comme l’ajout de voitures, chat de proximité, etc. -->
-
 Le projet « fxGuard » a vu le jour à la demande d'un client, afin de lui permettre de faire des modifications simples sur son serveur de jeu FiveM.
 FiveM est une modification du jeu "GTA5" permettant de lui ajouter du contenu comme des voitures, chat de proximité, etc.
 
@@ -57,10 +50,10 @@ Ce projet a donc pour but de permettre la modification de configuration telle qu
 
 ### 1.3 **Cible(s) du site / de l'application**
 
-Le site Web a pour vocation à être utilisé par une tranche de public assez vaste :
+Le site Web a pour vocation d'être utilisé par un public varié :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
 - Dans un premier temps, mon projet a pour objectif d’être utilisé dans les pays francophones.
-- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
+- Le support le plus utilisé sera dans un premier temps le desktop et une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
 
 ## **2. Aspects fonctionnels**
 
