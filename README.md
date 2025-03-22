@@ -48,6 +48,8 @@ Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajou
 Le projet « fxGuard » a vu le jour à la demande d'un client, afin de lui permettre de faire des modifications simples sur son serveur de jeu FiveM.
 FiveM est une modification du jeu "GTA5" permettant de lui ajouter du contenu comme des voitures, chat de proximité, etc.
 
+Ce projet a donc pour but de permettre la modification de configuration telle que des menus présents en jeu d’un serveur FiveM, le tout dans un espace no-code.
+
 ### 1.2 **Objectifs qualitatifs**
 
 - Créer une interface lisible et facile à comprendre.
