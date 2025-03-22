@@ -295,4 +295,4 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 🟣​ = Bases de données  
 🟠 = Backend  
 🔴 = Frontend  
-✅​ = Validation par client accompagné par le chef de projet
+✅​ = Validation par le client accompagné par le chef de projet
