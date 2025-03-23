@@ -204,7 +204,16 @@ La police utilisée sera une police neutre, la **Roboto**.
 
 ### 4.2 **Ergonomie**
 
-Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant.
+Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant. Pour cela, plusieurs principes seront appliqués :
+
+- Hiérarchisation de l'information : les contenus seront organisés de manière claire, en mettant en avant les éléments essentiels.
+
+- Expérience utilisateur fluide : des animations et des retours visuels aideront à comprendre les actions réalisées.
+
+- Navigation optimisée : un menu simplifié et une arborescence logique assureront une navigation rapide et intuitive.
+
+
+Ces éléments garantiront une prise en main rapide du site et une expérience utilisateur optimale.
 
 ## **5. Contraintes techniques**
 
