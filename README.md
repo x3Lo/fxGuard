@@ -49,7 +49,7 @@ Ce projet a donc pour but de permettre la modification de configuration telle qu
 - Créer une interface lisible et facile à comprendre.
 - Avoir un site responsive pour s'adapter à tout type de support
 
-### 1.3 **Cible(s) du site / de l'application**
+### 1.3 **Cibles du site / de l'application**
 
 Le site Web a pour vocation d'être utilisé par un public varié :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
@@ -138,14 +138,14 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 14. Promouvoir un utilisateur
     - Un administrateur peut promouvoir un autre utilisateur au rang d'administrateur.
 
-15. Page de statistique
+15. Page de statistiques
     - Un administrateur peut accéder à une page de statistiques pour consulter des données, par exemple le nombre de comptes créés sur une période donnée, le nombre de configurations postées, etc.
 
 16. Liste des utilisateurs
     - Un administrateur peut accéder à une liste de tous les comptes créés.
 
 17. Gestion commentaires
-    - Un administrateur peut supprimer les commentaires que les utilisateurs authentifiés auront publiés s'ils ne respectent pas les conditions d'utilisation
+    - Un administrateur peut supprimer les commentaires que les utilisateurs authentifiés auront publiés s'ils ne respectent pas les conditions d'utilisation.
 
 ### 2.3 **Arborescence du site / navigation**
 
@@ -186,8 +186,8 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
 - API REST : https://gta.vercel.app/
 - Les images présentes sur ce site proviennent de diverses sources, comme Google Images ou Pixabay, et sont toutes libres de droits.
-<!-- - Les vidéo proviendont de youtube. -->
-- Les textes proviendront du générateur de texte IA.
+- Les vidéos proviennent de YouTube.
+- Les textes proviendront de générateur de texte IA.
 
 ## **4. Ergonomie et graphisme**
 
@@ -302,7 +302,7 @@ Le développement du projet fxGuard repose sur des outils modernes et une métho
 
 - Outil collaboratif :
 
-   - GitHub pour le versionnement du code et le suivi des issues.
+   - GitHub pour le partage du code et le suivi des issues.
 
 - Outil de développement :
 
@@ -312,7 +312,7 @@ Le développement du projet fxGuard repose sur des outils modernes et une métho
 
    - La méthode Agile (Scrum/Kanban) est privilégiée avec des sprints de 2 semaines.
 
-   - Des réunions hebdomadaires sont organisées pour faire le point sur l'avancement et ajuster les priorités.
+   - Des réunions hebdomadaires avec le groupe de travail sont organisées pour faire le point sur l'avancement et ajuster les priorités.
 
    - Un système de revue de code est mis en place pour garantir la qualité et la maintenabilité du code.
 
