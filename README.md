@@ -12,7 +12,7 @@
 1. **Présentation générale du projet**
    1. *Contexte*
    2. *Objectifs qualitatifs*
-   3. *Cible(s) du site*
+   3. *Cibles du site*
 2. **Aspects fonctionnels**
    1. *User story*
    2. *Description fonctionnelle*
@@ -32,7 +32,8 @@
 7. **RGPD/Conditions d'utilisation**
 8. **Planning & suivi du projet**
    1. *Groupe de travail*
-   2. *Planning*
+   2. *Outils et méthode de développement*
+   3. *Planning*
 
 ## **1. Présentation générale du projet**
 
@@ -52,7 +53,7 @@ Ce projet a donc pour but de permettre la modification de configuration telle qu
 
 Le site Web a pour vocation d'être utilisé par un public varié :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
-- Dans un premier temps, mon projet a pour objectif d’être utilisé dans les pays francophones.
+- Dans un premier temps, ce projet a pour objectif d’être utilisé dans les pays francophones.
 - Le support le plus utilisé sera dans un premier temps le desktop et une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
 
 ## **2. Aspects fonctionnels**
@@ -105,7 +106,7 @@ Le site Web a pour vocation d'être utilisé par un public varié :
    - Bouton de déconnexion
 
 4. Gestion du profil utilisateur
-   - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
+   - Les utilisateurs pourront modifier les données renseignées lors de l'inscription, et supprimer leur compte.
 
 5. Présentation des fonctionnalités
    - Dans la page d'accueil, un paragraphe de présentation donnera les avantages à utiliser notre solution.
@@ -136,6 +137,15 @@ Le site Web a pour vocation d'être utilisé par un public varié :
   
 14. Promouvoir un utilisateur
     - Un administrateur peut promouvoir un autre utilisateur au rang d'administrateur.
+
+15. Page de statistique
+    - Un administrateur peut accéder à une page de statistiques pour consulter des données, par exemple le nombre de comptes créés sur une période donnée, le nombre de configurations postées, etc.
+
+16. Liste des utilisateurs
+    - Un administrateur peut accéder à une liste de tous les comptes créés.
+
+17. Gestion commentaires
+    - Un administrateur peut supprimer les commentaires que les utilisateurs authentifiés auront publiés s'ils ne respectent pas les conditions d'utilisation
 
 ### 2.3 **Arborescence du site / navigation**
 
@@ -176,6 +186,8 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
 - API REST : https://gta.vercel.app/
 - Les images présentes sur ce site proviennent de diverses sources, comme Google Images ou Pixabay, et sont toutes libres de droits.
+<!-- - Les vidéo proviendont de youtube. -->
+- Les textes proviendront du générateur de texte IA.
 
 ## **4. Ergonomie et graphisme**
 
@@ -201,7 +213,7 @@ Le site sera conçu pour être le plus intuitif possible, avec des noms de menus
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
   - Préprocesseur CSS : SASS
-  - API REST
+  - Récupération de données externes à travers une API REST
 - **Backend** :
   - Architecture : Model View Controller
   - Langage : PHP, SQL
@@ -221,7 +233,7 @@ Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes dire
 - **Chiffrement des données sensibles** : Le chiffrement des données sensibles, notamment des mots de passe, sera réalisé à l’aide de fonctions de hachage sécurisées pour garantir leur sécurité en cas de fuite de données.
 
 
-### 5.3 **Eco-resposabilité**
+### 5.3 **Eco-responsabilité**
 
 Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures seront mises en place :
 
@@ -275,7 +287,27 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 | **Administrateur Système**      | Nathan Carpentier | Supervise l’hébergement et la mise en production de la plateforme, optimise les performances du serveur.                               |
 | **Référenceur SEO**             | Antoine Dupont    | Optimise le site pour le référencement naturel (SEO), améliore la visibilité sur les moteurs de recherche et analyse les performances. |
 
-### 8.2 **Planning**
+### 8.2 **Outils et méthode de développement**
+
+Le développement du projet fxGuard repose sur des outils modernes et une méthodologie agile pour assurer un suivi efficace et une livraison de qualité.
+
+- Outil collaboratif :
+
+   - GitHub pour le versionnement du code et le suivi des issues.
+
+- Outil de développement :
+
+   - VS Code comme environnement de développement principal.
+
+- Méthode de développement :
+
+   - La méthode Agile (Scrum/Kanban) est privilégiée avec des sprints de 2 semaines.
+
+   - Des réunions hebdomadaires sont organisées pour faire le point sur l'avancement et ajuster les priorités.
+
+   - Un système de revue de code est mis en place pour garantir la qualité et la maintenabilité du code.
+
+### 8.3 **Planning**
 
 | Activité                                                                                         | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
 | ------------------------------------------------------------------------------------------------ | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
