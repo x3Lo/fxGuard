@@ -151,11 +151,11 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
    *Front office* :
 
-  ![fontOffice](./images/offices/frontOffice.png)
+  ![fontOffice](./public/images/offices/frontOffice.png)
 
    *Back office* :
 
-  ![backOffice](./images/offices/backOffice.png)
+  ![backOffice](./public/images/offices/backOffice.png)
 
 
 ### 2.4 **Restriction d'accès**
@@ -180,7 +180,7 @@ Le site Web a pour vocation d'être utilisé par un public varié :
 
 *Structure de la page d'Accueil :*                                           
 
-![wireframeDesktop](./images/wireframes/wireframeHome.png)
+![wireframeDesktop](./public/images/wireframes/wireframeHome.png)
 
 ## **3. Ressources**
 
@@ -197,7 +197,7 @@ Le site aura un thème très épuré et moderne, avec un fond gris foncé/noir e
 
 Palette : 
 
-![paletteCouleur](./images/couleurs/paletteCouleur.png)
+![paletteCouleur](./public/images/couleurs/paletteCouleur.png)
 
 Le logo sera très simpliste, reprenant le nom du site.  
 La police utilisée sera une police neutre, la **Roboto**.
