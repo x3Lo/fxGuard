@@ -12,7 +12,7 @@
 1. **Présentation générale du projet**
    1. *Contexte*
    2. *Objectifs qualitatifs*
-   3. *Cible(s) du site*
+   3. *Cibles du site*
 2. **Aspects fonctionnels**
    1. *User story*
    2. *Description fonctionnelle*
@@ -32,29 +32,29 @@
 7. **RGPD/Conditions d'utilisation**
 8. **Planning & suivi du projet**
    1. *Groupe de travail*
-   2. *Planning*
+   2. *Outils et méthode de développement*
+   3. *Planning*
 
 ## **1. Présentation générale du projet**
 
 ### 1.1 **Contexte**
 
-À la demande d'un client, j'ai dû trouver une solution web pour répondre à son besoin de modifier du contenu dans du code mais dans un espace no-code. Plus précisément, il voulait pouvoir modifier un menu accessible en jeu par les joueurs.
+Le projet « fxGuard » a vu le jour à la demande d'un client, afin de lui permettre de faire des modifications simples sur son serveur de jeu FiveM.
+FiveM est une modification du jeu "GTA5" permettant de lui ajouter du contenu comme des voitures, chat de proximité, etc.
 
-Le projet « fxGuard » a pour but de permettre la modération/administration et la modification du contenu présent en jeu d’un serveur FiveM, le tout dans un espace no-code.  
-Les serveurs FiveM sont des serveurs de jeux basés sur GTA5 permettant l’ajout de fonctionnalités et de contenu, comme l’ajout de voitures, chat de proximité, etc.
-FxGuard pourra par exemple modifier le catalogue de voitures mis en vente en donnant le prix, la vitesse, une photo, etc. du véhicule directement présent dans le jeu.
+Ce projet a donc pour but de permettre la modification de configuration telle que des menus présents en jeu d’un serveur FiveM, le tout dans un espace no-code.
 
 ### 1.2 **Objectifs qualitatifs**
 
 - Créer une interface lisible et facile à comprendre.
 - Avoir un site responsive pour s'adapter à tout type de support
 
-### 1.3 **Cible(s) du site / de l'application**
+### 1.3 **Cibles du site / de l'application**
 
-Le site Web a pour vocation à être utilisé par une tranche de public assez vaste :
+Le site Web a pour vocation d'être utilisé par un public varié :
 - Des adolescents, jeunes adultes, adultes, avec un niveau débutant à confirmé en administration de serveur FiveM.
-- Dans un premier temps, mon projet a pour objectif d’être utilisé dans les pays francophones.
-- Le support le plus utilisé sera, à mon sens, dans un premier temps le desktop, une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
+- Dans un premier temps, ce projet a pour objectif d’être utilisé dans les pays francophones.
+- Le support le plus utilisé sera dans un premier temps le desktop et une version mobile complète sera développée qui servira d'atout pour rester compétitif face aux solutions déjà existantes.
 
 ## **2. Aspects fonctionnels**
 
@@ -62,7 +62,7 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 #### En tant qu'utilisateur non authentifié,
 
-- Une page de promotion de l'interface mettant en avant toutes les fonctionnalités disponibles est affichée.
+- Une page de présentation de l'interface mettant en avant toutes les fonctionnalités disponibles est affichée.
 
 - Il est possible de s'inscrire ou de se connecter à l'interface via une section dédiée.
 
@@ -80,17 +80,17 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 - Possibilité de partager sa configuration.
 
-- Possibilité de donner une note et poster un commentaire sur une confirmation partagée.
+- Possibilité de donner une note et poster un commentaire sur une configuration partagée.
 
-- Il est possible de se déconnecter.
+- Possibilité de se déconnecter.
 
 #### En tant qu'administrateur de la solution,
 
-- Voir la liste de tous les comptes créés sur le site.
+- Accéder à liste de tous les comptes créés sur le site.
 
 - Accéder à des données statistiques liées au site web.
 
-- Faire la modération des commentaires.
+- Modérer des commentaires.
 
 - Promouvoir un utilisateur en administrateur.
 
@@ -106,10 +106,10 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
    - Bouton de déconnexion
 
 4. Gestion du profil utilisateur
-   - Les utilisateurs pourront modifier les données renseignées lors de l'inscription.
+   - Les utilisateurs pourront modifier les données renseignées lors de l'inscription, et supprimer leur compte.
 
 5. Présentation des fonctionnalités
-   - Dans la page d'accueil, un paragraphe de présentation donnant les avantages à utiliser notre solution.
+   - Dans la page d'accueil, un paragraphe de présentation donnera les avantages à utiliser notre solution.
 
 6. Contact
    - Un formulaire de contact sera mis à disposition pour tous les utilisateurs.
@@ -118,25 +118,34 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
    - Il est possible de créer une/plusieurs configuration.
 
 8. Fonction de recherche
-   - Lors de la création/impotation d'une configuration, il est possible d'effectuer des recherches et y ajouter des filtres.
+   - Lors de la création/importation d'une configuration, il est possible d'effectuer des recherches et y ajouter des filtres.
 
 9. Modifications d'une configuration
     - Si une configuration est déjà existante, il est toujours possible de la modifier même après sa création.
 
 10. Supprimer une configuration
-    - Il est possible de supprimer ces propres configurations.
+    - Il est possible de supprimer ses configurations.
 
 11. Partager sa configuration
-    - Possibilité de partagé ou non ces configurations.
+    - Possibilité de partager ou non ses configurations.
 
-12. Ajouter ces des commentaires/notes à des configurations
-    - Quand un autre utilisateur publit une configuration il es possible de partager des commentaires et ajouter des notes.
+12. Ajouter des commentaires/notes à des configurations
+    - Quand un autre utilisateur publie une configuration il est possible de partager des commentaires et ajouter des notes.
 
-13. Ajouter des catégories à ces configurations
+13. Ajouter des catégories à ses configurations
     - Lors de la création de configuration, un champ catégorie doit être rempli pour une meilleure expérience utilisateur lors de la recherche de configuration.
   
 14. Promouvoir un utilisateur
-    - Je peux promouvoir un utilisateur au rang d'administrateur.
+    - Un administrateur peut promouvoir un autre utilisateur au rang d'administrateur.
+
+15. Page de statistiques
+    - Un administrateur peut accéder à une page de statistiques pour consulter des données, par exemple le nombre de comptes créés sur une période donnée, le nombre de configurations postées, etc.
+
+16. Liste des utilisateurs
+    - Un administrateur peut accéder à une liste de tous les comptes créés.
+
+17. Gestion commentaires
+    - Un administrateur peut supprimer les commentaires que les utilisateurs authentifiés auront publiés s'ils ne respectent pas les conditions d'utilisation.
 
 ### 2.3 **Arborescence du site / navigation**
 
@@ -177,6 +186,8 @@ Le site Web a pour vocation à être utilisé par une tranche de public assez va
 
 - API REST : https://gta.vercel.app/
 - Les images présentes sur ce site proviennent de diverses sources, comme Google Images ou Pixabay, et sont toutes libres de droits.
+- Les vidéos proviennent de YouTube.
+- Les textes proviendront de générateur de texte IA.
 
 ## **4. Ergonomie et graphisme**
 
@@ -193,7 +204,16 @@ La police utilisée sera une police neutre, la **Roboto**.
 
 ### 4.2 **Ergonomie**
 
-Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant.
+Le site sera conçu pour être le plus intuitif possible, avec des noms de menus parlants. Les informations les plus importantes seront mises en avant. Pour cela, plusieurs principes seront appliqués :
+
+- Hiérarchisation de l'information : les contenus seront organisés de manière claire, en mettant en avant les éléments essentiels.
+
+- Expérience utilisateur fluide : des animations et des retours visuels aideront à comprendre les actions réalisées.
+
+- Navigation optimisée : un menu simplifié et une arborescence logique assureront une navigation rapide et intuitive.
+
+
+Ces éléments garantiront une prise en main rapide du site et une expérience utilisateur optimale.
 
 ## **5. Contraintes techniques**
 
@@ -202,7 +222,7 @@ Le site sera conçu pour être le plus intuitif possible, avec des noms de menus
 - **Frontend** :
   - Langages : HTML, CSS, JavaScript
   - Préprocesseur CSS : SASS
-  - API REST
+  - Récupération de données externes à travers une API REST
 - **Backend** :
   - Architecture : Model View Controller
   - Langage : PHP, SQL
@@ -222,7 +242,7 @@ Pour garantir un niveau de sécurité optimal sur la plateforme, les lignes dire
 - **Chiffrement des données sensibles** : Le chiffrement des données sensibles, notamment des mots de passe, sera réalisé à l’aide de fonctions de hachage sécurisées pour garantir leur sécurité en cas de fuite de données.
 
 
-### 5.3 **Eco-resposabilité**
+### 5.3 **Eco-responsabilité**
 
 Afin de réduire l'empreinte écologique du projet fxGuard, plusieurs mesures seront mises en place :
 
@@ -276,9 +296,27 @@ fxGuard accorde une importance primordiale à la protection des données des uti
 | **Administrateur Système**      | Nathan Carpentier | Supervise l’hébergement et la mise en production de la plateforme, optimise les performances du serveur.                               |
 | **Référenceur SEO**             | Antoine Dupont    | Optimise le site pour le référencement naturel (SEO), améliore la visibilité sur les moteurs de recherche et analyse les performances. |
 
-### 8.2 **Planning**
+### 8.2 **Outils et méthode de développement**
 
-Voici le tableau corrigé avec les coches alignées :  
+Le développement du projet fxGuard repose sur des outils modernes et une méthodologie agile pour assurer un suivi efficace et une livraison de qualité.
+
+- Outil collaboratif :
+
+   - GitHub pour le partage du code et le suivi des issues.
+
+- Outil de développement :
+
+   - VS Code comme environnement de développement principal.
+
+- Méthode de développement :
+
+   - La méthode Agile (Scrum/Kanban) est privilégiée avec des sprints de 2 semaines.
+
+   - Des réunions hebdomadaires avec le groupe de travail sont organisées pour faire le point sur l'avancement et ajuster les priorités.
+
+   - Un système de revue de code est mis en place pour garantir la qualité et la maintenabilité du code.
+
+### 8.3 **Planning**
 
 | Activité                                                                                         | Février S1 | Février S2 | Février S3 | Février S4 | Mars S1 | Mars S2 | Mars S3 | Mars S4 | Avril S1 | Avril S2 |
 | ------------------------------------------------------------------------------------------------ | ---------- | ---------- | ---------- | ---------- | ------- | ------- | ------- | ------- | -------- | -------- |
@@ -291,11 +329,11 @@ Voici le tableau corrigé avec les coches alignées :
 | **Création d'un backend** -> *Développeur Backend & Responsable Qualité/Tests & Expert Sécurité* |            |            |            |            |         |         | 🟠       | 🟠       |          |          |
 | Validation du backend                                                                            |            |            |            |            |         |         |         | ✅​      |          |          |
 | **Création de frontend** -> *Développeur Frontend & Responsable Qualité/Tests & Référenceur SEO* |            |            |            |            |         |         |         |         | 🔴        | 🔴        |
-| Validation du frontend                                                                           |            |            |            |            |         |         |         |         |          | ✅​       |
+| Validation du frontend + Validation et livraison du projet                                       |            |            |            |            |         |         |         |         |          | ✅​       |
 
 🔵 = Cahier des charges  
 🟡 = Conception et mise en page  
 🟣​ = Bases de données  
 🟠 = Backend  
 🔴 = Frontend  
-✅​ = Validation avec le client et autres
+✅​ = Validation par le client accompagné par le chef de projet
