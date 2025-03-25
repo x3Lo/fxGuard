@@ -4,7 +4,14 @@
 function switchman($action = "default"){
 
     $theActions = array();
+    $theActions["configCreator"]="ctrlConfigCreator.php";
+    $theActions["configList"]="ctrlConfigList.php";
+    $theActions["configShare"]="ctrlConfigShare.php";
+    $theActions["contact"]="ctrlContact.php";
     $theActions["default"]="ctrlHomePage.php";
+    $theActions["login"]="ctrlLogin.php";
+    $theActions["profile"]="ctrlProfile.php";
+    $theActions["register"]="ctrlRegister.php";
     $theActions["page404"]="page404_ctrl.php";
     
 
