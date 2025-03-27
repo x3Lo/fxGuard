@@ -10,6 +10,7 @@ function switchman($action = "default"){
     $theActions["contact"]="ctrlContact.php";
     $theActions["default"]="ctrlHomePage.php";
     $theActions["login"]="ctrlLogin.php";
+    $theActions["logout"]="ctrlLogout.php";
     $theActions["profile"]="ctrlProfile.php";
     $theActions["register"]="ctrlRegister.php";
     $theActions["page404"]="page404_ctrl.php";

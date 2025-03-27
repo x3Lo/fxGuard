@@ -5,3 +5,9 @@
         <li><a href="./?action=configShare">Configurations partagées</a></li>
     </ul>
 </div>
+<?php
+
+require_once RACINE.'/src/models/request.php';
+
+var_dump($_SESSION);
+var_dump($user['password']);

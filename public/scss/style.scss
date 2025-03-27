@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+header {
+    nav {
+        ul {
+            display: flex;
+
+            li {
+                margin: 0 10px;
+            }
+        }
+    }
+}
