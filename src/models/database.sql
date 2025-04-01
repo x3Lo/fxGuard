@@ -5,8 +5,8 @@ CREATE TABLE user_(
    userId VARCHAR(50) ,
    email VARCHAR(50)  NOT NULL,
    password VARCHAR(100)  NOT NULL,
-   createAt DATETIME NOT NULL,
-   role VARCHAR(50) ,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   role VARCHAR(50) NOT NULL,
    PRIMARY KEY(userId),
    UNIQUE(email)
 );

@@ -4,8 +4,8 @@ require RACINE."/src/views/header.php";
 
 // if the user applying is already logged in
 if (isset($_SESSION['userId'])) {
-    $_SESSION['msg']=['level'=> 'info', 'content' => 'You are already logged in as "'.$_SESSION['userId'].'". Log out before.'];
-    require RACINE."/src/views/configList.php";    
+    $_SESSION['msg']=['level'=> 'info', 'content' => 'Vous êtes déjà connecté en tant que "'.$_SESSION['userId'].'". Déconnectez-vous avant.'];
+    header("Location: ?action=configList");    
     exit;                           // end of script  
 }
 
@@ -22,26 +22,28 @@ if (!isset($_POST['login']) || !isset($_POST['login'])) {
 /* is one of the input fields empty ? */
 if (empty($_POST['login']) || empty($_POST['password']))
 {
-    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Both login and password must be set.'];
-    require RACINE."/src/views/login.php";
+    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Les identifiants et le mot de passe doivent être définis.'];
+    header("Location: ?action=login");
     exit;
 }
 
 /* everthing seems fine to evaluate authentication */
 
-require_once (RACINE."/src/models/request.php");
+require_once RACINE."/src/models/request.php";
 
 $user = getUserByUserId ($pdo, $_POST['login']);
 if (($user == null) || ($_POST['password'] != $user['password'])) {
-    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Login or password is wrong.'];
-    require RACINE."/src/views/login.php";
+    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Login ou mot de passe est incorrect.'];
+    header("Location: ?action=login");
     exit;
 }
 
 /* successfull login */
 $_SESSION['userId'] = $user['userId'];
+$_SESSION['email'] = $user['email'];
 $_SESSION['role'] = $user['role'];
-$_SESSION['msg']=['level'=> 'success', 'content' => 'Hi '.$user['userId'].'! You are logged in.'];
+$_SESSION['date'] = $user['createAt'];
+$_SESSION['msg']=['level'=> 'success', 'content' => 'Bonjour '.$user['userId'].' ! Vous êtes connecté.'];
 
 
 header ("Location: ?action=configList");     // login is achieved. Go to the landing page (home)

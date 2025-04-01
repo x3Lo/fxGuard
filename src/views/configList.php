@@ -1,6 +1,3 @@
-<?php
-require RACINE."/src/views/message.php";
-?>
 <h1>Configuration List</h1>
 <div>
     <ul>

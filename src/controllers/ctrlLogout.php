@@ -1,6 +1,6 @@
 <?php
 if (!(isset($_SESSION['userId']))) {
-    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Vous devez être connecté pour vous déconnecter'];
+    $_SESSION['msg']=['level'=> 'warning', 'content' => 'Connectez-vous afin de vous déconnecter'];
 }
 
 
@@ -8,7 +8,7 @@ if (isset($_SESSION['userId'])) {
     /* only if already logd in */
     /* keep the session alive to report messages */
     /* but remove all things that identify the user */
-    $_SESSION['msg']=['level'=> 'info', 'content' => 'Bye '.$_SESSION['userId'].'! You are logged out.'];
+    $_SESSION['msg']=['level'=> 'info', 'content' => 'Au revoir '.$_SESSION['userId'].' ! Vous êtes déconnecté.'];
 
     // unset($_SESSION['pseudo']);
     // unset($_SESSION['admin']);

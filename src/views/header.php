@@ -22,3 +22,7 @@
             </ul>
         </nav>
     </header>
+
+    <?php
+    require RACINE . "/src/views/message.php";
+    ?>
