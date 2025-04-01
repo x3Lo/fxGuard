@@ -23,3 +23,11 @@ function addUserByEmail($pdo, $userId, $email, $password) {
         'role' => 'user'
     ]);
 }
+
+function getConfig($pdo) {
+    $sql = "SELECT * FROM configuration";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}

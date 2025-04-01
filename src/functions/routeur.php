@@ -12,6 +12,7 @@ function switchman($action = "default"){
     $theActions["login"]="ctrlLogin.php";
     $theActions["logout"]="ctrlLogout.php";
     $theActions["profile"]="ctrlProfile.php";
+    $theActions["profileEdit"]="ctrlProfileEdit.php";
     $theActions["register"]="ctrlRegister.php";
     $theActions["page404"]="page404_ctrl.php";
     

@@ -16,16 +16,16 @@ if (!(isset($_SESSION['userId']))) {
    exit;                               // exit is mandatory to abort the current script and update the $_SESSION; Especially 
    // useful if the current script has not been completed.
 } else {
+
+   $dateString = $_SESSION['date'];
+   $date = new DateTime($dateString);
+   $formattedDate = $date->format('d/m/Y');
+
    if ($_SESSION['role'] == 'admin') {
       $_SESSION['privilege'] = 'administrateur';
    } else {
       $_SESSION['privilege'] = 'utilisateur';
    }
-
-
-   $dateString = $_SESSION['date'];
-   $date = new DateTime($dateString);
-   $formattedDate = $date->format('d/m/Y');
 
 
    require RACINE . "/src/views/profile.php";

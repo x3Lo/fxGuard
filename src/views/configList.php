@@ -5,6 +5,14 @@
         <li><a href="./?action=configShare">Configurations partagées</a></li>
     </ul>
 </div>
+<h2>Configurations :</h2>
 <?php
+foreach($configs as $config) {
+    echo $config['vehiculeName'];
+    echo $config['vehiculeBrand'];
+    echo $config['vehiculeType'];
+    ?><br><?php
+}
+
 
 require_once RACINE.'/src/models/request.php';

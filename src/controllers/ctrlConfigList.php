@@ -15,9 +15,12 @@ if (!(isset($_SESSION['userId']))) {
     header("Location: ?action=default");   // access forbidden; immediatly redirected to home page.
     exit;                               // exit is mandatory to abort the current script and update the $_SESSION; Especially 
                                         // useful if the current script has not been completed.
-}
+} else {
 
-else require RACINE."/src/views/configList.php";    // access allowed; go to the requested page
+   $configs = getconfig($pdo);
+   
+   require RACINE."/src/views/configList.php";
+}
 
 
 include(RACINE."/src/views/footer.php");
