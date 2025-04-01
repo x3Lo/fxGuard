@@ -1,3 +1,6 @@
+<?php
+require RACINE."/src/views/message.php";
+?>
 <h1>Configuration List</h1>
 <div>
     <ul>
@@ -8,6 +11,3 @@
 <?php
 
 require_once RACINE.'/src/models/request.php';
-
-var_dump($_SESSION);
-var_dump($user['password']);

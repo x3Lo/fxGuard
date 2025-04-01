@@ -1,3 +1,6 @@
+<?php
+require RACINE."/src/views/message.php";
+?>
 <h1>Login</h1>
 <form action="?action=login" method="post">
     <label for="pseudo">Pseudo :</label>
@@ -9,6 +12,3 @@
     <br>
     <button type="submit">Se connecter</button>
 </form>
-<br>
-<a href="?action=logout">Se déconnecter</a>
-<br>

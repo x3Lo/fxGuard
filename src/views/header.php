@@ -17,8 +17,8 @@
                 <li><a href="./?action=contact">Contact</a></li>
                 <li><a href="./?action=profile">Profil</a></li>
                 <li><a href="./?action=login">Se Connecter</a></li>
+                <li><a href="?action=logout">Se déconnecter</a></li>
                 <li><a href="./?action=register">S'Inscrir</a></li>
             </ul>
         </nav>
-        <?php var_dump($_SESSION) ; ?>
     </header>
