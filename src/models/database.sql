@@ -5,7 +5,7 @@ CREATE TABLE user_ (
    userId VARCHAR(50),
    email VARCHAR(50) NOT NULL UNIQUE,
    password VARCHAR(100) NOT NULL,
-   createAt DATETIME NOT NULL,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    role VARCHAR(50) NOT NULL,
    PRIMARY KEY(userId)
 );
@@ -13,13 +13,17 @@ CREATE TABLE user_ (
 CREATE TABLE theme (
    themeId VARCHAR(50),
    themeName VARCHAR(50) NOT NULL UNIQUE,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(themeId)
 );
 
 CREATE TABLE list_configuration (
    listConfigId INT AUTO_INCREMENT,
+   listName VARCHAR(50) NOT NULL,
    userId VARCHAR(50) NOT NULL,
    themeId VARCHAR(50) NOT NULL,
+   share BOOLEAN NOT NULL,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(listConfigId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
    FOREIGN KEY(themeId) REFERENCES theme(themeId) ON DELETE CASCADE
@@ -35,7 +39,7 @@ CREATE TABLE configuration (
    vehiculeTopSpeed DECIMAL(5,2),
    vehiculeHandling DECIMAL(5,2),
    vehiculeSeat INT NOT NULL,
-   createAt DATETIME NOT NULL,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    listConfigId INT NOT NULL,
    PRIMARY KEY(vehiculeId),
    FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId) ON DELETE CASCADE
@@ -45,7 +49,7 @@ CREATE TABLE comment (
    commentId INT AUTO_INCREMENT,
    commentNote DECIMAL(2,1) NOT NULL CHECK (commentNote BETWEEN 0 AND 10),
    commentContent VARCHAR(450),
-   createAt DATETIME NOT NULL,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    userId VARCHAR(50) NOT NULL,
    vehiculeId INT NOT NULL,
    PRIMARY KEY(commentId),

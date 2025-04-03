@@ -17,8 +17,10 @@ if (!(isset($_SESSION['userId']))) {
                                         // useful if the current script has not been completed.
 } else {
 
-   $configs = getconfig($pdo);
-   
+
+   $userId = $_SESSION['userId'];
+   $configsList = getConfigListByUserId($pdo, $userId);
+      
    require RACINE."/src/views/configList.php";
 }
 
