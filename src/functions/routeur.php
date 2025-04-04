@@ -6,6 +6,7 @@ function switchman($action = "default"){
     $theActions = array();
     $theActions["configCreator"]="ctrlConfigCreator.php";
     $theActions["configView"]="ctrlConfigView.php";
+    $theActions["configAdd"]="ctrlConfigAdd.php";
     $theActions["configList"]="ctrlConfigList.php";
     $theActions["configShare"]="ctrlConfigShare.php";
     $theActions["contact"]="ctrlContact.php";

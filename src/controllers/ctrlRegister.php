@@ -3,7 +3,7 @@
 require RACINE . "/src/views/header.php";
 
 
-if ((isset($_SESSION['userId']))) {
+if (isset($_SESSION['userId'])) {
     $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Vous devez être déconnecter pour vous inscrir.'];
     header("Location: ?action=default");   // access forbidden; immediatly redirected to home page.
     exit;
@@ -13,7 +13,7 @@ if ((isset($_SESSION['userId']))) {
 
 
 
-if (!isset($_post['userId']) || !isset($_POST['password'])) {
+if (!isset($_POST['userId']) || !isset($_POST['password'])) {
     require RACINE . "/src/views/register.php";
     exit;
 }
@@ -26,7 +26,6 @@ if (empty($_POST['userId']) || empty($_POST['email']) || empty($_POST['password'
     // require RACINE . "/src/views/register.php";
     exit;
 }
-
 
 
 require_once RACINE . "/src/models/request.php";

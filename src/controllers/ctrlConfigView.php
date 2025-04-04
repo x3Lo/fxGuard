@@ -33,14 +33,8 @@ if ($configs[0]['share'] == 1) {
     $share = 'privé';
 }
 
-
-$configsVehicules = getAllConfigs($pdo);
-
-
-
-
 require RACINE . "/src/views/configView.php";
 
 
 
-include(RACINE . "/src/views/footer.php");
+include RACINE . "/src/views/footer.php";

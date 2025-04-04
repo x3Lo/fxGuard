@@ -153,3 +153,40 @@ function getAllConfigs($pdo)
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+function addConfigToConfigList($pdo, $vehiculeName, $vehiculeBrand, $vehiculeType, $vehiculeImage, $vehiculeAcceleration, $vehiculeTopSpeed, $vehiculeHandling, $vehiculeSeat, $listConfigId)
+{
+    $sql = "INSERT INTO configuration (
+                vehiculeName, 
+                vehiculeBrand, 
+                vehiculeType, 
+                vehiculeImage, 
+                vehiculeAcceleration, 
+                vehiculeTopSpeed, 
+                vehiculeHandling, 
+                vehiculeSeat, 
+                listConfigId
+            ) VALUES (
+                :vehiculeName, 
+                :vehiculeBrand, 
+                :vehiculeType, 
+                :vehiculeImage,
+                :vehiculeAcceleration,
+                :vehiculeTopSpeed,
+                :vehiculeHandling,
+                :vehiculeSeat,
+                :listConfigId
+            );";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'vehiculeName' => $vehiculeName,
+        'vehiculeBrand' => $vehiculeBrand,
+        'vehiculeType' => $vehiculeType,
+        'vehiculeImage' => $vehiculeImage,
+        'vehiculeAcceleration' => $vehiculeAcceleration,
+        'vehiculeTopSpeed' => $vehiculeTopSpeed,
+        'vehiculeHandling' => $vehiculeHandling,
+        'vehiculeSeat' => $vehiculeSeat,
+        'listConfigId' => $listConfigId,
+    ]);
+}
