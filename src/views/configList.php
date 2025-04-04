@@ -12,11 +12,15 @@ require_once RACINE.'/src/models/request.php';
 
 
 foreach($configsList as $configList) {
-    echo "Id : ".$configList['listConfigId']." "."<br>";
-    echo "Nom : ".$configList['listName']." "."<br>";
-    echo "Theme : ".$configList['themeName']." "."<br>";
-    echo "Auteur : ".$configList['userId']." "."<br>";
-    echo '<a href="?action=configView&configListId='.$configList['listConfigId'].'">Modifier</a>';
+    echo "Id : " . $configList['listConfigId'] . " " . "<br>";
+    echo "Nom : " . $configList['listName'] . " " . "<br>";
+    echo "Theme : " . $configList['themeName'] . " " . "<br>";
+    echo "Auteur : " . $configList['userId'] . " " . "<br>";
+    echo '<a href="?action=configView&configListId=' . $configList['listConfigId'] . '">Modifier</a>';
+    echo '<form action="?action=configListRemove" method="post">';
+        echo '<input id="listConfigId" name="listConfigId" value="' . $configList['listConfigId'] . '" hidden>';
+        echo '<button>Supprimer</button>';
+    echo '</form>';
     ?>
     <br><br>
 <?php }

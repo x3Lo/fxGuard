@@ -194,9 +194,18 @@ function addConfigToConfigList($pdo, $vehiculeName, $vehiculeBrand, $vehiculeTyp
 
 function rmConfig($pdo, $vehiculeId)
 {
-    $sql = "DELETE FROM";
+    $sql = "DELETE FROM configuration WHERE vehiculeId = :vehiculeId";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         'vehiculeId' => $vehiculeId,
+    ]);
+}
+
+function rmConfigList($pdo, $listConfigId)
+{
+    $sql = "DELETE FROM list_configuration WHERE listConfigId = :listConfigId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'listConfigId' => $listConfigId,
     ]);
 }

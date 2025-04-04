@@ -20,6 +20,7 @@ if (isset($configs[0]['vehiculeName'])) {
         echo '<p>Maniabilité : ' . $config['vehiculeHandling'] . '</p>';
         echo '<p>Place(s) : ' . $config['vehiculeSeat'] . '</p>';
         echo '<form action="?action=configRemove" method="post">';
+            echo '<input id="vehiculeId" name="vehiculeId" value="' . $config['vehiculeId'] . '" hidden>';
             echo '<button>Supprimer</button>';
         echo '</form>';
 ?>

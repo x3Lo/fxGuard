@@ -9,6 +9,7 @@ function switchman($action = "default"){
     $theActions["configAdd"]="ctrlConfigAdd.php";
     $theActions["configRemove"]="ctrlConfigRemove.php";
     $theActions["configList"]="ctrlConfigList.php";
+    $theActions["configListRemove"]="ctrlConfigListRemove.php";
     $theActions["configShare"]="ctrlConfigShare.php";
     $theActions["contact"]="ctrlContact.php";
     $theActions["default"]="ctrlHomePage.php";
