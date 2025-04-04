@@ -85,7 +85,8 @@ function getConfig($pdo, $listConfigId)
                 c.vehiculeTopSpeed, 
                 c.vehiculeAcceleration, 
                 c.vehiculeHandling, 
-                c.vehiculeSeat 
+                c.vehiculeSeat, 
+                c.vehiculeImage 
             FROM list_configuration lc LEFT JOIN configuration c ON c.listConfigId = lc.listConfigId JOIN theme t ON lc.themeId = t.themeId JOIN user_ u ON lc.userId = u.userId 
             WHERE lc.listConfigId = :listConfigId;";
 
@@ -188,5 +189,14 @@ function addConfigToConfigList($pdo, $vehiculeName, $vehiculeBrand, $vehiculeTyp
         'vehiculeHandling' => $vehiculeHandling,
         'vehiculeSeat' => $vehiculeSeat,
         'listConfigId' => $listConfigId,
+    ]);
+}
+
+function rmConfig($pdo, $vehiculeId)
+{
+    $sql = "DELETE FROM";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'vehiculeId' => $vehiculeId,
     ]);
 }

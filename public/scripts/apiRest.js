@@ -44,12 +44,13 @@ fetch(URL)
                     '<img src="' + vehicle.images.frontQuarter + '" alt="Front Quarter">' + 
                     '<form action="?action=configAdd" method="post">' + 
                         '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.manufacturer + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
-                        '<input id="name" name="name" value="' + vehicle.model + '" hidden>' + 
+                        '<input id="brande" name="brande" value="' + vehicle.manufacturer + '" hidden>' + 
+                        '<input id="type" name="type" value="' + categoryKey + '" hidden>' + 
+                        '<input id="image" name="image" value="' + vehicle.images.frontQuarter + '" hidden>' + 
+                        '<input id="acceleration" name="acceleration" value="' + (vehicle.acceleration !== undefined ? vehicle.acceleration : 'N/A') + '" hidden>' + 
+                        '<input id="topSpeed" name="topSpeed" value="' + (vehicle.topSpeed ? vehicle.topSpeed.kmh : 'N/A') + '" hidden>' + 
+                        '<input id="handling" name="handling" value="' + (vehicle.handling !== undefined ? vehicle.handling : 'N/A') + '" hidden>' + 
+                        '<input id="seat" name="seat" value="' + vehicle.seats + '" hidden>' + 
                         '<button type="submit">Ajouter</button>' + 
                     '</form>'
                     

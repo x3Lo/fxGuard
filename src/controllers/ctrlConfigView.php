@@ -19,6 +19,7 @@ if (!(isset($_SESSION['userId']))) {
 
 if (isset($_GET['configListId'])) {
     $listConfigId = $_GET['configListId'];
+    $_SESSION['listConfigId'] = $listConfigId;
 } else {
     echo "Le paramètre 'configListId' n'est pas défini dans l'URL.";
 }
