@@ -27,11 +27,14 @@ if (isset($_GET['configListId'])) {
 $configs = getConfig($pdo, $listConfigId);
 
 
-// if ($configs[0]['share'] == 1) {
-//     $share = 'public';
-// } else {
-//     $share = 'privé';
-// }
+if ($configs[0]['share'] == 1) {
+    $share = 'public';
+} else {
+    $share = 'privé';
+}
+
+
+$configsVehicules = getAllConfigs($pdo);
 
 
 

@@ -86,7 +86,7 @@ function getConfig($pdo, $listConfigId)
                 c.vehiculeAcceleration, 
                 c.vehiculeHandling, 
                 c.vehiculeSeat 
-            FROM configuration c JOIN list_configuration lc ON c.listConfigId = lc.listConfigId JOIN theme t ON lc.themeId = t.themeId JOIN user_ u ON lc.userId = u.userId 
+            FROM list_configuration lc LEFT JOIN configuration c ON c.listConfigId = lc.listConfigId JOIN theme t ON lc.themeId = t.themeId JOIN user_ u ON lc.userId = u.userId 
             WHERE lc.listConfigId = :listConfigId;";
 
     $stmt = $pdo->prepare($sql);
@@ -143,4 +143,13 @@ function createConfigList($pdo, $userId, $themeId, $share, $listName)
         'share' => $share,
         'listName' => $listName,
     ]);
+}
+
+function getAllConfigs($pdo)
+{
+    $sql = "SELECT DISTINCT vehiculeName, vehiculeBrand, vehiculeType, vehiculeImage, vehiculeAcceleration, vehiculeTopSpeed, vehiculeHandling, vehiculeSeat FROM configuration;";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
