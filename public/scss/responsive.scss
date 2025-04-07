@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+    #bandeau #menu {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 768px) { 
+    #bandeau .fa-bars {
+        display: none;
+    }
+
+    #bandeau #menu {
+        display: block;
+    }
+}

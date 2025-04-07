@@ -1,3 +1,14 @@
+@charset "UTF-8";
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-v47-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 * {
   margin: 0px;
   padding: 0px;
@@ -5,11 +16,178 @@
   text-decoration: none;
 }
 
-header nav ul {
-  display: flex;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  color: #FFF;
 }
-header nav ul li {
-  margin: 0 10px;
+
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/GTA-5-city-at-night-purple-style-skyscrapers_1920x1080.jpg");
+  background-size: cover;
+  filter: blur(8px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+header #bandeau {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(33, 33, 33, 0.7333333333);
+}
+header #bandeau #logo {
+  color: #EB0AFF;
+  margin-left: 35px;
+}
+header #bandeau .fa-bars {
+  margin-right: 30px;
+  font-size: 40px;
+  color: #EB0AFF;
+}
+header #bandeau #menu ul {
+  display: flex;
+  align-items: center;
+}
+header #bandeau #menu ul li {
+  margin: 0 30px;
+}
+header #bandeau #menu ul li a {
+  color: #FFF;
+}
+header #bandeau #menu ul .active {
+  color: #EB0AFF;
+}
+header #bandeau #menu ul li:hover a {
+  transition: 0.2s;
+  color: #EB0AFF;
+}
+header #bandeau #menu ul li:nth-last-child(2) {
+  margin-right: 15px;
+  padding: 20px 30px;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+}
+header #bandeau #menu ul li:last-child {
+  margin-right: 15px;
+  margin-left: 0px;
+  padding: 20px 30px;
+  width: 100px;
+  text-align: center;
+  border-radius: 24px;
+  background-color: #EB0AFF;
+}
+header #bandeau #menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Opacité sur l’arrière-plan */
+  z-index: 5; /* Derrière le menu burger mais devant le reste */
+  opacity: 0; /* Initialement invisible */
+  visibility: hidden; /* Empêche les clics quand invisible */
+  transition: opacity 0.7s ease, visibility 0.7s;
+}
+header #bandeau #menu-overlay.active {
+  opacity: 1; /* Rend l'overlay visible */
+  visibility: visible; /* Active les clics */
+}
+header #bandeau #menuburger {
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  background-color: #212121;
+  width: 300px;
+  height: 100vh;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s;
+  z-index: 15; /* Devant l'overlay */
+}
+header #bandeau #menuburger ul #xmark1 {
+  height: 100px;
+  font-size: 50px;
+  color: #EB0AFF;
+  display: flex;
+  justify-content: right;
+}
+header #bandeau #menuburger ul #xmark1 a {
+  top: 23%;
+  height: 50px;
+  font-size: 50px;
+}
+header #bandeau #menuburger ul li a {
+  height: 80px;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  color: #EB0AFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+}
+header #bandeau #menuburger ul li a i {
+  color: #EB0AFF;
+  margin-left: 30px;
+}
+header #bandeau #menuburger.active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+main #image {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+main #image p {
+  width: 180px;
+  padding: 20px;
+  background-color: rgba(33, 33, 33, 0.8549019608);
+  border-radius: 10px;
+  text-align: center;
+}
+main #image a {
+  padding: 20px 30px;
+  background-color: #EB0AFF;
+  border-radius: 24px;
+  color: #212121;
+}
+
+@media screen and (max-width: 768px) {
+  #bandeau #menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  #bandeau .fa-bars {
+    display: none;
+  }
+  #bandeau #menu {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

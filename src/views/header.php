@@ -7,20 +7,58 @@
     <title>fxGuard</title>
     <link rel="stylesheet" href="public/css/style.css">
     <script src="public/scripts/scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="public/scripts/menuBurger.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="./?action=default">Accueil</a></li>
-                <li><a href="./?action=configList">Configuations</a></li>
-                <li><a href="./?action=contact">Contact</a></li>
-                <li><a href="./?action=profile">Profil</a></li>
-                <li><a href="./?action=login">Se Connecter</a></li>
-                <li><a href="?action=logout">Se déconnecter</a></li>
-                <li><a href="./?action=register">S'Inscrir</a></li>
-            </ul>
+    <header class="container">
+        <nav id="bandeau">
+            <h2><a id="logo" href="./index.html">fxGuard</a></h2>
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            <div id="menuburger">
+                <ul>
+                    <li id="xmark1"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="./?action=default">Accueil<i class="fa-solid fa-chevron-right"></i></a></li>
+                    <li><a href="./?action=contact">Contact<i class="fa-solid fa-chevron-right"></i></a></li>
+                    <?php
+                    if (isset($_SESSION['userId'])) {
+                    ?>
+                        <li><a href="./?action=configList">Configuations<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="./?action=profile">Profil<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="?action=logout">Se déconnecter<i class="fa-solid fa-chevron-right"></i></a></li>
+                    <?php
+                    } else {
+                    ?>
+                        <li><a href="./?action=login">Se connecter<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="./?action=register">S'Inscrir<i class="fa-solid fa-chevron-right"></i></a></li>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a class="active" href="./?action=default">Accueil</a></li>
+                    <li><a href="./?action=contact">Contact</a></li>
+                    <?php
+                    if (isset($_SESSION['userId'])) {
+                    ?>
+                        <li><a href="./?action=configList">Configuations</a></li>
+                        <li><a href="./?action=profile">Profil</a></li>
+                        <li><a href="?action=logout">Se déconnecter</a></li>
+
+                    <?php
+                    } else {
+                    ?>
+                        <li><a href="./?action=login">Se Connecter</a></li>
+                        <li><a href="./?action=register">S'Inscrir</a></li>
+                    <?php
+                    }
+                    ?>
+                </ul>
+            </div>
+            <div id="menu-overlay"></div>
         </nav>
     </header>
 
