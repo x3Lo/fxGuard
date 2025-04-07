@@ -21,11 +21,7 @@ body {
   padding: 0;
   font-family: Roboto;
   color: #FFF;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
+  background-color: #212121;
 }
 
 .background {
@@ -41,12 +37,18 @@ body {
   z-index: 0;
 }
 
+header {
+  margin: 0px;
+}
 header #bandeau {
+  position: relative;
+  z-index: 100;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(33, 33, 33, 0.7333333333);
+  border-bottom: 1px solid #EB0AFF;
+  background-color: #212121;
 }
 header #bandeau #logo {
   color: #EB0AFF;
@@ -118,7 +120,7 @@ header #bandeau #menuburger {
   opacity: 0;
   visibility: hidden;
   transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s;
-  z-index: 15; /* Devant l'overlay */
+  z-index: 200; /* Devant l'overlay */
 }
 header #bandeau #menuburger ul #xmark1 {
   height: 100px;
@@ -154,7 +156,10 @@ header #bandeau #menuburger.active {
   visibility: visible;
 }
 
-main #image {
+main#homePage {
+  position: relative;
+}
+main#homePage #image {
   display: flex;
   flex-direction: column;
   margin-top: 60px;
@@ -162,18 +167,65 @@ main #image {
   justify-content: center;
   align-items: center;
 }
-main #image p {
+main#homePage #image p {
   width: 180px;
   padding: 20px;
   background-color: rgba(33, 33, 33, 0.8549019608);
   border-radius: 10px;
   text-align: center;
 }
-main #image a {
+main#homePage #image a {
+  margin-bottom: 50px;
   padding: 20px 30px;
   background-color: #EB0AFF;
   border-radius: 24px;
   color: #212121;
+}
+main#homePage #para {
+  margin: 0px;
+  width: 100%;
+  background-color: #212121;
+}
+main#homePage #para p {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.container {
+  margin: 0 25px;
+  margin-top: 40px;
+}
+
+main.login form .champs {
+  display: flex;
+  margin-top: 10px;
+}
+main.login form .champs label {
+  width: 40%;
+  margin-right: 5px;
+}
+main.login form .champs input {
+  width: 55%;
+  background-color: #212121;
+  border-radius: 5px;
+  border: 1px solid #EB0AFF;
+  color: #FFF;
+}
+main.login form button {
+  width: 100px;
+  display: flex;
+  margin-left: auto;
+  margin-top: 20px;
+  padding: 10px 15px;
+  border-radius: 24px;
+  justify-content: center;
+  background-color: #EB0AFF;
+  border: none;
+}
+main.login form button.last {
+  background-color: #212121;
+  border: 1px solid #EB0AFF;
+  color: #EB0AFF;
 }
 
 @media screen and (max-width: 768px) {

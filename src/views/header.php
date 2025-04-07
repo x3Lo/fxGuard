@@ -5,16 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fxGuard</title>
-    <link rel="stylesheet" href="public/css/style.css">
-    <script src="public/scripts/scripts.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <?php
+    if($_GET['action'] == 'configView') {
+        ?> <script src="public/scripts/scripts.js" defer></script> <?php
+    }
+    ?>
     <script src="public/scripts/menuBurger.js" defer></script>
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 
 <body>
-    <header class="container">
+    <header>
         <nav id="bandeau">
-            <h2><a id="logo" href="./index.html">fxGuard</a></h2>
+            <h2><a id="logo" href="./?action=default">fxGuard</a></h2>
             <a href="#"><i class="fa-solid fa-bars"></i></a>
             <div id="menuburger">
                 <ul>

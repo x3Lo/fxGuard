@@ -34,8 +34,8 @@ addUserByEmail($pdo, $_POST['userId'], $_POST['email'], $_POST['password']);
 // $user = getUserByUserId($pdo, $_POST['login']);
 
 
-// $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre compte a bien été créé.'];
+$_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre compte a bien été créé.'];
 
-// header("Location: ?action=login");
+header("Location: ?action=login");
 
 include RACINE . "/src/views/footer.php";

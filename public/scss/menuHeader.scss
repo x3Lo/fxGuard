@@ -75,7 +75,7 @@
     opacity: 0;
     visibility: hidden;
     transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s;
-    z-index: 15; /* Devant l'overlay */
+    z-index: 200; /* Devant l'overlay */
     
     ul{
 
