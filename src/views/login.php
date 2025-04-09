@@ -8,6 +8,6 @@
             <label for=" password">Mot de passe :</label>
             <input type="password" id="password" name="password" value="<?php echo $_POST["password"] ?? '' ?>" required>
         </div>
-        <button type="submit">Se connecter</button>
+        <button class="bouttonViolet" type="submit">Se connecter</button>
     </form>
 </main>

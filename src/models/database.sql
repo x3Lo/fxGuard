@@ -11,7 +11,7 @@ CREATE TABLE user_ (
 );
 
 CREATE TABLE theme (
-   themeId VARCHAR(50),
+   themeId INT AUTO_INCREMENT,
    themeName VARCHAR(50) NOT NULL UNIQUE,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(themeId)
@@ -21,7 +21,7 @@ CREATE TABLE list_configuration (
    listConfigId INT AUTO_INCREMENT,
    listName VARCHAR(50) NOT NULL,
    userId VARCHAR(50) NOT NULL,
-   themeId VARCHAR(50) NOT NULL,
+   themeId INT NOT NULL,
    share BOOLEAN NOT NULL,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(listConfigId),

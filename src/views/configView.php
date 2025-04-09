@@ -1,49 +1,57 @@
-<h1>Configuration View</h1>
-<a href="./?action=configList">Retourner en arrière</a>
-<br><br><br>
+<main class="container" id="view">
+    <a href="./?action=configList">Retourner en arrière</a>
 
-<?php
+    <div id="configName">
+        <h2>Nom de la configuration : <?php echo $configs[0]['listName'] ?></h2>
+        <h3>Catégorie : <?php echo $configs[0]['themeName'] ?></h3>
+        <h4>Confidentialité : <?php echo $share ?></h4>
+        <h4>Auteur : <?php echo $configs[0]['userId'] ?></h4>
+    </div>
 
-echo '<h2>Nom de la configuration : ' . $configs[0]['listName'] . '</h2>';
-echo '<h3>Catégorie : ' . $configs[0]['themeName'] . '</h3>';
-echo '<h4>Confidentialité : ' . $share . '</h4>';
-echo '<h4>Auteur : ' . $configs[0]['userId'] . '</h4>';
 
-if (isset($configs[0]['vehiculeName'])) {
-    foreach ($configs as $config) {
-        if ($config['userId'] == $_SESSION['userId']) {
-            echo '<img src="' . $config['vehiculeImage'] . '" alt="Un(e) ' . $config['vehiculeName'] . ', vehicule GTA 5.">';
-            echo '<p>Nom : ' . $config['vehiculeName'] . '</p>';
-            echo '<p>Marque :' . $config['vehiculeBrand'] . '</p>';
-            echo '<p>Type : ' . $config['vehiculeType'] . '</p>';
-            echo '<p>Accélération : ' . $config['vehiculeAcceleration'] . '</p>';
-            echo '<p>Vittesse max : ' . $config['vehiculeTopSpeed'] . ' km/h</p>';
-            echo '<p>Maniabilité : ' . $config['vehiculeHandling'] . '</p>';
-            echo '<p>Place(s) : ' . $config['vehiculeSeat'] . '</p>';
-            echo '<form action="?action=configRemove" method="post">';
-            echo '<input id="vehiculeId" name="vehiculeId" value="' . $config['vehiculeId'] . '" hidden>';
-            echo '<button>Supprimer</button>';
-            echo '</form>';
-        } else {
-            echo '<img src="' . $config['vehiculeImage'] . '" alt="Un(e) ' . $config['vehiculeName'] . ', vehicule GTA 5.">';
-            echo '<p>Nom : ' . $config['vehiculeName'] . '</p>';
-            echo '<p>Marque :' . $config['vehiculeBrand'] . '</p>';
-            echo '<p>Type : ' . $config['vehiculeType'] . '</p>';
-            echo '<p>Accélération : ' . $config['vehiculeAcceleration'] . '</p>';
-            echo '<p>Vittesse max : ' . $config['vehiculeTopSpeed'] . ' km/h</p>';
-            echo '<p>Maniabilité : ' . $config['vehiculeHandling'] . '</p>';
-            echo '<p>Place(s) : ' . $config['vehiculeSeat'] . '</p>';
-        }
-?>
-        <br><br>
-    <?php
-    }
-} else {
-    echo '<p>Aucun vehicule ajouté.</p>';
-}
+    <section>
+        <?php
+        if (isset($configs[0]['vehiculeName'])) {
+            foreach ($configs as $config) {
+                if ($config['userId'] == $_SESSION['userId']) { ?>
+                    <article>
+                        <img src="<?php echo $config['vehiculeImage'] ?>" alt="Un(e) <?php echo $config['vehiculeName'] ?>, vehicule GTA 5.">
+                        <p>Nom : <?php echo $config['vehiculeName'] ?></p>
+                        <p>Marque : <?php echo $config['vehiculeBrand'] ?></p>
+                        <p>Type : <?php echo $config['vehiculeType'] ?></p>
+                        <p>Accélération : <?php echo $config['vehiculeAcceleration'] ?></p>
+                        <p>Vittesse max : <?php echo $config['vehiculeTopSpeed'] ?> km/h</p>
+                        <p>Maniabilité : <?php echo $config['vehiculeHandling'] ?></p>
+                        <p>Place(s) : <?php echo $config['vehiculeSeat'] ?></p>
+                        <form action="?action=configRemove" method="post">
+                            <input id="vehiculeId" name="vehiculeId" value="<?php echo $config['vehiculeId'] ?>" hidden>
+                            <button class="bouttonViolet">Supprimer</button>
+                        </form>
+                    </article>
+                <?php } else { ?>
+                    <article>
+                        <img src="<?php echo $config['vehiculeImage'] ?>" alt="Un(e) <?php echo $config['vehiculeName'] ?>, vehicule GTA 5.">
+                        <p>Nom : <?php echo $config['vehiculeName'] ?></p>
+                        <p>Marque : <?php echo $config['vehiculeBrand'] ?></p>
+                        <p>Type : <?php echo $config['vehiculeType'] ?></p>
+                        <p>Accélération : <?php echo $config['vehiculeAcceleration'] ?></p>
+                        <p>Vittesse max : <?php echo $config['vehiculeTopSpeed'] ?> km/h</p>
+                        <p>Maniabilité : <?php echo $config['vehiculeHandling'] ?></p>
+                        <p>Place(s) : <?php echo $config['vehiculeSeat'] ?></p>
+                    </article>
 
-if ($configs[0]['userId'] == $_SESSION['userId']) { ?>
-    <h2><button id="loadScriptButton">Ajouter des vehicules</button></h2>
-    <input type="text" id="search" placeholder="Rechercher un véhicule...">
-    <ul id="vehicle-list"></ul>
-<?php }
+                <?php } ?>
+            <?php
+            }
+        } else { ?>
+            <p>Aucun vehicule ajouté.</p>
+        <?php } ?>
+    </section>
+
+    <?php if ($configs[0]['userId'] == $_SESSION['userId']) { ?>
+        <h2><button id="loadScriptButton">Ajouter des vehicules</button></h2>
+        <input type="text" id="search" placeholder="Rechercher un véhicule...">
+        <ul id="vehicle-list"></ul>
+    <?php } ?>
+
+</main>

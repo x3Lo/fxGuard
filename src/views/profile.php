@@ -17,8 +17,8 @@
             <p><?php echo $formattedDate; ?></p>
         </div>
         <div class="bouttons">
-            <button type="submit">Modifier</button>
-            <button class="last">Supprimer</button>
+            <button class="bouttonViolet" type="submit">Modifier</button>
+            <button class="bouttonViolet last">Supprimer</button>
         </div>
         
     </form>

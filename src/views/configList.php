@@ -1,26 +1,27 @@
-<h1>Configuration List</h1>
-<div>
-    <ul>
-        <li><a href="./?action=configCreator">Crée une configuration</a></li>
-        <li><a href="./?action=configShare">Configurations partagées</a></li>
-    </ul>
-</div>
-<h2>Configurations :</h2>
-<?php
+<main class="container">
+    <h1>Configuration List</h1>
+    <div>
+        <ul>
+            <li><a href="./?action=configCreator">Crée une configuration</a></li>
+            <li><a href="./?action=configShare">Configurations partagées</a></li>
+        </ul>
+    </div>
+    <h2>Configurations :</h2>
+    <?php
 
-require_once RACINE.'/src/models/request.php';
+    require_once RACINE . '/src/models/request.php';
 
 
-foreach($configsList as $configList) {
-    echo "Id : " . $configList['listConfigId'] . " " . "<br>";
-    echo "Nom : " . $configList['listName'] . " " . "<br>";
-    echo "Theme : " . $configList['themeName'] . " " . "<br>";
-    echo "Auteur : " . $configList['userId'] . " " . "<br>";
-    echo '<a href="?action=configView&configListId=' . $configList['listConfigId'] . '">Modifier</a>';
-    echo '<form action="?action=configListRemove" method="post">';
-        echo '<input id="listConfigId" name="listConfigId" value="' . $configList['listConfigId'] . '" hidden>';
-        echo '<button>Supprimer</button>';
-    echo '</form>';
-    ?>
-    <br><br>
-<?php }
+    foreach ($configsList as $configList) { ?>
+        <p>Id : <?php echo $configList['listConfigId'] ?></p>
+        <p>Nom : <?php echo $configList['listName'] ?></p>
+        <p>Theme : <?php echo $configList['themeName'] ?></p>
+        <p>Auteur : <?php echo $configList['userId'] ?></p>
+        <a class="bouttonViolet" href="?action=configView&configListId=<?php $configList['listConfigId'] ?>">Modifier</a>
+        <form action="?action=configListRemove" method="post">
+            <input id="listConfigId" name="listConfigId" value="<?php $configList['listConfigId'] ?>" hidden>
+            <button class="bouttonViolet last">Supprimer</button>
+        </form>
+    <?php } ?>
+
+</main>
