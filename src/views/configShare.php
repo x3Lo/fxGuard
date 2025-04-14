@@ -27,8 +27,7 @@
 
                 
                 <?php foreach ($allMoyennes[$configList['listConfigId']] as $moyenne) { ?>
-                    <?php var_dump($moyenne) ?>
-                    <h3><?= $moyenne['AVG(commentNote'] ?></h3>
+                    <h3>Notes Moyennes : <?= $moyenne['AVG(commentNote)'] ?>/10</h3>
                 <?php } ?>
 
                 <h3>Commentaire(s) :</h3>
