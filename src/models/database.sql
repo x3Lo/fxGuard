@@ -47,12 +47,12 @@ CREATE TABLE configuration (
 
 CREATE TABLE comment (
    commentId INT AUTO_INCREMENT,
-   commentNote DECIMAL(2,1) NOT NULL CHECK (commentNote BETWEEN 0 AND 10),
+   commentNote DECIMAL(2,0) NOT NULL CHECK (commentNote BETWEEN 0 AND 10),
    commentContent VARCHAR(450),
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    userId VARCHAR(50) NOT NULL,
-   vehiculeId INT NOT NULL,
+   listConfigId INT NOT NULL,
    PRIMARY KEY(commentId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
-   FOREIGN KEY(vehiculeId) REFERENCES configuration(vehiculeId) ON DELETE CASCADE
+   FOREIGN KEY(listConfigId) REFERENCES configuration(listConfigId) ON DELETE CASCADE
 );

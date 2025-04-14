@@ -197,7 +197,7 @@ function rmConfig($pdo, $vehiculeId)
     $sql = "DELETE FROM configuration WHERE vehiculeId = :vehiculeId";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        'vehiculeId' => $vehiculeId,
+        'vehiculeId' => $vehiculeId
     ]);
 }
 
@@ -206,6 +206,28 @@ function rmConfigList($pdo, $listConfigId)
     $sql = "DELETE FROM list_configuration WHERE listConfigId = :listConfigId";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        'listConfigId' => $listConfigId,
+        'listConfigId' => $listConfigId
     ]);
+}
+
+function getCommentById($pdo, $listConfigId)
+{
+    $sql = "SELECT * FROM comment WHERE listConfigId = :listConfigId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'listConfigId' => $listConfigId
+    ]);
+
+    return $stmt->fetchAll();
+}
+
+function getNoteMoyenneById($pdo, $listConfigId)
+{
+    $sql = "SELECT AVG(commentNote) FROM comment WHERE listConfigId = :listConfigId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'listConfigId' => $listConfigId
+    ]);
+
+    return $stmt->fetchAll();
 }

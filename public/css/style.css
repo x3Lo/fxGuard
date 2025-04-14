@@ -56,6 +56,39 @@ body {
   color: #EB0AFF;
 }
 
+.msg {
+  margin-top: 20px;
+  padding: 15px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  border: 1px solid #EB0AFF;
+  background-color: rgba(33, 33, 33, 0.9254901961);
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.warning {
+  border: 1px solid red;
+  color: red;
+}
+
+.success {
+  border: 1px solid green;
+  color: green;
+}
+
 header {
   margin: 0px;
 }
@@ -276,6 +309,13 @@ main#creator form select {
   border-radius: 5px;
   border: 1px solid #EB0AFF;
   color: #FFF;
+}
+
+main#share section article {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
 }
 
 @media screen and (max-width: 768px) {

@@ -49,6 +49,39 @@ body {
     color: $colorFont2;
 }
 
+.msg {
+    margin-top: 20px;
+    padding: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    text-align: center;
+    position: absolute;
+    border: 1px solid $colorFont2;
+    background-color: #212121ec;
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.warning {
+    border: 1px solid red;
+    color: red;
+}
+
+.success {
+    border: 1px solid green;
+    color: green;
+}
+
 header {
     margin: 0px;
 
