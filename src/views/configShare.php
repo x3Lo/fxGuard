@@ -25,6 +25,23 @@
                     <a class="bouttonViolet" href="?action=configView&configListId=<?php echo $configList['listConfigId'] ?>">Voir</a>
                 <?php } ?>
 
+                
+                <?php foreach ($allMoyennes[$configList['listConfigId']] as $moyenne) { ?>
+                    <?php var_dump($moyenne) ?>
+                    <h3><?= $moyenne['AVG(commentNote'] ?></h3>
+                <?php } ?>
+
+                <h3>Commentaire(s) :</h3>
+                <?php foreach ($allComments[$configList['listConfigId']] as $comment) { ?>
+                    <!-- <?php var_dump($comment) ?> -->
+                    <p>Note : <?= $comment['commentNote'] ?>/10</p>
+                    <p>Commentaire : <?= $comment['commentContent'] ?></p>
+                    <p>Autheur : <?= $comment['userId'] ?></p>
+                    <p>Publié le <?= $comment['createAt'] ?></p>
+                    <br>
+                <?php } ?>
+
+
             </article>
         <?php } ?>
     </section>

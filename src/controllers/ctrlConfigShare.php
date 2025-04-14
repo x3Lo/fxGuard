@@ -17,8 +17,18 @@ if (!(isset($_SESSION['userId']))) {
     // useful if the current script has not been completed.
 } else {
     $configsList = getConfigShareList($pdo);
-   
+    $allComments = [];
+    $allMoyennes = [];
 
+    foreach ($configsList as $configList) {
+        $listConfigId = $configList['listConfigId'];
+        $comments = getCommentById($pdo, $listConfigId);
+        $noteMoyenne = getNoteMoyenneById($pdo, $listConfigId);
+
+
+        $allComments[$listConfigId] = $comments;
+        $allMoyennes[$listConfigId] = $noteMoyenne;
+    }
 
     require RACINE . "/src/views/configShare.php";
 }
