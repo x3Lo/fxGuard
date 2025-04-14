@@ -49,7 +49,7 @@
     </section>
 
     <?php if ($configs[0]['userId'] == $_SESSION['userId']) { ?>
-        <h2><button id="loadScriptButton">Ajouter des vehicules</button></h2>
+        <h2><button class="bouttonViolet" id="loadScriptButton">Ajouter des vehicules</button></h2>
         <input type="text" id="search" placeholder="Rechercher un véhicule...">
         <ul id="vehicle-list"></ul>
     <?php } ?>

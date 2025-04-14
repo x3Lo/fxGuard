@@ -215,16 +215,21 @@ main#homePage #para p {
   margin-top: 40px;
 }
 
+main.login h2 {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
 main.login form .champs {
   display: flex;
+  flex-direction: column;
   margin-top: 10px;
 }
 main.login form .champs label {
-  width: 40%;
-  margin-right: 5px;
+  margin-bottom: 15px;
 }
 main.login form .champs input {
-  width: 55%;
+  margin-bottom: 25px;
+  padding: 10px 5px;
   background-color: #212121;
   border-radius: 5px;
   border: 1px solid #EB0AFF;
@@ -253,6 +258,24 @@ main#view section article {
 }
 main#view section article img {
   border-radius: 12px;
+}
+
+main#creator a {
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  padding: 10px 15px;
+}
+main#creator form {
+  margin-top: 40px;
+}
+main#creator form input,
+main#creator form select {
+  margin-bottom: 15px;
+  padding: 0 5px;
+  background-color: #212121;
+  border-radius: 5px;
+  border: 1px solid #EB0AFF;
+  color: #FFF;
 }
 
 @media screen and (max-width: 768px) {

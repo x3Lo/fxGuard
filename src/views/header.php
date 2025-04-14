@@ -35,7 +35,7 @@
                     } else {
                     ?>
                         <li><a href="./?action=login">Se connecter<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="./?action=register">S'Inscrir<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="./?action=register">S'Inscrire<i class="fa-solid fa-chevron-right"></i></a></li>
                     <?php
                     }
                     ?>
@@ -56,7 +56,7 @@
                     } else {
                     ?>
                         <li><a href="./?action=login">Se Connecter</a></li>
-                        <li><a href="./?action=register">S'Inscrir</a></li>
+                        <li><a href="./?action=register">S'Inscrire</a></li>
                     <?php
                     }
                     ?>

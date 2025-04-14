@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';  // Remplace par ton host si nécessaire
 $dbname = 'db_fxguard_test';
-$user = 'root';  // Remplace par ton utilisateur MySQL
-$pass = '';  // Remplace par ton mot de passe MySQL
+$user = 'toor';  // Remplace par ton utilisateur MySQL
+$pass = 'toor';  // Remplace par ton mot de passe MySQL
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass, [

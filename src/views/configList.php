@@ -17,9 +17,9 @@
         <p>Nom : <?php echo $configList['listName'] ?></p>
         <p>Theme : <?php echo $configList['themeName'] ?></p>
         <p>Auteur : <?php echo $configList['userId'] ?></p>
-        <a class="bouttonViolet" href="?action=configView&configListId=<?php $configList['listConfigId'] ?>">Modifier</a>
+        <a class="bouttonViolet" href="?action=configView&configListId=<?php echo $configList['listConfigId'] ?>">Modifier</a>
         <form action="?action=configListRemove" method="post">
-            <input id="listConfigId" name="listConfigId" value="<?php $configList['listConfigId'] ?>" hidden>
+            <input id="listConfigId" name="listConfigId" value="<?php echo $configList['listConfigId'] ?>" hidden>
             <button class="bouttonViolet last">Supprimer</button>
         </form>
     <?php } ?>

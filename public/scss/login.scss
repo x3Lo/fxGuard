@@ -1,18 +1,24 @@
 main.login {
+
+    h2 {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+    }
     
     form {
         
         .champs {
             display: flex;
+            flex-direction: column;
             margin-top: 10px;
 
             label {
-                width: 40%;
-                margin-right: 5px;
+                margin-bottom: 15px;
             }
 
             input {
-                width: 55%;
+                margin-bottom: 25px;
+                padding: 10px 5px;
                 background-color: $colorblkGrey;
                 border-radius: 5px;
                 border: 1px solid $colorFont2;
