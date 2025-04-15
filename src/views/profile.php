@@ -19,9 +19,7 @@
         </div>
         <div class="bouttons">
             <a class="bouttonViolet" href="./?action=profileEdit">Modifier</a>
-            <form action="./?action=" method="post">
-                <button class="bouttonViolet last">Supprimer</button>
-            </form>
+            <a class="bouttonViolet last" href="./?action=deleteProfile">Supprimer</a>
         </div>
 
     </form>

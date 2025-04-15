@@ -295,3 +295,12 @@ function editProfile($pdo, $userId, $userName, $email)
         'email' => $email
     ]);
 }
+
+function deleteProfile($pdo, $userId)
+{
+    $sql = "DELETE FROM user_ WHERE userId = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'userId' => $userId
+    ]);
+}
