@@ -17,7 +17,7 @@
                 <!-- <p>Id : <?php echo $configList['listConfigId'] ?></p> -->
                 <h3>Nom : <?php echo $configList['listName'] ?></h3>
                 <h4>Theme : <?php echo $configList['themeName'] ?></h4>
-                <p>Auteur : <?php echo $configList['userId'] ?></p>
+                <p>Auteur : <?php echo $configList['userName'] ?></p>
 
                 <?php if ($configList['userId'] == $_SESSION['userId']) { ?>
                     <a class="bouttonViolet" href="?action=configView&configListId=<?php echo $configList['listConfigId'] ?>">Modifier</a>
@@ -35,10 +35,11 @@
                     <!-- <?php var_dump($comment) ?> -->
                     <p>Note : <?= $comment['commentNote'] ?>/10</p>
                     <p>Commentaire : <?= $comment['commentContent'] ?></p>
-                    <p>Autheur : <?= $comment['userId'] ?></p>
+                    <p>Autheur : <?= $comment['userName'] ?></p>
                     <p>Publié le <?= $comment['createAt'] ?></p>
                     <br>
                 <?php } ?>
+                <a class="bouttonViolet last" href="./?action=comment&configListId=<?php echo $configList['listConfigId'] ?>">Poster un commentaire</a>
 
 
             </article>

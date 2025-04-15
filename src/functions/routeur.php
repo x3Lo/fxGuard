@@ -18,6 +18,8 @@ function switchman($action = "default"){
     $theActions["profile"]="ctrlProfile.php";
     $theActions["profileEdit"]="ctrlProfileEdit.php";
     $theActions["register"]="ctrlRegister.php";
+    $theActions["comment"]="ctrlComment.php";
+    $theActions["deleteComment"]="ctrlDeleteComment.php";
     $theActions["page404"]="page404_ctrl.php";
     
 

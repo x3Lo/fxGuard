@@ -3,7 +3,7 @@
 require RACINE . "/src/views/header.php";
 
 
-if (isset($_SESSION['userId'])) {
+if (isset($_SESSION['userName'])) {
     $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Vous devez être déconnecter pour vous inscrir.'];
     header("Location: ?action=default");   // access forbidden; immediatly redirected to home page.
     exit;
@@ -13,14 +13,14 @@ if (isset($_SESSION['userId'])) {
 
 
 
-if (!isset($_POST['userId']) || !isset($_POST['password'])) {
+if (!isset($_POST['userName']) || !isset($_POST['password'])) {
     require RACINE . "/src/views/register.php";
     exit;
 }
 
 
 
-if (empty($_POST['userId']) || empty($_POST['email']) || empty($_POST['password'])) {
+if (empty($_POST['userName']) || empty($_POST['email']) || empty($_POST['password'])) {
     $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Tous les champs doivent être définis.'];
     header("Location: ?action=register");
     // require RACINE . "/src/views/register.php";
@@ -30,7 +30,7 @@ if (empty($_POST['userId']) || empty($_POST['email']) || empty($_POST['password'
 
 require_once RACINE . "/src/models/request.php";
 
-addUserByEmail($pdo, $_POST['userId'], $_POST['email'], $_POST['password']);
+addUserByEmail($pdo, $_POST['userName'], $_POST['email'], $_POST['password']);
 // $user = getUserByUserId($pdo, $_POST['login']);
 
 

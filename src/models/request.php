@@ -1,11 +1,11 @@
 <?php
 
-function getUserByUserId($pdo, $userId)
+function getUserByUserName($pdo, $userName)
 {
     // Préparer la requête SQL pour récupérer l'utilisateur par userId
-    $sql = "SELECT * FROM user_ WHERE userId = :userId";
+    $sql = "SELECT * FROM user_ WHERE userName = :userName";
     $stmt = $pdo->prepare($sql);
-    $stmt->execute(['userId' => $userId]);
+    $stmt->execute(['userName' => $userName]);
 
     // Récupérer l'utilisateur
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -14,12 +14,12 @@ function getUserByUserId($pdo, $userId)
     return $user ? $user : NULL;
 }
 
-function addUserByEmail($pdo, $userId, $email, $password)
+function addUserByEmail($pdo, $userName, $email, $password)
 {
-    $sql = "INSERT INTO user_ (userId, email, password, role) VALUES (:userId, :email, :password, :role)";
+    $sql = "INSERT INTO user_ (userName, email, password, role) VALUES (:userName, :email, :password, :role)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
-        'userId' => $userId,
+        'userName' => $userName,
         'email' => $email,
         'password' => $password,
         'role' => 'user'
@@ -32,7 +32,8 @@ function getConfigListByUserId($pdo, $userId)
                 lc.listConfigId, 
                 lc.listName, 
                 t.themeName, 
-                u.userId
+                u.userId,
+                u.userName
             FROM list_configuration lc JOIN user_ u ON lc.userId = u.userId JOIN theme t ON lc.themeId = t.themeId WHERE u.userId = :userId ORDER BY lc.listConfigId;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -78,6 +79,7 @@ function getConfig($pdo, $listConfigId)
                 lc.share, 
                 t.themeName, 
                 u.userId, 
+                u.userName, 
                 c.vehiculeId, 
                 c.vehiculeName, 
                 c.vehiculeBrand, 
@@ -104,7 +106,8 @@ function getConfigShareList($pdo)
                 lc.listConfigId, 
                 lc.listName, 
                 t.themeName, 
-                u.userId
+                u.userId, 
+                u.userName
             FROM list_configuration lc JOIN user_ u ON lc.userId = u.userId JOIN theme t ON lc.themeId = t.themeId WHERE lc.share = :share ORDER BY lc.listConfigId;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -212,7 +215,15 @@ function rmConfigList($pdo, $listConfigId)
 
 function getCommentById($pdo, $listConfigId)
 {
-    $sql = "SELECT * FROM comment WHERE listConfigId = :listConfigId";
+    $sql = "SELECT 
+                c.commentId, 
+                c.commentNote, 
+                c.commentContent, 
+                c.createAt, 
+                c.listConfigId, 
+                u.userId, 
+                u.userName 
+            FROM comment c JOIN user_ u ON c.userId = u.userId WHERE listConfigId = :listConfigId";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         'listConfigId' => $listConfigId
@@ -230,4 +241,57 @@ function getNoteMoyenneById($pdo, $listConfigId)
     ]);
 
     return $stmt->fetchAll();
+}
+
+function postComment($pdo, $note, $content, $userId, $listConfigId)
+{
+    $sql = "INSERT INTO comment (
+                commentNote,
+                commentContent,
+                userId,
+                listConfigId
+            ) VALUE (
+                :note,
+                :content,
+                :userId,
+                :listConfigId
+            );";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'note' => $note,
+        'content' => $content,
+        'userId' => $userId,
+        'listConfigId' => $listConfigId,
+    ]);
+}
+
+function getCommentByUserId($pdo, $userId)
+{
+    $sql = "SELECT * FROM comment WHERE userId = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'userId' => $userId
+    ]);
+
+    return $stmt->fetchAll();
+}
+
+function deleteComment($pdo, $commentId)
+{
+    $sql = "DELETE FROM comment WHERE commentId = :commentId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'commentId' => $commentId
+    ]);
+}
+
+function editProfile($pdo, $userId, $userName, $email)
+{
+    $sql = "UPDATE user_ SET userName = :userName, email = :email WHERE userId = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'userId' => $userId,
+        'userName' => $userName,
+        'email' => $email
+    ]);
 }

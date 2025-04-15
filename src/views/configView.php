@@ -5,7 +5,7 @@
         <h2>Nom de la configuration : <?php echo $configs[0]['listName'] ?></h2>
         <h3>Catégorie : <?php echo $configs[0]['themeName'] ?></h3>
         <h4>Confidentialité : <?php echo $share ?></h4>
-        <h4>Auteur : <?php echo $configs[0]['userId'] ?></h4>
+        <h4>Auteur : <?php echo $configs[0]['userName'] ?></h4>
     </div>
 
 

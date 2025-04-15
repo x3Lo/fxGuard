@@ -17,20 +17,17 @@ if (!(isset($_SESSION['userId']))) {
    // useful if the current script has not been completed.
 } else {
 
-   $dateString = $_SESSION['date'];
-   $date = new DateTime($dateString);
-   $formattedDate = $date->format('d/m/Y');
+    if (!isset($_POST['userName'])) {
+        require RACINE . "/src/views/profileEdit.php";
+        exit;
+    }
 
-   if ($_SESSION['role'] == 'admin') {
-      $_SESSION['privilege'] = 'administrateur';
-   } else {
-      $_SESSION['privilege'] = 'utilisateur';
-   }
+    editProfile($pdo, $_SESSION['userId'], $_POST['userName'], $_POST['emaile']);
 
-   $comments = getCommentByUserId($pdo, $_SESSION['userId']);
-
-
-   require RACINE . "/src/views/profile.php";
+    $_SESSION['userName'] = $_POST['userName'];
+    $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez bien modifié votre profil'];
+    header("Location: ?action=profile");
+    
 }
 
 include RACINE . "/src/views/footer.php";

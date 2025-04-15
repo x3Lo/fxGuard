@@ -15,28 +15,22 @@ if (!(isset($_SESSION['userId']))) {
     header("Location: ?action=default");   // access forbidden; immediatly redirected to home page.
     exit;                               // exit is mandatory to abort the current script and update the $_SESSION; Especially 
     // useful if the current script has not been completed.
-}
-
-if (isset($_GET['configListId'])) {
-    $listConfigId = $_GET['configListId'];
-    $_SESSION['listConfigId'] = $listConfigId;
 } else {
-    $_SESSION['msg'] = ['level' => 'warning', 'content' => "Le paramètre 'configListId' n'est pas défini dans l'URL."];
+
+    if (!isset($_POST['note']) || !isset($_POST['comment'])) {
+        $_SESSION['listConfigId'] = $_GET['configListId'];
+        require RACINE . "/src/views/comment.php";    // stay on the same page
+        exit;                               // end of script
+    }
+
+    postComment($pdo, $_POST['note'], $_POST['comment'], $_SESSION['userId'], $_SESSION['listConfigId']);
+
+
+    $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre commentaire a bien été posté'];
+    
+    unset($_SESSION['listConfigId']);
+    header("Location: ?action=configShare"); 
 }
 
 
-$configs = getConfig($pdo, $listConfigId);
-// unset($_SESSION['listConfigId']);
-
-
-if ($configs[0]['share'] == 1) {
-    $share = 'public';
-} else {
-    $share = 'privé';
-}
-
-require RACINE . "/src/views/configView.php";
-
-
-
-include RACINE . "/src/views/footer.php";
+include(RACINE . "/src/views/footer.php");

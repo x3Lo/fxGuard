@@ -3,8 +3,8 @@
 require RACINE . "/src/views/header.php";
 
 // if the user applying is already logged in
-if (isset($_SESSION['userId'])) {
-    $_SESSION['msg'] = ['level' => 'info', 'content' => 'Vous êtes déjà connecté en tant que "' . $_SESSION['userId'] . '". Déconnectez-vous avant.'];
+if (isset($_SESSION['userName'])) {
+    $_SESSION['msg'] = ['level' => 'info', 'content' => 'Vous êtes déjà connecté en tant que "' . $_SESSION['userName'] . '". Déconnectez-vous avant.'];
     header("Location: ?action=configList");
     exit;                           // end of script  
 }
@@ -30,7 +30,7 @@ if (empty($_POST['login']) || empty($_POST['password'])) {
 
 require_once RACINE . "/src/models/request.php";
 
-$user = getUserByUserId($pdo, $_POST['login']);
+$user = getUserByUserName($pdo, $_POST['login']);
 if (($user == null) || ($_POST['password'] != $user['password'])) {
     $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Login ou mot de passe est incorrect.'];
     header("Location: ?action=login");
@@ -39,10 +39,11 @@ if (($user == null) || ($_POST['password'] != $user['password'])) {
 
 /* successfull login */
 $_SESSION['userId'] = $user['userId'];
+$_SESSION['userName'] = $user['userName'];
 $_SESSION['email'] = $user['email'];
 $_SESSION['role'] = $user['role'];
 $_SESSION['date'] = $user['createAt'];
-$_SESSION['msg'] = ['level' => 'success', 'content' => 'Bonjour ' . $user['userId'] . ' ! Vous êtes connecté.'];
+$_SESSION['msg'] = ['level' => 'success', 'content' => 'Bonjour ' . $user['userName'] . ' ! Vous êtes connecté.'];
 
 
 header("Location: ?action=configList");     // login is achieved. Go to the landing page (home)

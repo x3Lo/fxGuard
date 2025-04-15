@@ -1,8 +1,9 @@
 <main class="container login">
+    <h1>Profil</h1>
     <form action="?action=profile" method="post">
         <div class="champs">
-            <label for="userId">Pseudo :</label>
-            <input type="text" name="userId" id="userId" value="<?php echo $_SESSION['userId']; ?> " disabled>
+            <label for="userName">Pseudo :</label>
+            <input type="text" name="userName" id="userName" value="<?php echo $_SESSION['userName']; ?> " disabled>
         </div>
         <div class="champs">
             <label for="email">Email :</label>
@@ -17,9 +18,29 @@
             <p><?php echo $formattedDate; ?></p>
         </div>
         <div class="bouttons">
-            <button class="bouttonViolet" type="submit">Modifier</button>
-            <button class="bouttonViolet last">Supprimer</button>
+            <a class="bouttonViolet" href="./?action=profileEdit">Modifier</a>
+            <form action="./?action=" method="post">
+                <button class="bouttonViolet last">Supprimer</button>
+            </form>
         </div>
-        
+
     </form>
+    <div id="comment">
+        <h2>Commentaire(s) posté(s) :</h2>
+
+        <section>
+            <?php foreach ($comments as $comment) { ?>
+                <article>
+                    <p>Note : <?= $comment['commentNote'] ?></p>
+                    <p>Contenu : <?= $comment['commentContent'] ?></p>
+                    <p>Posté le <?= $comment['createAt'] ?></p>
+                    <form action="./?action=deleteComment" method="post">
+                        <input type="text" id="commentId" name="commentId" value="<?php echo $comment['commentId'] ?>" hidden>
+                        <button class="bouttonViolet last">Supprimer</button>
+                    </form>
+                </article>
+            <?php } ?>
+        </section>
+
+    </div>
 </main>

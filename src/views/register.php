@@ -2,8 +2,8 @@
     <h2>Veuillez remplir ce formulaire pour vous inscrire : </h2>
     <form action="?action=register" method="post">
         <div class="champs">
-            <label for="userId">Pseudo :</label>
-            <input type="text" id="userId" name="userId" value="<?php echo $_POST["userId"] ?? '' ?>" placeholder="Votre Pseudo" required>
+            <label for="userName">Pseudo :</label>
+            <input type="text" id="userName" name="userName" value="<?php echo $_POST["userName"] ?? '' ?>" placeholder="Votre Pseudo" required>
         </div>
         <div class="champs">
             <label for="email">E-mail :</label>

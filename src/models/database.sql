@@ -2,7 +2,8 @@ CREATE DATABASE db_fxguard_test;
 USE db_fxguard_test;
 
 CREATE TABLE user_ (
-   userId VARCHAR(50),
+   userId INT AUTO_INCREMENT,
+   userName VARCHAR(50) NOT NULL,
    email VARCHAR(50) NOT NULL UNIQUE,
    password VARCHAR(100) NOT NULL,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -20,7 +21,7 @@ CREATE TABLE theme (
 CREATE TABLE list_configuration (
    listConfigId INT AUTO_INCREMENT,
    listName VARCHAR(50) NOT NULL,
-   userId VARCHAR(50) NOT NULL,
+   userId INT NOT NULL,
    themeId INT NOT NULL,
    share BOOLEAN NOT NULL,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -50,9 +51,9 @@ CREATE TABLE comment (
    commentNote DECIMAL(2,0) NOT NULL CHECK (commentNote BETWEEN 0 AND 10),
    commentContent VARCHAR(450),
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-   userId VARCHAR(50) NOT NULL,
+   userId INT NOT NULL,
    listConfigId INT NOT NULL,
    PRIMARY KEY(commentId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
-   FOREIGN KEY(listConfigId) REFERENCES configuration(listConfigId) ON DELETE CASCADE
+   FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId) ON DELETE CASCADE
 );
