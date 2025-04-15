@@ -1,4 +1,5 @@
 <main class="container" id="creator">
+    <h1>Créer sa configuration</h1>
 
     <a href="./?action=configList">Retourner en arrière</a>
 

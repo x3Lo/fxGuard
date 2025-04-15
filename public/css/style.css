@@ -269,6 +269,65 @@ main.login form .champs input {
   color: #FFF;
 }
 
+main#list #menuConf {
+  margin-top: 30px;
+}
+main#list #menuConf ul li {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #EB0AFF;
+  color: #FFF;
+  border-radius: 24px;
+  text-align: center;
+}
+main#list h2 {
+  margin-top: 50px;
+}
+main#list section {
+  margin-top: 35px;
+}
+main#list section article {
+  margin-top: 15px;
+  padding: 20px;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+}
+
+main#creator h1 {
+  margin-bottom: 30px;
+}
+main#creator a {
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  padding: 10px 15px;
+}
+main#creator form {
+  margin-top: 40px;
+}
+main#creator form input,
+main#creator form select {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px 5px;
+  width: 95%;
+  background-color: #212121;
+  border-radius: 5px;
+  border: 1px solid #EB0AFF;
+  color: #FFF;
+}
+
+main#share section article {
+  margin-bottom: 30px;
+  padding: 15px;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+}
+
+main#view a {
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  padding: 10px 15px;
+}
 main#view #configName {
   margin-top: 50px;
   margin-bottom: 60px;
@@ -291,31 +350,7 @@ main#view section article {
 }
 main#view section article img {
   border-radius: 12px;
-}
-
-main#creator a {
-  border: 1px solid #EB0AFF;
-  border-radius: 24px;
-  padding: 10px 15px;
-}
-main#creator form {
-  margin-top: 40px;
-}
-main#creator form input,
-main#creator form select {
-  margin-bottom: 15px;
-  padding: 0 5px;
-  background-color: #212121;
-  border-radius: 5px;
-  border: 1px solid #EB0AFF;
-  color: #FFF;
-}
-
-main#share section article {
-  margin-bottom: 30px;
-  padding: 15px;
-  border: 1px solid #EB0AFF;
-  border-radius: 24px;
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px) {

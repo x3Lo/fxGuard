@@ -1,4 +1,46 @@
+main#list {
+
+    #menuConf {
+        margin-top: 30px;
+
+        ul {
+
+            li {
+                margin-top: 15px;
+                padding: 15px;
+                background-color: $colorFont2;
+                color: $colorFont1;
+                border-radius: 24px;
+                text-align: center;
+
+                a {
+
+                }
+            }
+        }
+    }
+
+    h2 {
+        margin-top: 50px;
+    }
+
+    section {
+        margin-top: 35px;
+
+        article {
+            margin-top: 15px;
+            padding: 20px;
+            border: 1px solid $colorFont2;
+            border-radius: 24px;
+        }
+    }
+}
+
 main#creator {
+
+    h1 {
+        margin-bottom: 30px;
+    }
 
     a {
         border: 1px solid $colorFont2;
@@ -11,8 +53,10 @@ main#creator {
 
         input,
         select {
+            margin-top: 10px;
             margin-bottom: 15px;
-            padding: 0 5px;
+            padding: 10px 5px;
+            width: 95%;
             background-color: $colorblkGrey;
             border-radius: 5px;
             border: 1px solid $colorFont2;
@@ -31,6 +75,48 @@ main#share {
             padding: 15px;
             border: 1px solid $colorFont2;
             border-radius: 24px;
+        }
+    }
+}
+
+main#view {
+
+    a {
+        border: 1px solid $colorFont2;
+        border-radius: 24px;
+        padding: 10px 15px;
+    }
+
+    #configName {
+        margin-top: 50px;
+        margin-bottom: 60px;
+
+        h2 {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
+
+        h4 {
+            font-size: 0.8rem;
+        }
+    }
+
+    section {
+
+        article {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 3px solid $colorFont2;
+            border-radius: 24px;
+            text-align: center;
+
+            img {
+                border-radius: 12px;
+                margin-bottom: 10px;
+            }
         }
     }
 }
