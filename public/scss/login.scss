@@ -24,6 +24,16 @@ main.login {
                 border: 1px solid $colorFont2;
                 color: $colorFont1;
             }
+
+            textarea {
+                height: 50px;
+                margin-bottom: 25px;
+                background-color: $colorblkGrey;
+                color: $colorFont1;
+                padding: 10px 5px;
+                border-radius: 12px;
+                border: 1px solid $colorFont2;
+            }
         }
     }
 }

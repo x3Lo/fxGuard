@@ -57,6 +57,7 @@ body {
 }
 
 .msg {
+  z-index: 100000;
   margin-top: 20px;
   padding: 15px;
   left: 50%;
@@ -242,6 +243,24 @@ main#homePage #para p {
   padding: 40px 30px;
   text-align: center;
 }
+main#homePage #iframe {
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #212121;
+}
+main#homePage #iframe iframe {
+  width: 80%;
+}
+
+main#profile #commentPro {
+  margin-top: 40px;
+}
+main#profile #commentPro section article {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EB0AFF;
+}
 
 .container {
   margin: 0 25px;
@@ -268,17 +287,32 @@ main.login form .champs input {
   border: 1px solid #EB0AFF;
   color: #FFF;
 }
+main.login form .champs textarea {
+  height: 50px;
+  margin-bottom: 25px;
+  background-color: #212121;
+  color: #FFF;
+  padding: 10px 5px;
+  border-radius: 12px;
+  border: 1px solid #EB0AFF;
+}
 
 main#list #menuConf {
   margin-top: 30px;
 }
 main#list #menuConf ul li {
-  margin-top: 15px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+main#list #menuConf ul li a {
+  display: flex;
+  justify-content: center;
+  width: 210px;
   padding: 15px;
   background-color: #EB0AFF;
   color: #FFF;
   border-radius: 24px;
-  text-align: center;
 }
 main#list h2 {
   margin-top: 50px;
@@ -315,12 +349,41 @@ main#creator form select {
   border: 1px solid #EB0AFF;
   color: #FFF;
 }
+main#creator form #ptg {
+  display: flex;
+  align-items: baseline;
+}
+main#creator form #ptg label {
+  width: 80%;
+}
+main#creator form #ptg input {
+  width: 20%;
+}
 
+main#share h1 {
+  margin-bottom: 30px;
+}
+main#share section {
+  margin-top: 40px;
+}
 main#share section article {
   margin-bottom: 30px;
   padding: 15px;
   border: 1px solid #EB0AFF;
   border-radius: 24px;
+}
+main#share #comment {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #EB0AFF;
+}
+main#share #comment section {
+  margin-top: 20px;
+}
+main#share a {
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  padding: 10px 15px;
 }
 
 main#view a {
@@ -351,6 +414,22 @@ main#view section article {
 main#view section article img {
   border-radius: 12px;
   margin-bottom: 10px;
+}
+main#view #vehicle-list h3 {
+  padding-top: 15px;
+  border-top: 1px solid #EB0AFF;
+  margin-top: 30px;
+}
+main#view #vehicle-list li {
+  margin-top: 30px;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  padding: 20px;
+  text-align: center;
+}
+main#view #vehicle-list li img {
+  border-radius: 12px;
+  margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px) {

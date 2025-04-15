@@ -13,8 +13,11 @@
                 echo '<option value="' . $theme['themeName'] . '">' . $theme['themeName'] . '</option>';
             } ?>
         </select><br>
-        <label for="share">Partager la configuration :</label>
-        <input type="checkbox" name="share" id="share"><br>
+        <div id="ptg">
+            <label for="share">Partager la configuration :</label>
+            <input type="checkbox" name="share" id="share"><br>
+        </div>
+
         <button class="bouttonViolet" type="submit">Créer une configuration</button>
     </form>
 </main>

@@ -4,8 +4,7 @@ require RACINE . "/src/views/header.php";
 
 
 if (isset($_SESSION['userName'])) {
-    $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Vous devez être déconnecter pour vous inscrir.'];
-    header("Location: ?action=default");   // access forbidden; immediatly redirected to home page.
+    $_SESSION['msg'] = ['level' => 'info', 'content' => 'Vous êtes déjà connecté en tant que "' . $_SESSION['userName'] . '". Déconnectez-vous avant.'];    header("Location: ?action=default");
     exit;
 }
 

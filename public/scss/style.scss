@@ -50,6 +50,7 @@ body {
 }
 
 .msg {
+    z-index: 100000;
     margin-top: 20px;
     padding: 15px;
     left: 50%;
@@ -146,6 +147,33 @@ main#homePage {
         p {
             padding: 40px 30px;
             text-align: center;
+        }
+    }
+
+    #iframe {
+        padding-top: 60px;
+        display: flex;
+        justify-content: center;
+        background-color: $colorblkGrey;
+
+        iframe {
+            width: 80%;
+        }
+    }
+}
+
+main#profile {
+
+    #commentPro {
+        margin-top: 40px;
+
+        section {
+
+            article {
+                padding-top: 30px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid $colorFont2;
+            }
         }
     }
 }

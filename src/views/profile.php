@@ -1,4 +1,4 @@
-<main class="container login">
+<main class="container login" id="profile">
     <h1>Profil</h1>
     <form action="?action=profile" method="post">
         <div class="champs">
@@ -10,12 +10,10 @@
             <input type="email" name="email" id="email" value="<?php echo $_SESSION['email']; ?> " disabled>
         </div>
         <div class="champs">
-            <label for="privilege">Role :</label>
-            <p><?php echo $_SESSION['privilege']; ?></p>
+            <p>Role : <?php echo $_SESSION['privilege']; ?></p>
         </div>
         <div class="champs">
-            <label for="date">Date de création du compte :</label>
-            <p><?php echo $formattedDate; ?></p>
+            <p>Date de création du compte : <?php echo $formattedDate; ?></p>
         </div>
         <div class="bouttons">
             <a class="bouttonViolet" href="./?action=profileEdit">Modifier</a>
@@ -23,7 +21,7 @@
         </div>
 
     </form>
-    <div id="comment">
+    <div id="commentPro">
         <h2>Commentaire(s) posté(s) :</h2>
 
         <section>
