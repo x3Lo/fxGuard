@@ -1,11 +1,29 @@
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
+
+    #homePage {
+
+        #image {
+            flex-direction: column;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
     #bandeau #menu {
         display: none;
     }
 }
 
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 1024px) {
+
+    .container {
+        width: 900px;
+        max-width: 900px;
+    }
+
     #bandeau .fa-bars {
         display: none;
     }

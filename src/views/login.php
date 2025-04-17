@@ -6,7 +6,7 @@
             <input type="text" id="login" name="login" value="<?php echo $_POST["login"] ?? '' ?>" placeholder="Votre Pseudo" required>
         </div>
         <div class="champs">
-            <label for=" password">Mot de passe :</label>
+            <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" value="<?php echo $_POST["password"] ?? '' ?>" placeholder="Votre mot de passe" required>
         </div>
         <button class="bouttonViolet" type="submit">Se connecter</button>

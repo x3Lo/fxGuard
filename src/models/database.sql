@@ -24,7 +24,6 @@ CREATE TABLE list_configuration (
    userId INT NOT NULL,
    themeId INT NOT NULL,
    share BOOLEAN NOT NULL,
-   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(listConfigId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
    FOREIGN KEY(themeId) REFERENCES theme(themeId) ON DELETE CASCADE
@@ -41,9 +40,7 @@ CREATE TABLE configuration (
    vehiculeHandling DECIMAL(5,2),
    vehiculeSeat INT NOT NULL,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-   listConfigId INT NOT NULL,
-   PRIMARY KEY(vehiculeId),
-   FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId) ON DELETE CASCADE
+   PRIMARY KEY(vehiculeId)
 );
 
 CREATE TABLE comment (
@@ -56,4 +53,13 @@ CREATE TABLE comment (
    PRIMARY KEY(commentId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
    FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId) ON DELETE CASCADE
+);
+
+CREATE TABLE composition(
+   vehiculeId INT,
+   listConfigId INT,
+   createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+   PRIMARY KEY(vehiculeId, listConfigId),
+   FOREIGN KEY(vehiculeId) REFERENCES configuration(vehiculeId),
+   FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId)
 );

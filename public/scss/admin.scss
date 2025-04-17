@@ -1,0 +1,42 @@
+main#admin {
+
+    section {
+
+        article {
+
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 24px;
+            border: 1px solid $colorFont2;
+        }
+
+        article:first-child {
+            margin-top: 40px;
+        }
+    }
+
+    #theme {
+        margin-top: 60px;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+
+            label {
+                margin-bottom: 15px;
+            }
+
+            input {
+                margin-bottom: 25px;
+                padding: 10px 5px;
+                background-color: $colorblkGrey;
+                border-radius: 5px;
+                border: 1px solid $colorFont2;
+                color: $colorFont1;
+            }
+        }
+
+
+    }
+}

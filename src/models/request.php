@@ -1,16 +1,21 @@
 <?php
 
+// Fonction pour récupérer un utilisateur à partir de son nom d'utilisateur
 function getUserByUserName($pdo, $userName)
 {
-    // Préparer la requête SQL pour récupérer l'utilisateur par userId
+    // Préparation de la requête SQL pour sélectionner l'utilisateur avec le nom donné
     $sql = "SELECT * FROM user_ WHERE userName = :userName";
+
+    // Prépare la requête pour éviter les injections SQL
     $stmt = $pdo->prepare($sql);
+
+    // Exécute la requête en liant le paramètre :userName à la valeur réelle
     $stmt->execute(['userName' => $userName]);
 
-    // Récupérer l'utilisateur
+    // Récupère le résultat sous forme de tableau associatif (clé => valeur)
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    // Retourner l'utilisateur si trouvé, sinon NULL
+    // Retourne les données de l'utilisateur si trouvé, sinon retourne NULL
     return $user ? $user : NULL;
 }
 
@@ -21,7 +26,7 @@ function addUserByEmail($pdo, $userName, $email, $password)
     $stmt->execute([
         'userName' => $userName,
         'email' => $email,
-        'password' => $password,
+        'password' => password_hash($password, PASSWORD_DEFAULT),
         'role' => 'user'
     ]);
 }
@@ -34,7 +39,11 @@ function getConfigListByUserId($pdo, $userId)
                 t.themeName, 
                 u.userId,
                 u.userName
-            FROM list_configuration lc JOIN user_ u ON lc.userId = u.userId JOIN theme t ON lc.themeId = t.themeId WHERE u.userId = :userId ORDER BY lc.listConfigId;";
+            FROM list_configuration lc 
+            JOIN user_ u ON lc.userId = u.userId 
+            JOIN theme t ON lc.themeId = t.themeId 
+            WHERE u.userId = :userId 
+            ORDER BY lc.listConfigId;";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         'userId' => $userId
@@ -74,13 +83,13 @@ function getLastConfigListId($pdo)
 function getConfig($pdo, $listConfigId)
 {
     $sql = "SELECT 
-                lc.listConfigId, 
+                compo.listConfigId, 
                 lc.listName, 
                 lc.share, 
                 t.themeName, 
                 u.userId, 
                 u.userName, 
-                c.vehiculeId, 
+                compo.vehiculeId, 
                 c.vehiculeName, 
                 c.vehiculeBrand, 
                 c.vehiculeType, 
@@ -89,8 +98,12 @@ function getConfig($pdo, $listConfigId)
                 c.vehiculeHandling, 
                 c.vehiculeSeat, 
                 c.vehiculeImage 
-            FROM list_configuration lc LEFT JOIN configuration c ON c.listConfigId = lc.listConfigId JOIN theme t ON lc.themeId = t.themeId JOIN user_ u ON lc.userId = u.userId 
-            WHERE lc.listConfigId = :listConfigId;";
+            FROM composition compo
+            JOIN list_configuration lc ON lc.listConfigId = compo.listConfigId
+            LEFT JOIN configuration c ON c.vehiculeId = compo.vehiculeId 
+            JOIN theme t ON lc.themeId = t.themeId 
+            JOIN user_ u ON lc.userId = u.userId 
+            WHERE compo.listConfigId = :listConfigId;";
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
@@ -302,5 +315,63 @@ function deleteProfile($pdo, $userId)
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         'userId' => $userId
+    ]);
+}
+
+function getAllUser($pdo)
+{
+    $sql = "SELECT * FROM user_";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function upgradeUser($pdo, $userId)
+{
+    $sql = "UPDATE user_ SET role = 'admin' WHERE userId = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'userId' => $userId
+    ]);
+}
+
+function downgradeUser($pdo, $userId)
+{
+    $sql = "UPDATE user_ SET role = 'user' WHERE userId = :userId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'userId' => $userId
+    ]);
+}
+
+function getAllTheme($pdo)
+{
+    $sql = "SELECT * FROM theme";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function addTheme($pdo, $themeName)
+{
+    $sql = "INSERT INTO theme (
+                themeName
+            ) VALUE (
+                :themeName
+            );";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'themeName' => $themeName
+    ]);
+}
+
+function deleteTheme($pdo, $themeId)
+{
+    $sql = "DELETE FROM theme WHERE themeId = :themeId";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'themeId' => $themeId
     ]);
 }

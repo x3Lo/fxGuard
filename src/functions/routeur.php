@@ -22,6 +22,12 @@ function switchman($action = "default"){
     $theActions["deleteComment"]="ctrlDeleteComment.php";
     $theActions["deleteProfile"]="ctrlDeleteProfile.php";
     $theActions["page404"]="page404_ctrl.php";
+
+    $theActions["admin"]="ctrlAdmin.php";
+    $theActions["upgradeUser"]="ctrlUpgradeUser.php";
+    $theActions["downgradeUser"]="ctrlDowngradeUser.php";
+    $theActions["deleteTheme"]="ctrlDeleteTheme.php";
+    $theActions["addTheme"]="ctrlAddTheme.php";
     
 
     $controler_id = $theActions[$action];
