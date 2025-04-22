@@ -3,7 +3,7 @@
 $listConfigId = $_SESSION['listConfigId'];
 
 $vehiculeId = $_POST['vehiculeId'];
-rmConfig($pdo, $vehiculeId);
+rmVehiculeToConfig($pdo, $vehiculeId, $listConfigId);
 
 unset($_SESSION['listConfigId']);
 

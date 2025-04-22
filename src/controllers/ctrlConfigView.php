@@ -27,7 +27,7 @@ if (isset($_GET['configListId'])) {
 
 $configs = getConfig($pdo, $listConfigId);
 // unset($_SESSION['listConfigId']);
-var_dump($configs);
+// var_dump($configs);
 
 
 if ($configs[0]['share'] == 1) {

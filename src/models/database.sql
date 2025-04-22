@@ -18,7 +18,7 @@ CREATE TABLE theme (
    PRIMARY KEY(themeId)
 );
 
-CREATE TABLE list_configuration (
+CREATE TABLE configuration (
    listConfigId INT AUTO_INCREMENT,
    listName VARCHAR(50) NOT NULL,
    userId INT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE list_configuration (
    FOREIGN KEY(themeId) REFERENCES theme(themeId) ON DELETE CASCADE
 );
 
-CREATE TABLE configuration (
+CREATE TABLE vehicule (
    vehiculeId INT AUTO_INCREMENT,
    vehiculeName VARCHAR(50) NOT NULL,
    vehiculeBrand VARCHAR(50) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE comment (
    listConfigId INT NOT NULL,
    PRIMARY KEY(commentId),
    FOREIGN KEY(userId) REFERENCES user_(userId) ON DELETE CASCADE,
-   FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId) ON DELETE CASCADE
+   FOREIGN KEY(listConfigId) REFERENCES configuration(listConfigId) ON DELETE CASCADE
 );
 
 CREATE TABLE composition(
@@ -60,6 +60,6 @@ CREATE TABLE composition(
    listConfigId INT,
    createAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
    PRIMARY KEY(vehiculeId, listConfigId),
-   FOREIGN KEY(vehiculeId) REFERENCES configuration(vehiculeId),
-   FOREIGN KEY(listConfigId) REFERENCES list_configuration(listConfigId)
+   FOREIGN KEY(vehiculeId) REFERENCES vehicule(vehiculeId),
+   FOREIGN KEY(listConfigId) REFERENCES configuration(listConfigId)
 );

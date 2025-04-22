@@ -2,12 +2,17 @@
 
 session_start();
 
-require(__DIR__ . "/src/config.php");
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+define("RACINE", __DIR__);
+
 require(RACINE."/src/functions/routeur.php");
 require(RACINE."/src/models/connect.php");
 require(RACINE."/src/models/request.php");
-
-
 
 $action = "default";
 

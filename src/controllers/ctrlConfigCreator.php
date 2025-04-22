@@ -30,7 +30,7 @@ $themeId = getThemeIdByName($pdo, $_POST['themeName']);
 $share = isset($_POST['share']) ? 1 : 0; // Si non coché, valeur = 0
 
 
-createConfigList($pdo, $_SESSION['userId'], $themeId, $share, $_POST['listName']);
+addConfig($pdo, $_SESSION['userId'], $themeId, $share, $_POST['listName']);
 
 
 // include(RACINE . "/src/views/footer.php");
