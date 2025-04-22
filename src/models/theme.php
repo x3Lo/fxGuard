@@ -50,8 +50,16 @@ function addTheme($pdo, $themeName)
 function deleteTheme($pdo, $themeId)
 {
     $sql = "DELETE FROM theme WHERE themeId = :themeId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'themeId' => $themeId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'themeId' => $themeId
+        ]);
+
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Le theme '.$_POST['themeName'].' a bien été supprimé'];
+        
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }

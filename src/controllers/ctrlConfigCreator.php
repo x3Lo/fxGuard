@@ -26,11 +26,11 @@ if (empty($_POST['themeName']) || empty($_POST['listName'])) {
 }
 
 
-$themeId = getThemeIdByName($pdo, $_POST['themeName']);
-$share = isset($_POST['share']) ? 1 : 0; // Si non coché, valeur = 0
+$themeId = getThemeIdByName($pdo, htmlspecialchars($_POST['themeName']));
+$share = htmlspecialchars(isset($_POST['share'])) ? 1 : 0; // Si non coché, valeur = 0
 
 
-addConfig($pdo, $_SESSION['userId'], $themeId, $share, $_POST['listName']);
+addConfig($pdo, $_SESSION['userId'], $themeId, $share, htmlspecialchars($_POST['listName']));
 
 
 // include(RACINE . "/src/views/footer.php");

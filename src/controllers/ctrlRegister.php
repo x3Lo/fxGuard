@@ -29,7 +29,7 @@ if (empty($_POST['userName']) || empty($_POST['email']) || empty($_POST['passwor
 
 require_once RACINE . "/src/models/request.php";
 
-addUserByEmail($pdo, $_POST['userName'], $_POST['email'], $_POST['password']);
+addUserByEmail($pdo, htmlspecialchars($_POST['userName']), htmlspecialchars($_POST['email']), htmlspecialchars($_POST['password']));
 // $user = getUserByUserId($pdo, $_POST['login']);
 
 

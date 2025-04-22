@@ -18,12 +18,12 @@ if (!(isset($_SESSION['userId']))) {
 } else {
 
     if (!isset($_POST['note']) || !isset($_POST['comment'])) {
-        $_SESSION['listConfigId'] = $_GET['configListId'];
+        $_SESSION['listConfigId'] = htmlspecialchars($_GET['configListId']);
         require RACINE . "/src/views/comment.php";    // stay on the same page
         exit;                               // end of script
     }
 
-    postComment($pdo, $_POST['note'], $_POST['comment'], $_SESSION['userId'], $_SESSION['listConfigId']);
+    postComment($pdo, htmlspecialchars($_POST['note']), htmlspecialchars($_POST['comment']), $_SESSION['userId'], $_SESSION['listConfigId']);
 
 
     $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre commentaire a bien été posté'];

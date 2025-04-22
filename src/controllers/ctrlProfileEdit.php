@@ -22,9 +22,9 @@ if (!(isset($_SESSION['userId']))) {
         exit;
     }
 
-    editProfile($pdo, $_SESSION['userId'], $_POST['userName'], $_POST['emaile']);
+    editProfile($pdo, $_SESSION['userId'], htmlspecialchars($_POST['userName']), htmlspecialchars($_POST['emaile']));
 
-    $_SESSION['userName'] = $_POST['userName'];
+    $_SESSION['userName'] = htmlspecialchars($_POST['userName']);
     $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez bien modifié votre profil'];
     header("Location: ?action=profile");
     

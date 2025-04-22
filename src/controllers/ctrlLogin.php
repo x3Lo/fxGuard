@@ -30,8 +30,8 @@ if (empty($_POST['login']) || empty($_POST['password'])) {
 
 require_once RACINE . "/src/models/request.php";
 
-$user = getUserByUserName($pdo, $_POST['login']);
-if (!$user || !password_verify($_POST['password'], $user['password'])) {
+$user = getUserByUserName($pdo, htmlspecialchars($_POST['login']));
+if (!$user || !password_verify(htmlspecialchars($_POST['password']), $user['password'])) {
     $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Login ou mot de passe est incorrect.'];
     header("Location: ?action=login");
     exit;

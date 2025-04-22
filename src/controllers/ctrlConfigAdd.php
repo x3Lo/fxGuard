@@ -4,7 +4,7 @@ $listConfigId = $_SESSION['listConfigId'];
 
 addVehiculeToConfig(
     $pdo, 
-    $_POST['name'], $_POST['brande'], $_POST['type'], $_POST['image'], $_POST['acceleration'], $_POST['topSpeed'], $_POST['handling'], $_POST['seat'], 
+    htmlspecialchars($_POST['name']), htmlspecialchars($_POST['brande']), htmlspecialchars($_POST['type']), htmlspecialchars($_POST['image']), htmlspecialchars($_POST['acceleration']), htmlspecialchars($_POST['topSpeed']), htmlspecialchars($_POST['handling']), htmlspecialchars($_POST['seat']), 
     $listConfigId);
 
 unset($_SESSION['listConfigId']);
