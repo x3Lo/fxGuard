@@ -90,6 +90,10 @@ body {
   color: green;
 }
 
+button {
+  cursor: pointer;
+}
+
 header {
   margin: 0px;
 }
@@ -297,6 +301,7 @@ main.login form .champs input {
   color: #FFF;
 }
 main.login form .champs textarea {
+  resize: none;
   height: 50px;
   margin-bottom: 25px;
   background-color: #212121;
@@ -470,13 +475,46 @@ main#admin #theme div input {
   color: #FFF;
 }
 
+main.legal h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+footer {
+  font-size: 0.8rem;
+  padding-top: 90px;
+  position: relative;
+  background-color: #212121;
+  padding-bottom: 40px;
+}
+footer #navFooter,
+footer #footer2 {
+  width: 80%;
+  border-top: 1px solid #EB0AFF;
+  margin: 0 auto;
+}
+footer #navFooter ul,
+footer #footer2 ul {
+  padding-top: 40px;
+  width: 60%;
+  margin: 0 auto;
+}
+footer #navFooter ul li,
+footer #footer2 ul li {
+  margin-bottom: 30px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     width: 500px;
     margin: 40px auto;
   }
-  #homePage #image {
-    flex-direction: column;
+  main#homePage #image {
+    flex-direction: row;
+    margin-bottom: 60px;
+  }
+  main#homePage #image p {
+    margin-right: 30px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -493,6 +531,11 @@ main#admin #theme div input {
   }
   #bandeau #menu {
     display: block;
+  }
+  footer {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 

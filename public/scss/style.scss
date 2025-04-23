@@ -83,6 +83,10 @@ body {
     color: green;
 }
 
+button {
+    cursor: pointer;
+}
+
 header {
     margin: 0px;
 
@@ -186,6 +190,9 @@ main#profile {
 @import './login.scss';
 @import './config.scss';
 @import './admin.scss';
+@import './legal.scss';
+@import './footer.scss';
+
 
 
 @import './responsive.scss';

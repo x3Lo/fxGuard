@@ -14,6 +14,8 @@ if (isset($_SESSION['userName'])) {
 
 if (!isset($_POST['userName']) || !isset($_POST['password'])) {
     require RACINE . "/src/views/register.php";
+    require RACINE . "/src/views/footer.php";
+
     exit;
 }
 

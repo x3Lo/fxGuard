@@ -5,10 +5,15 @@
         margin: 40px auto;
     }
 
-    #homePage {
+    main#homePage {
 
         #image {
-            flex-direction: column;
+            flex-direction: row;
+            margin-bottom: 60px;
+
+            p {
+                margin-right: 30px;
+            }
         }
     }
 }
@@ -34,5 +39,11 @@
 
     #bandeau #menu {
         display: block;
+    }
+
+    footer {
+        display: flex;
+        margin: 0 auto;
+        width: 80%;
     }
 }

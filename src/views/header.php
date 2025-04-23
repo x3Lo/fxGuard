@@ -12,6 +12,7 @@
     <?php }
     } ?>
     <script src="public/scripts/menuBurger.js" defer></script>
+    <link rel="icon" type="image/png" href="public/favicon-32x32.png">
     <link rel="stylesheet" href="public/css/style.css">
 </head>
 

@@ -26,6 +26,7 @@ main.login {
             }
 
             textarea {
+                resize: none;
                 height: 50px;
                 margin-bottom: 25px;
                 background-color: $colorblkGrey;

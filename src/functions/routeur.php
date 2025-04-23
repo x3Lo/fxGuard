@@ -22,6 +22,9 @@ function switchman($action = "default"){
     $theActions["deleteComment"]="ctrlDeleteComment.php";
     $theActions["deleteProfile"]="ctrlDeleteProfile.php";
     $theActions["page404"]="page404_ctrl.php";
+    $theActions["confidentialite"]="ctrlConfidentialite.php";
+    $theActions["mentions-legales"]="ctrlMentions-legales.php";
+
 
     $theActions["admin"]="ctrlAdmin.php";
     $theActions["upgradeUser"]="ctrlUpgradeUser.php";

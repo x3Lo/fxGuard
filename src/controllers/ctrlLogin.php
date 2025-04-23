@@ -15,6 +15,7 @@ if (isset($_SESSION['userName'])) {
 /* if there are no POST parameters, it means that it is the first page loading */
 if (!isset($_POST['login']) || !isset($_POST['login'])) {
     require RACINE . "/src/views/login.php";    // stay on the same page
+    require RACINE . "/src/views/footer.php";
     exit;                               // end of script
 }
 

@@ -1,5 +1,5 @@
-CREATE DATABASE db_fxguard_test;
-USE db_fxguard_test;
+-- CREATE DATABASE db_fxguard_test;
+-- USE db_fxguard_test;
 
 CREATE TABLE user_ (
    userId INT AUTO_INCREMENT,
@@ -63,3 +63,6 @@ CREATE TABLE composition(
    FOREIGN KEY(vehiculeId) REFERENCES vehicule(vehiculeId),
    FOREIGN KEY(listConfigId) REFERENCES configuration(listConfigId)
 );
+
+INSERT INTO user_ (userName, email, password, role)
+VALUES ('admin', 'admin@example.com', '$2y$10$cypJjXGzKCgGW5VmmdySuuHM0MQ5ezcGPIXJWgHwGq8XIk81zjItS', 'admin');
