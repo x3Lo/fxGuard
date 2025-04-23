@@ -4,8 +4,13 @@
 function getThemeName($pdo)
 {
     $sql = "SELECT themeName, themeId FROM theme;";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC); // Retourne sous forme de tableau associatif
 }
@@ -14,10 +19,15 @@ function getThemeName($pdo)
 function getThemeIdByName($pdo, $themeName)
 {
     $sql = "SELECT themeId FROM theme WHERE themeName = :themeName;";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'themeName' => $themeName
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'themeName' => $themeName
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchColumn(); // Retourne uniquement l'ID (colonne simple)
 }
@@ -26,8 +36,13 @@ function getThemeIdByName($pdo, $themeName)
 function getAllTheme($pdo)
 {
     $sql = "SELECT * FROM theme";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(); // Pas en mode associatif ici (tu peux le mettre si besoin)
 }
@@ -40,10 +55,17 @@ function addTheme($pdo, $themeName)
             ) VALUE (
                 :themeName
             );";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'themeName' => $themeName
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'themeName' => $themeName
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Thème ajouté avec succès'];
+
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Supprime un thème selon son ID
@@ -56,8 +78,7 @@ function deleteTheme($pdo, $themeId)
             'themeId' => $themeId
         ]);
 
-        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Le theme '.$_POST['themeName'].' a bien été supprimé'];
-        
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Le theme ' . $_POST['themeName'] . ' a bien été supprimé'];
     } catch (PDOException $e) {
         $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
         return null;

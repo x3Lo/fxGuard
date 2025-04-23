@@ -26,7 +26,6 @@ if (!(isset($_SESSION['userId']))) {
     postComment($pdo, htmlspecialchars($_POST['note']), htmlspecialchars($_POST['comment']), $_SESSION['userId'], $_SESSION['listConfigId']);
 
 
-    $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre commentaire a bien été posté'];
     
     unset($_SESSION['listConfigId']);
     header("Location: ?action=configShare"); 

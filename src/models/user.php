@@ -22,43 +22,64 @@ function addUserByEmail($pdo, $userName, $email, $password)
 {
     // Requête d'insertion (mot de passe hashé)
     $sql = "INSERT INTO user_ (userName, email, password, role) VALUES (:userName, :email, :password, :role)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userName' => $userName,
-        'email' => $email,
-        'password' => password_hash($password, PASSWORD_DEFAULT), // Hashage sécurisé
-        'role' => 'user' // Role par défaut
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userName' => $userName,
+            'email' => $email,
+            'password' => password_hash($password, PASSWORD_DEFAULT), // Hashage sécurisé
+            'role' => 'user' // Role par défaut
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez créé votre compte'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Fonction pour modifier les infos de profil (nom + email)
 function editProfile($pdo, $userId, $userName, $email)
 {
     $sql = "UPDATE user_ SET userName = :userName, email = :email WHERE userId = :userId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId,
-        'userName' => $userName,
-        'email' => $email
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId,
+            'userName' => $userName,
+            'email' => $email
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Fonction pour supprimer un utilisateur par son ID
 function deleteProfile($pdo, $userId)
 {
     $sql = "DELETE FROM user_ WHERE userId = :userId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Fonction pour récupérer tous les utilisateurs (admin uniquement en général)
 function getAllUser($pdo)
 {
     $sql = "SELECT * FROM user_";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(); // Retourne un tableau complet
 }
@@ -67,18 +88,30 @@ function getAllUser($pdo)
 function upgradeUser($pdo, $userId)
 {
     $sql = "UPDATE user_ SET role = 'admin' WHERE userId = :userId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez promu avec succès'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Fonction pour rétrograder un administrateur en utilisateur normal
 function downgradeUser($pdo, $userId)
 {
     $sql = "UPDATE user_ SET role = 'user' WHERE userId = :userId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez rétrogradé avec succès'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }

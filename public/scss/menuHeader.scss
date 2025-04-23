@@ -35,6 +35,15 @@
             }
         }
 
+        li:nth-last-child(2):hover {
+
+            a {
+                background-color: $colorFont2;
+                color: $colorFont1;
+                transition: 0.2s;
+            }
+        }
+
         li:last-child {
             margin-right: 15px;
             margin-left: 0px;
@@ -44,6 +53,18 @@
                 padding: 20px 30px;
                 border-radius: 24px;
                 background-color: $colorFont2;
+                border: 1px solid $colorFont2;
+            }
+        }
+
+        li:last-child:hover {
+
+            a {
+                background-color: $colorblkGrey;
+                color: $colorFont1;
+                border: 1px solid $colorFont2;
+                border-radius: 24px;
+                transition: 0.2s;
             }
         }
     }

@@ -1,5 +1,5 @@
 Options -Indexes
 
-<Files ".*">
+<Files .*>
 deny from all
 </Files>

@@ -46,14 +46,26 @@ body {
   border-radius: 24px;
   justify-content: center;
   background-color: #EB0AFF;
-  border: none;
+  border: 1px solid #EB0AFF;
   font-size: 13px;
+}
+
+.bouttonViolet:hover {
+  border: 1px solid #EB0AFF;
+  background-color: #212121;
+  transition: 0.2s;
 }
 
 .last {
   background-color: #212121;
   border: 1px solid #EB0AFF;
   color: #EB0AFF;
+}
+
+.last:hover {
+  background-color: #EB0AFF;
+  color: #FFF;
+  transition: 0.2s;
 }
 
 .msg {
@@ -142,6 +154,11 @@ header #bandeau #menu ul li:nth-last-child(2) a {
   border: 1px solid #EB0AFF;
   border-radius: 24px;
 }
+header #bandeau #menu ul li:nth-last-child(2):hover a {
+  background-color: #EB0AFF;
+  color: #FFF;
+  transition: 0.2s;
+}
 header #bandeau #menu ul li:last-child {
   margin-right: 15px;
   margin-left: 0px;
@@ -151,6 +168,14 @@ header #bandeau #menu ul li:last-child a {
   padding: 20px 30px;
   border-radius: 24px;
   background-color: #EB0AFF;
+  border: 1px solid #EB0AFF;
+}
+header #bandeau #menu ul li:last-child:hover a {
+  background-color: #212121;
+  color: #FFF;
+  border: 1px solid #EB0AFF;
+  border-radius: 24px;
+  transition: 0.2s;
 }
 header #bandeau #menu-overlay {
   position: fixed;
@@ -244,8 +269,16 @@ main#homePage #image a {
   margin-bottom: 50px;
   padding: 20px 30px;
   background-color: #EB0AFF;
+  border: 2px solid #EB0AFF;
   border-radius: 24px;
-  color: #212121;
+  color: #FFF;
+}
+main#homePage #image a:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #FFF;
+  border: 2px solid #EB0AFF;
+  border-radius: 24px;
+  transition: 0.2s;
 }
 main#homePage #para {
   margin: 0px;
@@ -253,7 +286,7 @@ main#homePage #para {
   background-color: #212121;
 }
 main#homePage #para p {
-  padding: 40px 30px;
+  padding: 70px 30px;
   text-align: center;
 }
 main#homePage #iframe {
@@ -325,8 +358,14 @@ main#list #menuConf ul li a {
   width: 210px;
   padding: 15px;
   background-color: #EB0AFF;
+  border: 1px solid #EB0AFF;
   color: #FFF;
   border-radius: 24px;
+}
+main#list #menuConf ul li a:hover {
+  border: 1px solid #EB0AFF;
+  background-color: #212121;
+  transition: 0.2s;
 }
 main#list h2 {
   margin-top: 50px;
@@ -348,6 +387,10 @@ main#creator a {
   border: 1px solid #EB0AFF;
   border-radius: 24px;
   padding: 10px 15px;
+}
+main#creator a:hover {
+  background-color: #EB0AFF;
+  transition: 0.2s;
 }
 main#creator form {
   margin-top: 40px;
@@ -399,11 +442,19 @@ main#share a {
   border-radius: 24px;
   padding: 10px 15px;
 }
+main#share a:hover {
+  background-color: #EB0AFF;
+  transition: 0.2s;
+}
 
 main#view a {
   border: 1px solid #EB0AFF;
   border-radius: 24px;
   padding: 10px 15px;
+}
+main#view a:hover {
+  background-color: #EB0AFF;
+  transition: 0.2s;
 }
 main#view #configName {
   margin-top: 50px;

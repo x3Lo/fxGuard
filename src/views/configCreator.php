@@ -5,7 +5,7 @@
 
     <form action="?action=configCreator" method="post">
         <label for="listName">Nom de la configuration :</label><br>
-        <input type="text" id="listName" name="listName"><br>
+        <input type="text" id="listName" name="listName" placeholder="Nom de la configuration"><br>
         <label for="themeName">Theme :</label><br>
         <select name="themeName" id="themeName"><br>
             <?php

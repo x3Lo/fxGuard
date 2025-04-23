@@ -14,10 +14,15 @@ function getCommentById($pdo, $listConfigId)
             FROM comment c 
             JOIN user_ u ON c.userId = u.userId 
             WHERE listConfigId = :listConfigId"; // Filtre sur l'ID de la configuration
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'listConfigId' => $listConfigId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'listConfigId' => $listConfigId
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(); // Retourne tous les résultats
 }
@@ -26,10 +31,15 @@ function getCommentById($pdo, $listConfigId)
 function getNoteMoyenneById($pdo, $listConfigId)
 {
     $sql = "SELECT AVG(commentNote) FROM comment WHERE listConfigId = :listConfigId"; // Utilise AVG pour la moyenne
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'listConfigId' => $listConfigId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'listConfigId' => $listConfigId
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(); // Retourne la moyenne (dans un tableau)
 }
@@ -48,24 +58,35 @@ function postComment($pdo, $note, $content, $userId, $listConfigId)
                 :userId,
                 :listConfigId
             );";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'note' => $note,
-        'content' => $content,
-        'userId' => $userId,
-        'listConfigId' => $listConfigId,
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'note' => $note,
+            'content' => $content,
+            'userId' => $userId,
+            'listConfigId' => $listConfigId,
+        ]);
+
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre commentaire a bien été posté'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Récupère tous les commentaires faits par un utilisateur donné
 function getCommentByUserId($pdo, $userId)
 {
     $sql = "SELECT * FROM comment WHERE userId = :userId"; // Filtre sur l'ID utilisateur
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId
-    ]);
-
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
     return $stmt->fetchAll(); // Retourne tous les commentaires de cet utilisateur
 }
 
@@ -73,8 +94,15 @@ function getCommentByUserId($pdo, $userId)
 function deleteComment($pdo, $commentId)
 {
     $sql = "DELETE FROM comment WHERE commentId = :commentId"; // Suppression ciblée
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'commentId' => $commentId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'commentId' => $commentId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre commentaire a bien été supprimé'];
+
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }

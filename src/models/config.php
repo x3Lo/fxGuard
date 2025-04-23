@@ -14,10 +14,15 @@ function getConfigListByUserId($pdo, $userId)
             JOIN theme t ON lc.themeId = t.themeId 
             WHERE u.userId = :userId 
             ORDER BY lc.listConfigId;"; // Tri par ID de config pour garder un ordre
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC); // Retourne un tableau associatif
 }
@@ -26,8 +31,13 @@ function getConfigListByUserId($pdo, $userId)
 function getLastConfigListId($pdo)
 {
     $sql = "SELECT listConfigId FROM configuration ORDER BY listConfigId DESC LIMIT 1;"; // Dernier ID par ordre décroissant
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchColumn(); // Retourne une seule colonne : l'ID
 }
@@ -64,8 +74,7 @@ function getConfig($pdo, $listConfigId)
         $stmt->execute([
             'listConfigId' => $listConfigId
         ]);
-    }
-    catch (PDOException $e) {
+    } catch (PDOException $e) {
         $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
         return null;
     }
@@ -87,10 +96,15 @@ function getConfigShareList($pdo)
             JOIN theme t ON lc.themeId = t.themeId 
             WHERE lc.share = :share 
             ORDER BY lc.listConfigId;";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'share' => 1 // Partagées uniquement
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'share' => 1 // Partagées uniquement
+        ]);
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -100,36 +114,62 @@ function addConfig($pdo, $userId, $themeId, $share, $listName)
 {
     $sql = "INSERT INTO configuration (userId, themeId, share, listName) 
             VALUES (:userId, :themeId, :share, :listName)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'userId' => $userId,
-        'themeId' => $themeId,
-        'share' => $share,
-        'listName' => $listName,
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'userId' => $userId,
+            'themeId' => $themeId,
+            'share' => $share,
+            'listName' => $listName,
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez bien créé une nouvelle configuration'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Récupère toutes les configurations de véhicules (distincts)
 function getAllConfigs($pdo)
 {
     $sql = "SELECT DISTINCT vehiculeName, vehiculeBrand, vehiculeType, vehiculeImage, vehiculeAcceleration, vehiculeTopSpeed, vehiculeHandling, vehiculeSeat FROM vehicule;";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute();
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 
     return $stmt->fetchAll(PDO::FETCH_ASSOC); // Résultats sans doublons
 }
 
 // Ajoute un véhicule à une liste de configuration
 function addVehiculeToConfig(
-    $pdo, 
-    $vehiculeName, $vehiculeBrand, $vehiculeType, $vehiculeImage, $vehiculeAcceleration, $vehiculeTopSpeed, $vehiculeHandling, $vehiculeSeat, 
-    $listConfigId)
-{
+    $pdo,
+    $vehiculeName,
+    $vehiculeBrand,
+    $vehiculeType,
+    $vehiculeImage,
+    $vehiculeAcceleration,
+    $vehiculeTopSpeed,
+    $vehiculeHandling,
+    $vehiculeSeat,
+    $listConfigId
+) {
     $vehicule = getVehiculeByName($pdo, $vehiculeName);
     if (empty($vehicule)) {
         addVehicule(
-            $pdo, 
-            $vehiculeName, $vehiculeBrand, $vehiculeType, $vehiculeImage, $vehiculeAcceleration, $vehiculeTopSpeed, $vehiculeHandling, $vehiculeSeat);
+            $pdo,
+            $vehiculeName,
+            $vehiculeBrand,
+            $vehiculeType,
+            $vehiculeImage,
+            $vehiculeAcceleration,
+            $vehiculeTopSpeed,
+            $vehiculeHandling,
+            $vehiculeSeat
+        );
         $vehicule = getVehiculeByName($pdo, $vehiculeName);
     }
 
@@ -138,30 +178,49 @@ function addVehiculeToConfig(
                 :vehiculeId, 
                 :listConfigId
             );";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'vehiculeId' => $vehicule[0]['vehiculeId'],
-        'listConfigId' => $listConfigId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'vehiculeId' => $vehicule[0]['vehiculeId'],
+            'listConfigId' => $listConfigId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Votre avez ajouté un vehicule à la configuration'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Supprime un véhicule d'une configuration selon son ID
 function rmVehiculeToConfig($pdo, $vehiculeId, $listConfigId)
 {
     $sql = "DELETE FROM composition WHERE vehiculeId = :vehiculeId AND listConfigId = :listConfigId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'vehiculeId' => $vehiculeId,
-        'listConfigId' => $listConfigId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'vehiculeId' => $vehiculeId,
+            'listConfigId' => $listConfigId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Vous avez supprimé un véhicule de la configuration'];
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
 
 // Supprime une configuration complète (liste) par son ID
 function rmConfigList($pdo, $listConfigId)
 {
     $sql = "DELETE FROM configuration WHERE listConfigId = :listConfigId";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        'listConfigId' => $listConfigId
-    ]);
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            'listConfigId' => $listConfigId
+        ]);
+        $_SESSION['msg'] = ['level' => 'success', 'content' => 'Configuration supprimée'];
+
+    } catch (PDOException $e) {
+        $_SESSION['msg'] = ['level' => 'warning', 'content' => ($e->getMessage())];
+        return null;
+    }
 }
