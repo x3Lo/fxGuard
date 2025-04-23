@@ -1,5 +1,10 @@
 @media screen and (min-width: 768px) {
 
+    .container {
+        width: 500px;
+        margin: 40px auto;
+    }
+
     #homePage {
 
         #image {
@@ -21,7 +26,6 @@
 
     .container {
         width: 900px;
-        max-width: 900px;
     }
 
     #bandeau .fa-bars {

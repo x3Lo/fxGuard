@@ -30,7 +30,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/081b4a3b-2cee-40c8-8277-34970f1b6492.png");
+  background-image: url("../images/background.png");
   background-size: cover;
   filter: blur(8px);
   transform: scale(1.1);
@@ -131,18 +131,20 @@ header #bandeau #menu ul li:hover a {
 }
 header #bandeau #menu ul li:nth-last-child(2) {
   margin-right: 15px;
-  padding: 20px 30px;
-  width: 100px;
   text-align: center;
+}
+header #bandeau #menu ul li:nth-last-child(2) a {
+  padding: 20px 30px;
   border: 1px solid #EB0AFF;
   border-radius: 24px;
 }
 header #bandeau #menu ul li:last-child {
   margin-right: 15px;
   margin-left: 0px;
-  padding: 20px 30px;
-  width: 100px;
   text-align: center;
+}
+header #bandeau #menu ul li:last-child a {
+  padding: 20px 30px;
   border-radius: 24px;
   background-color: #EB0AFF;
 }
@@ -152,15 +154,21 @@ header #bandeau #menu-overlay {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Opacité sur l’arrière-plan */
-  z-index: 5; /* Derrière le menu burger mais devant le reste */
-  opacity: 0; /* Initialement invisible */
-  visibility: hidden; /* Empêche les clics quand invisible */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Opacité sur l’arrière-plan */
+  z-index: 5;
+  /* Derrière le menu burger mais devant le reste */
+  opacity: 0;
+  /* Initialement invisible */
+  visibility: hidden;
+  /* Empêche les clics quand invisible */
   transition: opacity 0.7s ease, visibility 0.7s;
 }
 header #bandeau #menu-overlay.active {
-  opacity: 1; /* Rend l'overlay visible */
-  visibility: visible; /* Active les clics */
+  opacity: 1;
+  /* Rend l'overlay visible */
+  visibility: visible;
+  /* Active les clics */
 }
 header #bandeau #menuburger {
   position: fixed;
@@ -173,7 +181,8 @@ header #bandeau #menuburger {
   opacity: 0;
   visibility: hidden;
   transition: transform 0.7s ease, opacity 0.7s ease, visibility 0.7s;
-  z-index: 200; /* Devant l'overlay */
+  z-index: 200;
+  /* Devant l'overlay */
 }
 header #bandeau #menuburger ul #xmark1 {
   height: 100px;
@@ -462,6 +471,10 @@ main#admin #theme div input {
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    width: 500px;
+    margin: 40px auto;
+  }
   #homePage #image {
     flex-direction: column;
   }
@@ -474,7 +487,6 @@ main#admin #theme div input {
 @media screen and (min-width: 1024px) {
   .container {
     width: 900px;
-    max-width: 900px;
   }
   #bandeau .fa-bars {
     display: none;

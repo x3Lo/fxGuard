@@ -29,17 +29,16 @@
                     if (isset($_SESSION['userId'])) {
                     ?>
                         <li><a href="./?action=configList">Configuations<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="./?action=profile">Profil<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="?action=logout">Se déconnecter<i class="fa-solid fa-chevron-right"></i></a></li>
-
                         <?php if ($_SESSION['role'] == 'admin') { ?>
                             <li><a href="./?action=admin">Administration<i class="fa-solid fa-chevron-right"></i></a></li>
                         <?php } ?>
+                        <li><a href="./?action=profile">Profil<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li><a href="?action=logout">Se déconnecter<i class="fa-solid fa-chevron-right"></i></a></li>
                     <?php
                     } else {
                     ?>
-                        <li><a href="./?action=login">Se connecter<i class="fa-solid fa-chevron-right"></i></a></li>
-                        <li><a href="./?action=register">S'Inscrire<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li id="li1"><a href="./?action=login">Se connecter<i class="fa-solid fa-chevron-right"></i></a></li>
+                        <li id="li2"><a href="./?action=register">S'Inscrire<i class="fa-solid fa-chevron-right"></i></a></li>
                     <?php
                     }
                     ?>
@@ -53,12 +52,11 @@
                     if (isset($_SESSION['userId'])) {
                     ?>
                         <li><a href="./?action=configList">Configurations</a></li>
-                        <li><a href="./?action=profile">Profil</a></li>
-                        <li><a href="?action=logout">Se déconnecter</a></li>
-
                         <?php if ($_SESSION['role'] == 'admin') { ?>
                             <li><a href="./?action=admin">Administration</a></li>
                         <?php } ?>
+                        <li><a href="./?action=profile">Profil</a></li>
+                        <li><a href="?action=logout">Se déconnecter</a></li>
                     <?php
                     } else {
                     ?>
