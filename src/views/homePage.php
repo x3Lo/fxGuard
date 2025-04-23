@@ -5,9 +5,13 @@
         <a href="./?action=register">Nous rejoindre</a>
     </div>
     <div id="para">
-        <p>Fini les tâches répétitives et fastidieuses. Grâce à fxGuard, créez vos configurations en quelques clics à partir d’un catalogue complet de véhicules prêts à l’emploi.<br><br>Besoin de gérer plusieurs configurations ou de les remplacer instantanément ? C’est désormais un jeu d’enfant. Gagnez en souplesse, en rapidité et en confort d’utilisation avec fxGuard, tout devient plus simple.</p>
+        <h2>Simplifiez la gestion de vos véhicules sur FiveM avec fxGuard</h2>
+        <p>Fini les tâches répétitives et les manipulations complexes. Grâce à fxGuard, vous créez vos menus en jeu dans GTA 5 sur FiveM en quelques clics, sans aucune ligne de code. <br>
+            Choisissez parmi un catalogue complet de véhicules prêts à l’emploi, ajoutez-les à vos menus, et c’est tout ! <br><br>
+            Besoin de gérer plusieurs configurations ou de tout changer à la volée ? C’est désormais possible. <br>
+            Avec fxGuard, vous gagnez en flexibilité, en vitesse et en simplicité.</p>
     </div>
     <div id="iframe">
-        <iframe src="http://www.youtube.com/embed/QkkoHAzjnUs?si=G_kk3_Z0CGPZ0hI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/QkkoHAzjnUs?si=G_kk3_Z0CGPZ0hI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </main>

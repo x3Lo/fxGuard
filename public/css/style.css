@@ -285,9 +285,13 @@ main#homePage #para {
   width: 100%;
   background-color: #212121;
 }
+main#homePage #para h2,
 main#homePage #para p {
-  padding: 70px 30px;
+  padding: 30px;
   text-align: center;
+}
+main#homePage #para h2 {
+  padding-top: 70px;
 }
 main#homePage #iframe {
   padding-top: 60px;

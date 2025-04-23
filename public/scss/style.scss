@@ -169,9 +169,16 @@ main#homePage {
         width: 100%;
         background-color: $colorblkGrey;
 
+        
+
+        h2,
         p {
-            padding: 70px 30px;
+            padding: 30px;
             text-align: center;
+        }
+        
+        h2 {
+            padding-top: 70px;
         }
     }
 
