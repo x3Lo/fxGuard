@@ -532,10 +532,19 @@ footer #footer2 ul li {
   #bandeau #menu {
     display: block;
   }
-  footer {
+  footer div#ligneViolet {
+    border-top: 1px solid #EB0AFF;
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer #grpFooter {
     display: flex;
     margin: 0 auto;
-    width: 80%;
+  }
+  footer #grpFooter #navFooter,
+  footer #grpFooter #footer2 {
+    border: none;
+    padding: 0 100px;
   }
 }
 
