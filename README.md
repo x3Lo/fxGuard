@@ -62,5 +62,5 @@ Conçue pour simplifier la configuration de vos véhicules, fxGuard permet à n�
 git clone https://github.com/tonuser/fxGuard.git
 cd fxGuard
 # importer la base de données via le fichier database.sql puis configbdd.sql fourni dans le dossier "base_de_donnees"
-# créer et configurer le fichier .env avec vos accès MySQL
+# renommer le fichier bdd.env en .env et le configurer avec vos accès MySQL
 # lancer le projet via localhost

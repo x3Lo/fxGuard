@@ -15,6 +15,14 @@
                 margin-right: 30px;
             }
         }
+
+        #iframe {
+
+            iframe {
+                width: 70%;
+                height: 350px;
+            }
+        }
     }
 }
 
@@ -41,6 +49,20 @@
         display: block;
     }
 
+    main#homePage {
+
+        #image {
+            margin: 200px 0;
+        }
+
+        #iframe {
+            padding-top: 100px;
+            iframe {
+                height: 450px;
+            }
+        }
+    }
+
     footer {
 
         div#ligneViolet {
@@ -50,13 +72,14 @@
         }
 
         #grpFooter {
-            display: flex;
             margin: 0 auto;
+            display: flex;
+            width: 60%;
 
             #navFooter,
             #footer2 {
                 border: none;
-                padding: 0 100px;
+                padding: 0 90px;
             }
         }
     }

@@ -1,0 +1,1 @@
+const loadScriptButton=document.getElementById("loadScriptButton");function loadExternalScript(){const t=document.createElement("script");t.src="public/scripts/apiRest.js",t.type="text/javascript",document.body.appendChild(t),t.onerror=function(){}}loadScriptButton.addEventListener("click",loadExternalScript);
