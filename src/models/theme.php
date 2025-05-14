@@ -69,7 +69,7 @@ function addTheme($pdo, $themeName)
 }
 
 // Supprime un thème selon son ID
-function deleteTheme($pdo, $themeId)
+function rmTheme($pdo, $themeId)
 {
     $sql = "DELETE FROM theme WHERE themeId = :themeId";
     try {

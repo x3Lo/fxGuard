@@ -1,5 +1,5 @@
 <?php
 
-deleteComment($pdo, htmlspecialchars($_POST['commentId']));
+rmComment($pdo, htmlspecialchars($_POST['commentId']));
 
 header("Location: ?action=profile"); 

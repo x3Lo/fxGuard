@@ -10,7 +10,7 @@ $dotenv->load();
 
 define("RACINE", __DIR__);
 
-require(RACINE."/src/functions/routeur.php");
+require(RACINE."/src/functions/router.php");
 require(RACINE."/src/models/connect.php");
 require(RACINE."/src/models/request.php");
 

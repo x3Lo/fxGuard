@@ -55,7 +55,7 @@ function editProfile($pdo, $userId, $userName, $email)
 }
 
 // Fonction pour supprimer un utilisateur par son ID
-function deleteProfile($pdo, $userId)
+function rmProfile($pdo, $userId)
 {
     $sql = "DELETE FROM user_ WHERE userId = :userId";
     try {

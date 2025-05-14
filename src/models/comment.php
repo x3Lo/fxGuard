@@ -91,7 +91,7 @@ function getCommentByUserId($pdo, $userId)
 }
 
 // Supprime un commentaire selon son ID
-function deleteComment($pdo, $commentId)
+function rmComment($pdo, $commentId)
 {
     $sql = "DELETE FROM comment WHERE commentId = :commentId"; // Suppression ciblée
     try {

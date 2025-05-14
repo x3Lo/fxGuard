@@ -15,6 +15,6 @@ if (!(isset($_SESSION['userId']))) {
     // useful if the current script has not been completed.
 }
 
-deleteProfile($pdo, $_SESSION['userId']);
+rmProfile($pdo, $_SESSION['userId']);
 
 header("Location: ?action=logout");
