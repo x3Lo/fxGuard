@@ -47,7 +47,7 @@ body {
   justify-content: center;
   background-color: #EB0AFF;
   border: 1px solid #EB0AFF;
-  font-size: 13px;
+  font-size: 0.8rem;
 }
 
 .bouttonViolet:hover {
