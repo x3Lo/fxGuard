@@ -12,6 +12,6 @@
             Avec fxGuard, vous gagnez en flexibilité, en vitesse et en simplicité.</p>
     </div>
     <div id="iframe">
-        <iframe src="https://www.youtube.com/embed/QkkoHAzjnUs?si=G_kk3_Z0CGPZ0hI1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/QkkoHAzjnUs?si=G_kk3_Z0CGPZ0hI1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 </main>

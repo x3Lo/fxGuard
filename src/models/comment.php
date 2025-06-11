@@ -45,7 +45,7 @@ function getNoteMoyenneById($pdo, $listConfigId)
 }
 
 // Ajoute un nouveau commentaire à la base de données
-function postComment($pdo, $note, $content, $userId, $listConfigId)
+function addComment($pdo, $note, $content, $userId, $listConfigId)
 {
     $sql = "INSERT INTO comment (
                 commentNote,

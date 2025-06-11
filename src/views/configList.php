@@ -24,6 +24,4 @@
             </article>
         <?php } ?>
     </section>
-
-
 </main>

@@ -187,10 +187,11 @@ main#homePage {
         display: flex;
         justify-content: center;
         background-color: $colorblkGrey;
-
+        
         iframe {
             width: 80%;
             height: 180px;
+            border: none;
         }
     }
 }

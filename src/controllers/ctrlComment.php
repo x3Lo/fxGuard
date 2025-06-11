@@ -23,7 +23,7 @@ if (!(isset($_SESSION['userId']))) {
         exit;                               // end of script
     }
 
-    postComment($pdo, htmlspecialchars($_POST['note']), htmlspecialchars($_POST['comment']), $_SESSION['userId'], $_SESSION['listConfigId']);
+    addComment($pdo, htmlspecialchars($_POST['note']), htmlspecialchars($_POST['comment']), $_SESSION['userId'], $_SESSION['listConfigId']);
 
 
     

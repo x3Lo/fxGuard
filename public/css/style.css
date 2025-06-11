@@ -128,6 +128,9 @@ header #bandeau .fa-bars {
   font-size: 40px;
   color: #EB0AFF;
 }
+header #bandeau #menu {
+  display: none;
+}
 header #bandeau #menu ul {
   display: flex;
   align-items: center;
@@ -302,6 +305,7 @@ main#homePage #iframe {
 main#homePage #iframe iframe {
   width: 80%;
   height: 180px;
+  border: none;
 }
 
 main#profile #commentPro {
@@ -577,11 +581,6 @@ footer #footer2 ul li {
     height: 350px;
   }
 }
-@media screen and (max-width: 1024px) {
-  #bandeau #menu {
-    display: none;
-  }
-}
 @media screen and (min-width: 1024px) {
   .container {
     width: 900px;
@@ -589,7 +588,7 @@ footer #footer2 ul li {
   #bandeau .fa-bars {
     display: none;
   }
-  #bandeau #menu {
+  header #bandeau #menu {
     display: block;
   }
   main#homePage #image {

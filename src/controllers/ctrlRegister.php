@@ -28,6 +28,17 @@ if (empty($_POST['userName']) || empty($_POST['email']) || empty($_POST['passwor
     exit;
 }
 
+if (!(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))) {
+    $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Adresse email invalide.'];
+    header("Location: ?action=register");
+    exit;
+}
+
+if (strlen($password) < 8) {
+    $_SESSION['msg'] = ['level' => 'warning', 'content' => 'Le mot de passe doit contenir au moins 8 caractères.'];
+    header("Location: ?action=register");
+    exit;
+}
 
 require_once RACINE . "/src/models/request.php";
 
